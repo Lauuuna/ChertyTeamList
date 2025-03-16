@@ -38,7 +38,7 @@ async function fetchData(url) {
             <h2>#${players.indexOf(player) + 1} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
             <div class="player-info">
                 <p><span>Stars:</span> ${totalPoints}</p>
-                <p><span>Самый сложный уровень:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
+                <p><span>Hardest:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
                 <p><span>OSC:</span> ${player.osc}</p> <!-- Новое поле: OSC -->
                 <p><span>L%:</span> ${player.l_percent}</p> <!-- Новое поле: L% -->
                 <p><span>ЗА СКОЛЬКО ПРОЙДЕТ 1⭐:</span> ${player.time_for_1_star}</p> <!-- Новое поле: ЗА СКОЛЬКО ПРОЙДЕТ 1⭐ -->
