@@ -31,7 +31,7 @@ async function fetchData(url) {
       playerCard.className = 'player-card';
       playerCard.innerHTML = `
         <h2>#${index + 1} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
-        <p>Очки: ${calculatePlayerPoints(player, levels)}</p>
+        <p>Stars: ${calculatePlayerPoints(player, levels)}</p>
       `;
       playerCard.addEventListener('click', () => {
         window.location.href = `player.html?id=${player.id}`;

@@ -37,7 +37,7 @@ async function fetchData(url) {
         playerDetails.innerHTML = `
             <h2>#${players.indexOf(player) + 1} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
             <div class="player-info">
-                <p><span>Очки:</span> ${totalPoints}</p>
+                <p><span>Stars:</span> ${totalPoints}</p>
                 <p><span>Самый сложный уровень:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
                 <p><span>OSC:</span> ${player.osc}</p> <!-- Новое поле: OSC -->
                 <p><span>L%:</span> ${player.l_percent}</p> <!-- Новое поле: L% -->
@@ -45,13 +45,13 @@ async function fetchData(url) {
                 <p><span>Skill-set:</span> ${player.skill_set.join(', ')}</p> <!-- Новое поле: Skill-set -->
             </div>
             <div class="completed-levels">
-                <h3>Пройденные уровни</h3>
+                <h3>COMPLETIONS</h3>
                 <table>
                     <thead>
                         <tr>
-                            <th>Название</th>
-                            <th>Позиция</th>
-                            <th>Очки</th>
+                            <th>Level</th>
+                            <th>Position</th>
+                            <th>Stars</th>
                         </tr>
                     </thead>
                     <tbody>

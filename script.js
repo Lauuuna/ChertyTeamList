@@ -33,7 +33,7 @@ async function loadLevels() {
         levelCard.innerHTML = `
             <div>
                 <h2>#${position} - ${level.name}</h2>
-                <p>First victor: ${firstPlayer.nickname}</p>
+                <p>${firstPlayer.nickname}</p>
             </div>
             <div class="preview">
                 <img src="${previewUrl}" alt="Preview">
@@ -127,7 +127,7 @@ async function loadArchive(type) {
                 archiveCard.className = 'archive-level-card';
                 archiveCard.innerHTML = `
                     <h2>${level.name}</h2>
-                    <p>First victor: ${firstPlayer.nickname}</p>
+                    <p>${firstPlayer.nickname}</p>
                     <p>Phases: ${level.phase}</p>
                     <p>GGDL: ${level.ggdl_phase}</p>
                     <p>Skill-sets: ${level.skill_sets.join(', ')}</p>
