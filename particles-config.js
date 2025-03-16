@@ -25,7 +25,7 @@ particlesJS('particles-js', {
             random: false,
             anim: {
                 enable: false,
-                speed: 1,
+                speed: 2,
                 opacity_min: 0.1,
                 sync: false
             }
@@ -45,7 +45,7 @@ particlesJS('particles-js', {
         },
         move: {
             enable: true,
-            speed: 3,
+            speed: 2,
             direction: 'top',
             random: false,
             straight: false,
@@ -63,9 +63,11 @@ particlesJS('particles-js', {
         events: {
             onhover: {
                 enable: false,
+                mode: 'bubble'
             },
             onclick: {
                 enable: false,
+                mode: 'push'
             },
             resize: true
         }

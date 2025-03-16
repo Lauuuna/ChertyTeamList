@@ -35,51 +35,53 @@ async function fetchData(url) {
         }, null);
 
         playerDetails.innerHTML = `
+        <div class="player-card with-border"> <!-- Добавлен класс with-border -->
             <h2>#${players.indexOf(player) + 1} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
-            <div class="player-info">
-                <p><span>Stars:</span> ${totalPoints}</p>
-                <p><span>Hardest:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
-                <p><span>OSC:</span> ${player.osc}</p> <!-- Новое поле: OSC -->
-                <p><span>L%:</span> ${player.l_percent}</p> <!-- Новое поле: L% -->
-                <p><span>ЗА СКОЛЬКО ПРОЙДЕТ 1⭐:</span> ${player.time_for_1_star}</p> <!-- Новое поле: ЗА СКОЛЬКО ПРОЙДЕТ 1⭐ -->
-                <p><span>Skill-set:</span> ${player.skill_set.join(', ')}</p> <!-- Новое поле: Skill-set -->
-            </div>
-            <div class="completed-levels">
-                <h3>COMPLETIONS</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Level</th>
-                            <th>Position</th>
-                            <th>Stars</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${player.levels_completed.map(levelName => {
-                            const level = levels.find(l => l.name === levelName);
-                            if (level) {
-                                const position = levels.indexOf(level) + 1;
-                                return `
-                                    <tr onclick="window.location.href='level.html?id=${position}'">
-                                        <td>${level.name}</td>
-                                        <td>#${position}</td>
-                                        <td>${level.points}</td>
-                                    </tr>
-                                `;
-                            } else {
-                                return `
-                                    <tr>
-                                        <td>${levelName}</td>
-                                        <td>N/A</td>
-                                        <td>N/A</td>
-                                    </tr>
-                                `;
-                            }
-                        }).join('')}
-                    </tbody>
-                </table>
-            </div>
-        `;
+        </div>
+        <div class="player-info">
+            <p><span>Stars:</span> ${totalPoints}</p>
+            <p><span>Hardest:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
+            <p><span>OSC:</span> ${player.osc}</p>
+            <p><span>L%:</span> ${player.l_percent}</p>
+            <p><span>ЗА СКОЛЬКО ПРОЙДЕТ 1⭐:</span> ${player.time_for_1_star}</p>
+            <p><span>Skill-set:</span> ${player.skill_set.join(', ')}</p>
+        </div>
+        <div class="completed-levels">
+            <h3>COMPLETIONS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Position</th>
+                        <th>Stars</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${player.levels_completed.map(levelName => {
+                        const level = levels.find(l => l.name === levelName);
+                        if (level) {
+                            const position = levels.indexOf(level) + 1;
+                            return `
+                                <tr onclick="window.location.href='level.html?id=${position}'">
+                                    <td>${level.name}</td>
+                                    <td>#${position}</td>
+                                    <td>${level.points}</td>
+                                </tr>
+                            `;
+                        } else {
+                            return `
+                                <tr>
+                                    <td>${levelName}</td>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                </tr>
+                            `;
+                        }
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
     } else {
         playerDetails.innerHTML = '<p>Игрок не найден.</p>';
     }

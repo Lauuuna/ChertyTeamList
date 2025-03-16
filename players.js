@@ -10,13 +10,16 @@ async function fetchData(url) {
   function calculatePlayerPoints(player, levels) {
     let totalPoints = 0;
     player.levels_completed.forEach(levelName => {
-      const level = levels.find(l => l.name === levelName);
-      if (level) {
-        totalPoints += level.points;
-      }
+        const level = levels.find(l => l.name === levelName);
+        if (level) {
+            const playerProgress = level.players.find(p => p.id === player.id);
+            if (playerProgress && playerProgress.progress === 100) {
+                totalPoints += level.points;
+            }
+        }
     });
     return totalPoints;
-  }
+}
 
   async function loadPlayers() {
     const levels = await fetchData('levels.json');
