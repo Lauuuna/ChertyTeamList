@@ -1,0 +1,64 @@
+[
+    {
+      "id": 59075347,
+      "name": "Tartarus",
+      "phase": "10",
+      "ggdl_phase": "34",
+      "skill_sets": ["ship", "timings"],
+      "points": 110.3,
+      "list_percent": 52,
+      "players": [
+        {
+          "id": 1,
+          "date": "2025-XX-01",
+          "video_link": "https://www.youtube.com/watch?v=6CxgMThFR3Q",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "official",
+          "date_start": "2025-01-02",
+          "date_end": "XXXX-XX-XX",
+          "duration_days": "?"
+        },
+        {
+          "type": "actual",
+          "date_start": "2025-27-01",
+          "date_end": "XXXX-XX-XX",
+          "duration_days": "?"
+        }
+      ]
+    },
+    {
+      "id": 71434979,
+      "name": "Trueffet",
+      "phase": "10",
+      "ggdl_phase": "34",
+      "skill_sets": ["wave", "high cps", "fast-paced"],
+      "points": 106.8,
+      "list_percent": 53,
+      "players": [
+        {
+          "id": 2,
+          "date": "2024-XX-12",
+          "video_link": "https://youtu.be/7H-KXhwTLCU?si=yQd5XunvQJGu-oDB",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+            "type": "official",
+            "date_start": "2024-24-12",
+            "date_end": "2025-31-01",
+            "duration_days": 38
+        },
+        {
+          "type": "actual",
+          "date_start": "2024-08-12",
+          "date_end": "2025-26-01",
+          "duration_days": 49
+        }
+      ]
+    }
+  ]

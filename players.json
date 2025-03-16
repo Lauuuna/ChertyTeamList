@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "nickname": "tami.q",
+      "flag": "kz", 
+      "levels_completed": ["Tartarus"],
+      "osc": 3.778,
+      "l_percent": "24.630%",
+      "time_for_1_star": "510 Attempts",
+      "skill_set": ["overall", "ship"]
+    },
+    {
+      "id": 2,
+      "nickname": "angyedz",
+      "flag": "ru",
+      "levels_completed": ["Trueffet"],
+      "osc": 3.503,
+      "l_percent": "16.879%",
+      "time_for_1_star": "616 Attempts",
+      "skill_set": ["wave"]
+    }
+  ]
