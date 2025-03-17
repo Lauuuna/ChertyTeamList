@@ -29,6 +29,44 @@
 
   <div id="particles-js"></div>
   <canvas id="star-background"></canvas>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const actualArchiveButton = document.getElementById('actual-archive');
+        const officialArchiveButton = document.getElementById('official-archive');
+        const archiveList = document.getElementById('archive-list');
+        async function loadArchive(type) {
+            const levels = await fetchData('levels.json');
+            archiveList.innerHTML = ''; 
+    
+            levels.forEach(level => {
+                const archive = level.archives.find(archive => archive.type === type);
+                if (archive) {
+                    const archiveLevelCard = document.createElement('div');
+                    archiveLevelCard.className = 'archive-level-card';
+                    archiveLevelCard.innerHTML = `
+                        <h2>${level.name}</h2>
+                        <p class="archive-dates">${archive.date_start} - ${archive.date_end} (${archive.duration_days} дней)</p>
+                    `;
+                    archiveList.appendChild(archiveLevelCard);
+                }
+            });
+        }
+        actualArchiveButton.addEventListener('click', () => {
+            actualArchiveButton.classList.add('active');
+            officialArchiveButton.classList.remove('active');
+            loadArchive('actual');
+        });
+    
+        officialArchiveButton.addEventListener('click', () => {
+            officialArchiveButton.classList.add('active');
+            actualArchiveButton.classList.remove('active');
+            loadArchive('official');
+        });
+    
+        
+        loadArchive('actual');
+    });
+  </script>
   <script src="particles-config.js"></script>
   <script src="script.js"></script>
   <script src="stars.js"></script>

@@ -593,27 +593,27 @@ body {
   background-color: #333;
   border-radius: 10px;
   padding: 20px;
-  margin: 10px auto; /* Центрирование по оси X */
-  width: 70%; /* Уменьшенная ширина */
-  max-width: 500px; /* Максимальная ширина */
+  margin: 10px auto;
+  width: 70%; 
+  max-width: 500px; 
   transition: transform 0.2s;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  border: 2px solid #ff4444; /* Красная обводка */
-  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3); /* Тень для акцента */
+  border: 2px solid #ff4444;
+  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3); 
 }
 
 .player-card.with-border:hover {
   transform: scale(1.05);
-  border-color: #ff6666; /* Изменение цвета обводки при наведении */
+  border-color: #ff6666; 
 }
 
 .player-card.with-border h2 {
   margin: 0;
   font-size: 1.5em;
   color: #fff;
-  text-align: center; /* Текст по центру */
+  text-align: center;
 }
 
 .player-card.with-border .flag {
@@ -623,4 +623,52 @@ body {
   margin-left: 10px;
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* хуйня для филтровв*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container input, .search-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-container input::placeholder {
+    color: #aaa;
+}
+
+.search-container input:focus, .search-container select:focus {
+    border-color: #ff4444;
+}
+
+.search-container input[type="number"] {
+    width: 100px;
 }
