@@ -26,13 +26,13 @@
           "type": "official",
           "date_start": "2025-01-02",
           "date_end": "XXXX-XX-XX",
-          "duration_days": "?"
+          "duration_days": "X"
         },
         {
           "type": "actual",
           "date_start": "2025-27-01",
           "date_end": "XXXX-XX-XX",
-          "duration_days": "?"
+          "duration_days": "X"
         }
       ]
     },
@@ -194,6 +194,182 @@
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=Fs9QBWlwSgs",
           "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 68668045,
+      "name": "Congregation",
+      "phase": "9",
+      "ggdl_phase": "32",
+      "skill_sets": ["slow-paced", "timings", "nerve control"],
+      "points": 68.1,
+      "list_percent": 50,
+      "players": [
+        {
+          "id": 5,
+          "date": "2024-XX-12",
+          "video_link": "https://www.youtube.com/watch?v=eud4S1Cutag",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 88421468,
+      "name": "AKIRA",
+      "phase": "8",
+      "ggdl_phase": "32",
+      "skill_sets": ["wave", "ship"],
+      "points": 49,
+      "list_percent": 59,
+      "players": [
+        {
+          "id": 4,
+          "date": "2024-XX-10",
+          "video_link": "https://www.youtube.com/watch?v=HAJy9WCzut0",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "official",
+          "date_start": "2024-02-11",
+          "date_end": "2024-09-11",
+          "duration_days": "8"
+        }
+      ]
+    },
+    {
+      "id": 89488413,
+      "name": "Lumina",
+      "phase": "8",
+      "ggdl_phase": "30",
+      "skill_sets": ["timings", "nerve control"],
+      "points": 47,
+      "list_percent": 60,
+      "players": [
+        {
+          "id": 5,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=83NbxBwhgnc",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 52919433,
+      "name": "Arctic Lights",
+      "phase": "7",
+      "ggdl_phase": "32",
+      "skill_sets": ["timings", "wave"],
+      "points": 29.6,
+      "list_percent": 52,
+      "players": [
+        {
+          "id": 2,
+          "date": "2024-XX-06",
+          "video_link": "https://www.youtube.com/watch?v=Q0Gl0wkGLEc",
+          "progress": 100
+        },
+        {
+          "id": 4,
+          "date": "2024-XX-XX",
+          "video_link": "",
+          "progress": 54
+        }
+      ]
+    },
+    {
+      "id": 60740290,
+      "name": "Aquatic Auroras",
+      "phase": "6",
+      "ggdl_phase": "32",
+      "skill_sets": ["wave"],
+      "points": 25.8,
+      "list_percent": 52,
+      "players": [
+        {
+          "id": 5,
+          "date": "2024-XX-03",
+          "video_link": "https://www.youtube.com/watch?v=AU-EFqzmzRY",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 77255632,
+      "name": "Sink",
+      "phase": "6",
+      "ggdl_phase": "31",
+      "skill_sets": ["flow", "fast-paced", "timings"],
+      "points": 24.5,
+      "list_percent": 49,
+      "players": [
+        {
+          "id": 3,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=vPfTkh3dShM",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 81535535,
+      "name": "Shmarley Ville",
+      "phase": "6",
+      "ggdl_phase": "30",
+      "skill_sets": ["ball", "timings", "fast-paced"],
+      "points": 20.2,
+      "list_percent": 53,
+      "players": [
+        {
+          "id": 4,
+          "date": "2024-XX-10",
+          "video_link": "https://www.youtube.com/watch?v=v8_1yqlGmqA",
+          "progress": 100
+        },
+        {
+          "id": 3,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=31JYfWaazQk",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "official",
+          "date_start": "2024-06-10",
+          "date_end": "2024-01-11",
+          "duration_days": "27"
+        }
+      ]
+    },
+    {
+      "id": 28220417,
+      "name": "Yatagarasu",
+      "phase": "6",
+      "ggdl_phase": "31",
+      "skill_sets": ["ship", "overall", "nerve control"],
+      "points": 19.9,
+      "list_percent": 54,
+      "players": [
+        {
+          "id": 5,
+          "date": "2025-XX-01",
+          "video_link": "https://www.youtube.com/watch?v=6jkz542bp64",
+          "progress": 100
+        },
+        {
+          "id": 3,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=Yy0usq3_SEg",
+          "progress": 100
+        },
+        {
+          "id": 2,
+          "date": "202X-XX-XX",
+          "video_link": "",
+          "progress": 77
         }
       ]
     }

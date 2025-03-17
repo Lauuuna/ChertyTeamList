@@ -7,7 +7,8 @@
       "osc": 3.778,
       "l_percent": "24.630%",
       "time_for_1_star": "510 Attempts",
-      "skill_set": ["overall", "ship"]
+      "skill_set": ["overall", "ship"],
+      "channel_link": "https://www.youtube.com/@tami.q"
     },
     {
       "id": 2,
@@ -17,26 +18,40 @@
       "osc": 3.503,
       "l_percent": "16.879%",
       "time_for_1_star": "616 Attempts",
-      "skill_set": ["wave"]
+      "skill_set": ["wave"],
+      "channel_link": "http://www.youtube.com/@Angyedz"
     },
     {
       "id": 3,
       "nickname": "sailers",
       "flag": "ru",
-      "levels_completed": ["Cognition"],
+      "levels_completed": ["Cognition", "Sink", "Shmarley Ville", "Yatagarasu"],
       "osc": 2.939,
       "l_percent": "7.017%",
       "time_for_1_star": "956",
-      "skill_set": ["Overall"]
+      "skill_set": ["Overall"],
+      "channel_link": "http://www.youtube.com/@Sailers_gd"
     },
     {
       "id": 4,
       "nickname": "miffiewxx",
       "flag": "fi",
-      "levels_completed": ["CITRA", "Jesse Pinkman"],
+      "levels_completed": ["CITRA", "Jesse Pinkman", "Aquatic Auroras", "Shmarley Ville"],
       "osc": 3.781,
       "l_percent": "24.728%",
       "time_for_1_star": "509",
-      "skill_set": ["wave", "timings"]
+      "skill_set": ["wave", "timings"],
+      "channel_link": "https://www.youtube.com/@miffiewxx"
+    },
+    {
+      "id": 5,
+      "nickname": "imasssaya",
+      "flag": "ru",
+      "levels_completed": ["Congregation", "Lumina", "Yatagarasu"],
+      "osc": 2.827,
+      "l_percent": "5.778%",
+      "time_for_1_star": "1053",
+      "skill_set": ["overall"],
+      "channel_link": "http://www.youtube.com/@imasssaya"
     }
   ]

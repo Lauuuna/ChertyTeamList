@@ -120,10 +120,10 @@ async function loadLevelDetails() {
                 <h2>#${levelId} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                 <div class="level-info">
                     <p><span>ID:</span> ${level.id}</p>
-                    <p><span>Фаза:</span> ${level.phase}</p>
+                    <p><span>Phases:</span> ${level.phase}</p>
                     <p><span>GGDL:</span> ${level.ggdl_phase}</p>
-                    <p><span>Скилл-сеты:</span> ${level.skill_sets.join(', ')}</p>
-                    <p><span>Звезды:</span> ${level.points}</p>
+                    <p><span>Skill-sets:</span> ${level.skill_sets.join(', ')}</p>
+                    <p><span>Stars:</span> ${level.points}</p>
                     <p><span>LIST%:</span> ${level.list_percent}%</p>
                 </div>
                 <div class="video-player">
@@ -161,19 +161,40 @@ function scrollToTop() {
     });
 }
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', handleScroll);
+
+function handleScroll() {
     const scrollToTopButton = document.getElementById('scroll-to-top');
     if (window.scrollY > 300) {
-        scrollToTopButton.classList.add('show');
+        if (!scrollToTopButton.classList.contains('show')) {
+            scrollToTopButton.classList.remove('hide');
+            scrollToTopButton.classList.add('show');
+        }
     } else {
-        scrollToTopButton.classList.remove('show');
+        if (scrollToTopButton.classList.contains('show')) {
+            hideButton(scrollToTopButton);
+        }
     }
-});
+}
+
+function hideButton(button) {
+    button.classList.remove('show');
+    button.classList.add('hide');
+    setTimeout(() => {
+        button.classList.remove('hide');
+    }, 500); 
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.getElementById('scroll-to-top');
     if (scrollToTopButton) {
-        scrollToTopButton.addEventListener('click', scrollToTop);
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            hideButton(scrollToTopButton);
+        });
     }
 });
 
