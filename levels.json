@@ -48,7 +48,7 @@
         {
           "id": 2,
           "date": "2024-XX-12",
-          "video_link": "https://youtu.be/7H-KXhwTLCU?si=yQd5XunvQJGu-oDB",
+          "video_link": "https://www.youtube.com/watch?v=7H-KXhwTLCU",
           "progress": 100
         }
       ],
@@ -79,7 +79,7 @@
         {
           "id": 1,
           "date": "2025-XX-02",
-          "video_link": "https://youtu.be/lzA9TJvgvHg?si=qivgXlWtI_Y_7UuD",
+          "video_link": "https://www.youtube.com/watch?v=lzA9TJvgvHg",
           "progress": 100
         }
       ],
@@ -95,6 +95,105 @@
           "date_start": "2024-22-11",
           "date_end": "2024-7-12",
           "duration_days": 16
+        }
+      ]
+    },
+    {
+      "id": 57600307,
+      "name": "Cognition",
+      "phase": "9",
+      "ggdl_phase": "33",
+      "skill_sets": ["timings"],
+      "points": 78,
+      "list_percent": 53,
+      "players": [
+        {
+          "id": 3,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=69bq1R_IGGc",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 57571983,
+      "name": "SUPERHATEMEWORLD",
+      "phase": "9",
+      "ggdl_phase": "33",
+      "skill_sets": ["timings"],
+      "points": 77,
+      "list_percent": 59,
+      "players": [
+        {
+          "id": 1,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=OfbDkoXhAxw&t=1s",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 76159410,
+      "name": "Cosmic Cyclone",
+      "phase": "9",
+      "ggdl_phase": "33",
+      "skill_sets": ["wave"],
+      "points": 76.6,
+      "list_percent": 59,
+      "players": [
+        {
+          "id": 2,
+          "date": "2023-XX-12",
+          "video_link": "https://www.youtube.com/watch?v=h7bzA4BwkA0",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "official",
+          "date_start": "2024-10-11",
+          "date_end": "2024-24-11",
+          "duration_days": "15"
+        },
+        {
+          "type": "actual",
+          "date_start": "2023-30-12",
+          "date_end": "2024-21-11",
+          "duration_days": "324"
+        }
+      ]
+    },
+    {
+      "id": 80966089,
+      "name": "CITRA",
+      "phase": "9",
+      "ggdl_phase": "32",
+      "skill_sets": ["fast-paced", "high cps", "learny"],
+      "points": 74,
+      "list_percent": 45,
+      "players": [
+        {
+          "id": 4,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=4EUj4fWdiGc&t=1s",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 79918576,
+      "name": "Jesse Pinkman",
+      "phase": "9",
+      "ggdl_phase": "32",
+      "skill_sets": ["fast-paced", "high cps", "timings"],
+      "points": 72,
+      "list_percent": 48,
+      "players": [
+        {
+          "id": 4,
+          "date": "2025-XX-02",
+          "video_link": "https://www.youtube.com/watch?v=Fs9QBWlwSgs",
+          "progress": 100
         }
       ]
     }

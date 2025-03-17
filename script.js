@@ -5,7 +5,6 @@ async function fetchData(url) {
             throw new Error(`Ошибка загрузки данных: ${response.status}`);
         }
         const data = await response.json();
-        console.log('Данные успешно загружены:', data); // сообщение
         return data;
     } catch (error) {
         console.error('Ошибка при загрузке данных:', error);
@@ -30,15 +29,12 @@ async function loadLevels() {
     try {
         const levels = await fetchData('levels.json');
         const players = await fetchData('players.json');
-        console.log('Уровни:', levels); // сообщение
-        console.log('Игроки:', players); // сообщение
-
         const levelsList = document.getElementById('levels-list');
         if (!levelsList) {
-            console.error('Элемент levels-list не найден!');
+            console.error('ваывыпчси');
             return;
         }
-        levelsList.innerHTML = ''; 
+        levelsList.innerHTML = '';
 
         const searchText = document.getElementById('search-input').value;
         const phaseFilter = document.getElementById('phase-filter').value;
@@ -50,21 +46,34 @@ async function loadLevels() {
             const levelCard = document.createElement('div');
             levelCard.className = 'level-card';
             const firstPlayer = getPlayerInfo(level.players[0].id, players);
-
             const position = levels.indexOf(level) + 1;
-
-            const videoId = level.players[0].video_link.split('v=')[1];
-            const previewUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
-
+            let previewUrl = '';
+            if (level.players[0].video_link) {
+                const videoLink = level.players[0].video_link;
+                let videoId = '';
+                if (videoLink.includes('youtube.com')) {
+                    videoId = videoLink.split('v=')[1];
+                    const ampersandPosition = videoId.indexOf('&');
+                    if (ampersandPosition !== -1) {
+                        videoId = videoId.substring(0, ampersandPosition);
+                    }
+                } else if (videoLink.includes('youtu.be')) {
+                    videoId = videoLink.split('/').pop();
+                }
+                if (videoId) {
+                    previewUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
+                }
+            }
             levelCard.innerHTML = `
                 <div>
-                    <h2>#${position} - ${level.name}</h2>
+                    <h2>#${position} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                     <p>${firstPlayer.nickname}</p>
                 </div>
                 <div class="preview">
-                    <img src="${previewUrl}" alt="Preview">
+                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'>Превью недоступно</p>';" />` : '<p class="no-preview">Превью недоступно</p>'}
                 </div>
             `;
+
             levelCard.addEventListener('click', () => {
                 window.location.href = `level.html?id=${position}`;
             });
@@ -93,11 +102,22 @@ async function loadLevelDetails() {
             document.title = `${level.name} | Cherti Team List`;
             const firstPlayer = getPlayerInfo(level.players[0].id, players);
             const videoLink = level.players[0].video_link;
-            const videoId = videoLink.split('v=')[1];
-            const embedVideoLink = `https://www.youtube.com/embed/${videoId}`;
+
+            let videoId = '';
+            if (videoLink.includes('youtube.com')) {
+                videoId = videoLink.split('v=')[1];
+                const ampersandPosition = videoId.indexOf('&');
+                if (ampersandPosition !== -1) {
+                    videoId = videoId.substring(0, ampersandPosition);
+                }
+            } else if (videoLink.includes('youtu.be')) {
+                videoId = videoLink.split('/').pop();
+            }
+
+            const embedVideoLink = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
             levelDetails.innerHTML = `
-                <h2>#${levelId} - ${level.name}</h2>
+                <h2>#${levelId} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                 <div class="level-info">
                     <p><span>ID:</span> ${level.id}</p>
                     <p><span>Фаза:</span> ${level.phase}</p>
@@ -107,7 +127,11 @@ async function loadLevelDetails() {
                     <p><span>LIST%:</span> ${level.list_percent}%</p>
                 </div>
                 <div class="video-player">
-                    <iframe src="${embedVideoLink}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    ${embedVideoLink ? `
+                        <iframe src="${embedVideoLink}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    ` : `
+                        <p class="video-error">Видео недоступно.</p>
+                    `}
                 </div>
                 <h3>(${level.players.length}) всего записей:</h3>
                 <ul class="player-list">
@@ -130,11 +154,35 @@ async function loadLevelDetails() {
     }
 }
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+window.addEventListener('scroll', () => {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    if (window.scrollY > 300) {
+        scrollToTopButton.classList.add('show');
+    } else {
+        scrollToTopButton.classList.remove('show');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    if (scrollToTopButton) {
+        scrollToTopButton.addEventListener('click', scrollToTop);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.includes('level.html')) {
         loadLevelDetails();
     } else if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
         loadLevels();
+
         document.getElementById('search-input').addEventListener('input', loadLevels);
         document.getElementById('phase-filter').addEventListener('change', loadLevels);
         document.getElementById('position-filter').addEventListener('input', loadLevels);

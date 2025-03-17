@@ -12,13 +12,10 @@ async function fetchData(url) {
     player.levels_completed.forEach(levelName => {
         const level = levels.find(l => l.name === levelName);
         if (level) {
-            const playerProgress = level.players.find(p => p.id === player.id);
-            if (playerProgress && playerProgress.progress === 100) {
-                totalPoints += level.points;
-            }
+            totalPoints += level.points;
         }
     });
-    return totalPoints;
+    return Math.round(totalPoints * 10) / 10; 
 }
 
   async function loadPlayers() {

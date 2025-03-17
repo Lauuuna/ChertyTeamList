@@ -3,7 +3,7 @@
       "id": 1,
       "nickname": "tami.q",
       "flag": "kz", 
-      "levels_completed": ["Tartarus","Renevant"],
+      "levels_completed": ["Tartarus","Renevant", "SUPERHATEMEWORLD"],
       "osc": 3.778,
       "l_percent": "24.630%",
       "time_for_1_star": "510 Attempts",
@@ -13,10 +13,30 @@
       "id": 2,
       "nickname": "angyedz",
       "flag": "ru",
-      "levels_completed": ["Trueffet"],
+      "levels_completed": ["Trueffet", "Cosmic Cyclone"],
       "osc": 3.503,
       "l_percent": "16.879%",
       "time_for_1_star": "616 Attempts",
       "skill_set": ["wave"]
+    },
+    {
+      "id": 3,
+      "nickname": "sailers",
+      "flag": "ru",
+      "levels_completed": ["Cognition"],
+      "osc": 2.939,
+      "l_percent": "7.017%",
+      "time_for_1_star": "956",
+      "skill_set": ["Overall"]
+    },
+    {
+      "id": 4,
+      "nickname": "miffiewxx",
+      "flag": "fi",
+      "levels_completed": ["CITRA", "Jesse Pinkman"],
+      "osc": 3.781,
+      "l_percent": "24.728%",
+      "time_for_1_star": "509",
+      "skill_set": ["wave", "timings"]
     }
   ]
