@@ -544,7 +544,7 @@
     "list_percent": 58,
     "players": [
       {
-        "id": 6,
+        "id": 1,
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=oxGK2o6-T44",
         "progress": 100
@@ -720,6 +720,164 @@
         "date": "2024-XX-03",
         "video_link": "",
         "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 83235400,
+    "name": "memories",
+    "phase": "4",
+    "ggdl_phase": "27",
+    "skill_sets": ["timings"],
+    "points": 9.6,
+    "list_percent": 54,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-09",
+        "video_link": "https://www.youtube.com/watch?v=06QrbUAOtk8",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 62592746,
+    "name": "Tenth Circle",
+    "phase": "4",
+    "ggdl_phase": "25",
+    "skill_sets": ["wave", "chokepoints", "nerve control"],
+    "points": 9,
+    "list_percent": 63,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-09",
+        "video_link": "https://www.youtube.com/watch?v=jIw4o7D_HNU",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 83676299,
+    "name": "Wild Rose",
+    "phase": "4",
+    "ggdl_phase": "25",
+    "skill_sets": ["cube", "timings", "fast-paced"],
+    "points": 8.8,
+    "list_percent": 50,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=rFG6NPhSMc8",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=w5UbAnhdxIM",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2025-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=N66PSvRohiA",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 26133601,
+    "name": "Athanatos",
+    "phase": "4",
+    "ggdl_phase": "26",
+    "skill_sets": ["wave", "ship", "chokepoints"],
+    "points": 8.4,
+    "list_percent": 54,
+    "players": [
+      {
+        "id": 2,
+        "date": "2024-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=7vIyXZbSkjs",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=_Vo_sBlFB44",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=8_wDVuQqXE8",
+        "progress": 100
+      }
+    ],
+    "archives": [
+      {
+        "type": "actual",
+        "date_start": "2023-08-04",
+        "date_end": "2023-13-06",
+        "duration_days": "66"
+      }
+    ]
+  },
+  {
+    "id": 95355264,
+    "name": "Hot Rod",
+    "phase": "4",
+    "ggdl_phase": "25",
+    "skill_sets": ["timings", "learny", "chokepoints"],
+    "points": 8.4,
+    "list_percent": 55,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=zfc2pFUvQsM",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 51791710,
+    "name": "Auditory Breaker",
+    "phase": "4",
+    "ggdl_phase": "27",
+    "skill_sets": ["wave", "chokepoints", "nerve control"],
+    "points": 8.4,
+    "list_percent": 56,
+    "players": [
+      {
+        "id": 2,
+        "date": "2023-XX-06",
+        "video_link": "https://www.youtube.com/watch?v=3HWvilwlCAE",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-05",
+        "video_link": "https://www.youtube.com/watch?v=3HWvilwlCAE",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2025-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=Yg2xI4IMU9E",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2025-XX-03",
+        "video_link": "https://www.youtube.com/watch?v=3G3sGQZE2Wc",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 66
       }
     ]
   }
