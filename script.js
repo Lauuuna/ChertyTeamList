@@ -30,10 +30,7 @@ async function loadLevels() {
         const levels = await fetchData('levels.json');
         const players = await fetchData('players.json');
         const levelsList = document.getElementById('levels-list');
-        if (!levelsList) {
-            console.error('ваывыпчси');
-            return;
-        }
+        if (!levelsList) return;
         levelsList.innerHTML = '';
 
         const searchText = document.getElementById('search-input').value;
@@ -66,11 +63,11 @@ async function loadLevels() {
             }
             levelCard.innerHTML = `
                 <div>
-                    <h2>#${position} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
+                    <h2>#${position} - ${level.name} ${level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : ''} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                     <p>${firstPlayer.nickname}</p>
                 </div>
                 <div class="preview">
-                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'>X</p>';" />` : '<p class="no-preview"></p>'}
+                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'>Превью недоступно</p>';" />` : '<p class="no-preview">Превью недоступно</p>'}
                 </div>
             `;
 
@@ -80,7 +77,7 @@ async function loadLevels() {
             levelsList.appendChild(levelCard);
         });
     } catch (error) {
-        console.error('Ошибка при загрузке.', error);
+        console.error('Ошибка при загрузке:', error);
     }
 }
 
@@ -93,10 +90,7 @@ async function loadLevelDetails() {
         const level = levels[levelId - 1];
         const levelDetails = document.getElementById('level-details');
 
-        if (!levelDetails) {
-            console.error('level-details не найден.');
-            return;
-        }
+        if (!levelDetails) return;
 
         if (level) {
             document.title = `${level.name} | Cherti Team List`;
@@ -117,13 +111,15 @@ async function loadLevelDetails() {
             const embedVideoLink = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
             levelDetails.innerHTML = `
-                <h2>#${levelId} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
+                <h2>#${levelId} - ${level.name} ${level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : ''} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                 <div class="level-info">
                     <p><span>ID:</span> ${level.id}</p>
+                    <p><span>Phase:</span> ${level.phase}</p>
                     <p><span>GGDL:</span> ${level.ggdl_phase}</p>
                     <p><span>Skill-sets:</span> ${level.skill_sets.join(', ')}</p>
                     <p><span>Stars:</span> ${level.points}</p>
                     <p><span>LIST%:</span> ${level.list_percent}%</p>
+                    <p><span>Игрок:</span> ${firstPlayer.nickname}</p>
                 </div>
                 <div class="video-player">
                     ${embedVideoLink ? `
@@ -149,7 +145,7 @@ async function loadLevelDetails() {
             levelDetails.innerHTML = '<p>Уровень не найден.</p>';
         }
     } catch (error) {
-        console.error('Ошибка при загрузке.', error);
+        console.error('Ошибка при загрузке:', error);
     }
 }
 
