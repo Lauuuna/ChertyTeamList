@@ -635,5 +635,91 @@
         "progress": 100
       }
     ]
+  },
+  {
+    "id": 88244926,
+    "name": "MISFIRE",
+    "phase": "4",
+    "ggdl_phase": "27",
+    "skill_sets": ["flow", "chokepoints", "timings"],
+    "points": 11.1,
+    "list_percent": 53,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=yOFwoAogwY8",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2025-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=6bM75sd_fK4",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2025-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=1w046iGLPQY",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 30380566,
+    "name": "Bausha Vortex",
+    "phase": "4",
+    "ggdl_phase": "28",
+    "skill_sets": ["flow", "chokepoints", "timings"],
+    "points": 10.5,
+    "list_percent": 58,
+    "players": [
+      {
+        "id": 5,
+        "date": "2024-XX-08",
+        "video_link": "https://www.youtube.com/watch?v=Z3kBrNRCa04",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 69507105,
+    "name": "RASH",
+    "phase": "4",
+    "ggdl_phase": "26",
+    "skill_sets": ["overall", "fast-paced", "timings"],
+    "points": 9.7,
+    "list_percent": 55,
+    "players": [
+      {
+        "id": 5,
+        "date": "2024-XX-08",
+        "video_link": "https://www.youtube.com/watch?v=iRMXG_NdlbQ",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 113890714,
+    "name": "Forbearence",
+    "phase": "4",
+    "ggdl_phase": "X",
+    "skill_sets": ["fast-paced", "overall"],
+    "points": 9.7,
+    "list_percent": 50,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=moDSgLmC1yo",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "2024-XX-03",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
   }
 ]
