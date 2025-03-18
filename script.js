@@ -2,12 +2,12 @@ async function fetchData(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Ошибка загрузки данных: ${response.status}`);
+            throw new Error(`Ошибка загрузки данных : ${response.status}`);
         }
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Ошибка при загрузке данных:', error);
+        console.error('Ошибка при загрузке.', error);
         return [];
     }
 }
@@ -70,7 +70,7 @@ async function loadLevels() {
                     <p>${firstPlayer.nickname}</p>
                 </div>
                 <div class="preview">
-                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'>Превью недоступно</p>';" />` : '<p class="no-preview">Превью недоступно</p>'}
+                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'>X</p>';" />` : '<p class="no-preview"></p>'}
                 </div>
             `;
 
@@ -80,7 +80,7 @@ async function loadLevels() {
             levelsList.appendChild(levelCard);
         });
     } catch (error) {
-        console.error('Ошибка при загрузке уровней:', error);
+        console.error('Ошибка при загрузке.', error);
     }
 }
 
@@ -94,7 +94,7 @@ async function loadLevelDetails() {
         const levelDetails = document.getElementById('level-details');
 
         if (!levelDetails) {
-            console.error('Элемент level-details не найден!');
+            console.error('level-details не найден.');
             return;
         }
 
@@ -120,7 +120,6 @@ async function loadLevelDetails() {
                 <h2>#${levelId} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                 <div class="level-info">
                     <p><span>ID:</span> ${level.id}</p>
-                    <p><span>Phases:</span> ${level.phase}</p>
                     <p><span>GGDL:</span> ${level.ggdl_phase}</p>
                     <p><span>Skill-sets:</span> ${level.skill_sets.join(', ')}</p>
                     <p><span>Stars:</span> ${level.points}</p>
@@ -150,7 +149,7 @@ async function loadLevelDetails() {
             levelDetails.innerHTML = '<p>Уровень не найден.</p>';
         }
     } catch (error) {
-        console.error('Ошибка при загрузке деталей уровня:', error);
+        console.error('Ошибка при загрузке.', error);
     }
 }
 
@@ -161,29 +160,14 @@ function scrollToTop() {
     });
 }
 
-window.addEventListener('scroll', handleScroll);
-
-function handleScroll() {
+window.addEventListener('scroll', () => {
     const scrollToTopButton = document.getElementById('scroll-to-top');
     if (window.scrollY > 300) {
-        if (!scrollToTopButton.classList.contains('show')) {
-            scrollToTopButton.classList.remove('hide');
-            scrollToTopButton.classList.add('show');
-        }
+        scrollToTopButton.classList.add('show');
     } else {
-        if (scrollToTopButton.classList.contains('show')) {
-            hideButton(scrollToTopButton);
-        }
+        scrollToTopButton.classList.remove('show');
     }
-}
-
-function hideButton(button) {
-    button.classList.remove('show');
-    button.classList.add('hide');
-    setTimeout(() => {
-        button.classList.remove('hide');
-    }, 500); 
-}
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.getElementById('scroll-to-top');
@@ -193,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 0,
                 behavior: 'smooth'
             });
-            hideButton(scrollToTopButton);
         });
     }
 });

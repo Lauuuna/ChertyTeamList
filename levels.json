@@ -372,5 +372,268 @@
           "progress": 77
         }
       ]
-    }
+    },
+    {
+      "id": 111451617,
+      "name": "TRXPPING EYEBXLLS",
+      "phase": "5",
+      "ggdl_phase": "29",
+      "skill_sets": ["learny"],
+      "points": 16.7,
+      "list_percent": 49,
+      "players": [
+        {
+          "id": 5,
+          "date": "2024-XX-11",
+          "video_link": "https://www.youtube.com/watch?v=kLoUgomz170",
+          "progress": 100
+        },
+        {
+          "id": 4,
+          "date": "2025-XX-01",
+          "video_link": "https://www.youtube.com/watch?v=PH9sd9jihfY&t=3s",
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 26681070,
+      "name": "Sonic Wave",
+      "phase": "5",
+      "ggdl_phase": "30",
+      "skill_sets": ["wave", "nerve control", "chokepoints"],
+      "points": 16.3,
+      "list_percent": 56,
+      "players": [
+        {
+          "id": 2,
+          "date": "2023-XX-061",
+          "video_link": "https://www.youtube.com/watch?v=PdAz36aqFKY",
+          "progress": 100
+        },
+        {
+          "id": 5,
+          "date": "2025-XX-01",
+          "video_link": "https://www.youtube.com/watch?v=p2coLwulbh8",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "actual",
+          "date_start": "2023-14-06",
+          "date_end": "2023-29-12",
+          "duration_days": "196"
+        }
+      ]
+    },
+    {
+      "id": 74034217,
+      "name": "Ddiamond",
+      "phase": "5",
+      "ggdl_phase": "30",
+      "skill_sets": ["wave", "overall"],
+      "points": 15.9,
+      "list_percent": 55,
+      "players": [
+        {
+          "id": 4,
+          "date": "2024-XX-09",
+          "video_link": "https://www.youtube.com/watch?v=vosTJeNbWE0",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "official",
+          "date_start": "2024-23-09",
+          "date_end": "2024-05-10",
+          "duration_days": "13"
+        }
+      ]
+    },
+    {
+      "id": 78421544,
+      "name": "Shiranai",
+      "phase": "5",
+      "ggdl_phase": "X",
+      "skill_sets": ["X"],
+      "points": 14.7,
+      "list_percent": 58,
+      "players": [
+        {
+          "id": 4,
+          "date": "2023-XX-09",
+          "video_link": "https://www.youtube.com/watch?v=jGKbhKfBHjg",
+          "progress": 100
+        }
+      ],
+      "archives": [
+        {
+          "type": "official",
+          "date_start": "2024-15-09",
+          "date_end": "2024-22-09",
+          "duration_days": "8"
+        }
+      ]
+    },
+    {
+    "id": 85438299,
+    "name": "Shitty Acheron",
+    "phase": "5",
+    "ggdl_phase": "X",
+    "skill_sets": ["overall", "ship"],
+    "points": 13.4,
+    "list_percent": 57,
+    "players": [
+      {
+        "id": 1,
+        "date": "2023-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=tHTN9V8txhI",
+        "progress": 100
+      },
+      {
+        "id": 2,
+        "date": "20XX-XX-XX",
+        "video_link": "",
+        "progress": 92
+      }
+    ]
+  },
+  {
+    "id": 27122654,
+    "name": "Artificial Ascent",
+    "phase": "5",
+    "ggdl_phase": "28",
+    "skill_sets": ["nerve control", "overall", "chokepoints"],
+    "points": 13.1,
+    "list_percent": 53,
+    "players": [
+      {
+        "id": 5,
+        "date": "2024-XX-08",
+        "video_link": "https://www.youtube.com/watch?v=cIir9Em0h4k",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 45094581,
+    "name": "Delta Interface",
+    "phase": "5",
+    "ggdl_phase": "28",
+    "skill_sets": ["nerve control", "ship"],
+    "points": 13.1,
+    "list_percent": 58,
+    "players": [
+      {
+        "id": 6,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=oJgsY2uhjG0",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 34057654,
+    "name": "Black Blizzard",
+    "phase": "5",
+    "ggdl_phase": "27",
+    "skill_sets": ["timings", "duals", "cube"],
+    "points": 13,
+    "list_percent": 58,
+    "players": [
+      {
+        "id": 6,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=oxGK2o6-T44",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 77487419,
+    "name": "Mind Control",
+    "phase": "5",
+    "ggdl_phase": "27",
+    "skill_sets": ["overall"],
+    "points": 13,
+    "list_percent": 60,
+    "players": [
+      {
+        "id": 3,
+        "date": "2025-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=j67qVyajj5M",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 94410319,
+    "name": "Ouroboros startpos 2",
+    "phase": "5",
+    "ggdl_phase": "26",
+    "skill_sets": ["wave", "chokepoints", "high cps"],
+    "points": 13,
+    "list_percent": 54,
+    "players": [
+      {
+        "id": 3,
+        "date": "2024-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=lQ46WT_0ngQ",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 38235367,
+    "name": "Quantum Processing",
+    "phase": "5",
+    "ggdl_phase": "27",
+    "skill_sets": ["timings", "chokepoints"],
+    "points": 13,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "2025-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=sx84tcnNgAI",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 60130895,
+    "name": "Berserk",
+    "phase": "5",
+    "ggdl_phase": "27",
+    "skill_sets": ["wave", "nerve control", "high cps"],
+    "points": 13,
+    "list_percent": 48,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=Vdh6LLObPOI",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 73733373,
+    "name": "DMG CTRL",
+    "phase": "4",
+    "ggdl_phase": "27",
+    "skill_sets": ["wave", "overall", "ship"],
+    "points": 11.1,
+    "list_percent": 65,
+    "players": [
+      {
+        "id": 3,
+        "date": "2025-XX-03",
+        "video_link": "https://www.youtube.com/watch?v=P60OCKQbe40",
+        "progress": 100
+      }
+    ]
+  }
 ]
