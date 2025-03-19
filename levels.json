@@ -947,6 +947,12 @@
         "date": "2024-XX-09",
         "video_link": "",
         "progress": 100
+      },
+      {
+        "id": 13,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 100
       }
     ]
   },
@@ -1248,6 +1254,12 @@
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 81
+      },
+      {
+        "id": 13,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 100
       },
       {
         "id": 6,
@@ -1856,7 +1868,7 @@
       {
         "id": 2,
         "date": "2023-XX-09",
-        "video_link": "",
+        "video_link": "https://www.youtube.com/watch?v=bH3hGeyNhuo",
         "progress": 100
       },
       {
@@ -2201,6 +2213,12 @@
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=MEGfqI6BfYM",
         "progress": 100
+      },
+      {
+        "id": 13,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 100
       }
     ]
   },
@@ -2313,7 +2331,7 @@
       {
         "id": 3,
         "date": "2019-XX-12",
-        "video_link": "",
+        "video_link": "https://www.youtube.com/watch?v=f_Fu6Ibx8tU",
         "progress": 100
       },
       {
@@ -2505,7 +2523,7 @@
       {
         "id": 1,
         "date": "X",
-        "video_link": "",
+        "video_link": "https://www.youtube.com/watch?v=-PClYRMzE6c",
         "progress": 100
       },
       {
