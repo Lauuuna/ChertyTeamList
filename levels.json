@@ -578,7 +578,7 @@
     "list_percent": 54,
     "players": [
       {
-        "id": 3,
+        "id": 4,
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=lQ46WT_0ngQ",
         "progress": 100
@@ -837,6 +837,12 @@
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=zfc2pFUvQsM",
         "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 73
       }
     ]
   },
@@ -1023,6 +1029,14 @@
         "video_link": "",
         "progress": 100
       }
+    ],
+    "archives": [
+      {
+        "type": "actual",
+        "date_start": "2023-24-02",
+        "date_end": "2023-07-04",
+        "duration_days": "45"
+      }
     ]
   },
   {
@@ -1051,6 +1065,14 @@
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=vhnFe14OXq0",
         "progress": 100
+      }
+    ],
+    "archives": [
+      {
+        "type": "actual",
+        "date_start": "2022-20-11",
+        "date_end": "2023-23-02",
+        "duration_days": "45"
       }
     ]
   },
@@ -1244,22 +1266,28 @@
         "progress": 100
       },
       {
+        "id": 13,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 100
+      },
+      {
         "id": 16,
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 90
       },
       {
+        "id": 7,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 86
+      },
+      {
         "id": 4,
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 81
-      },
-      {
-        "id": 13,
-        "date": "202X-XX-XX",
-        "video_link": "",
-        "progress": 100
       },
       {
         "id": 6,
@@ -1648,7 +1676,7 @@
     "list_percent": 100,
     "players": [
       {
-        "id": 4,
+        "id": 6,
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=MOq2LEk643o",
         "progress": 100
@@ -1688,7 +1716,7 @@
     "list_percent": 100,
     "players": [
       {
-        "id": 1,
+        "id": 4,
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=qtSdJim8Rhk",
         "progress": 100
@@ -1853,6 +1881,14 @@
         "date": "2022-XX-11",
         "video_link": "https://www.youtube.com/watch?v=bC-PzV-tntM",
         "progress": 100
+      }
+    ],
+    "archives": [
+      {
+        "type": "actual",
+        "date_start": "2022-04-11",
+        "date_end": "2022-19-11",
+        "duration_days": "16"
       }
     ]
   },
@@ -2119,6 +2155,14 @@
         "date": "2019-XX-03",
         "video_link": "https://www.youtube.com/watch?v=Px7XFrBBRHE",
         "progress": 100
+      }
+    ],
+    "archives": [
+      {
+        "type": "actual",
+        "date_start": "2019-26-06",
+        "date_end": "2022-25-06",
+        "duration_days": "1221"
       }
     ]
   },
@@ -2728,6 +2772,14 @@
         "date": "X",
         "video_link": "",
         "progress": 100
+      }
+    ],
+    "archives": [
+      {
+        "type": "actual",
+        "date_start": "2018-15-07",
+        "date_end": "2019-19-03",
+        "duration_days": "215"
       }
     ]
   },
