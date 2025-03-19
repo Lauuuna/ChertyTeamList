@@ -2,12 +2,12 @@ async function fetchData(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Ошибка загрузки данных : ${response.status}`);
+            throw new Error(`Error loading data : ${response.status}`);
         }
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Ошибка при загрузке.', error);
+        console.error('Error loading.', error);
         return [];
     }
 }
@@ -119,16 +119,17 @@ async function loadLevelDetails() {
                     <p><span>Skill-sets:</span> ${level.skill_sets.join(', ')}</p>
                     <p><span>Stars:</span> ${level.points}</p>
                     <p><span>LIST%:</span> ${level.list_percent}%</p>
-                    <p><span>Игрок:</span> ${firstPlayer.nickname}</p>
+                    <p><span>Verified by:</span> ${firstPlayer.nickname}</p>
+                    <p class="enjoyment" id="enjoyment"><span>Enjoyment:</span> Нажмите, чтобы увидеть оценки игроков</p>
                 </div>
                 <div class="video-player">
                     ${embedVideoLink ? `
                         <iframe src="${embedVideoLink}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     ` : `
-                        <p class="video-error">Видео недоступно.</p>
+                        <p class="video-error">Video unavailable.</p>
                     `}
                 </div>
-                <h3>(${level.players.length}) всего записей:</h3>
+                <h3>(${level.players.length}) total records:</h3>
                 <ul class="player-list">
                     ${level.players.map(player => {
                         const playerData = getPlayerInfo(player.id, players);
@@ -141,29 +142,74 @@ async function loadLevelDetails() {
                     }).join('')}
                 </ul>
             `;
+
+            const enjoymentBlock = document.getElementById('enjoyment');
+            enjoymentBlock.addEventListener('click', async () => {
+                const enjoymentData = await fetchData('enjoyment.json');
+                const levelEnjoyment = enjoymentData[level.id];
+                const modal = document.getElementById('enjoyment-modal');
+                const enjoymentList = document.getElementById('enjoyment-list');
+
+                const totalEnjoyment = level.enjoyment || (levelEnjoyment ? calculateAverageEnjoyment(levelEnjoyment) : null);
+
+                let content = '';
+                if (totalEnjoyment !== null) {
+                    content += `<p><strong>Enjoyment:</strong> ${totalEnjoyment}/10</p>`;
+                }
+                if (levelEnjoyment) {
+                    content += Object.entries(levelEnjoyment).map(([playerId, rating]) => {
+                        const player = players.find(p => p.id === parseInt(playerId));
+                        return `<p><strong>${player?.nickname || 'Unknown Player'}:</strong> ${rating}/10</p>`;
+                    }).join('');
+                } else {
+                    content += `<p>There are no opinions. Maybe you will be the first?</p>`;
+                }
+
+                content += `<button id="send-opinion" class="send-opinion-button">Send Opinion</button>`;
+
+                enjoymentList.innerHTML = content;
+
+                const sendOpinionButton = document.getElementById('send-opinion');
+                sendOpinionButton.addEventListener('click', () => {
+                    window.open('https://forms.gle/ASiLaXuWrrsHcDga9', '_blank');
+                });
+
+                modal.style.display = 'flex';
+            });
+
+            const closeModal = document.querySelector('.close');
+            closeModal.addEventListener('click', () => {
+                const modal = document.getElementById('enjoyment-modal');
+                modal.style.display = 'none';
+            });
         } else {
-            levelDetails.innerHTML = '<p>Уровень не найден.</p>';
+            levelDetails.innerHTML = '<p>Level not found..</p>';
         }
     } catch (error) {
-        console.error('Ошибка при загрузке:', error);
+        console.error('Error loading :', error);
     }
 }
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+function calculateAverageEnjoyment(enjoymentData) {
+    const ratings = Object.values(enjoymentData);
+    if (ratings.length === 0) return 0;
+    const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    return (total / ratings.length).toFixed(1);
 }
 
-window.addEventListener('scroll', () => {
-    const scrollToTopButton = document.getElementById('scroll-to-top');
-    if (window.scrollY > 300) {
-        scrollToTopButton.classList.add('show');
-    } else {
-        scrollToTopButton.classList.remove('show');
-    }
-});
+function calculateAverageEnjoyment(enjoymentData) {
+    const ratings = Object.values(enjoymentData);
+    if (ratings.length === 0) return 0;
+    const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    return (total / ratings.length).toFixed(1);
+}
+
+function calculateAverageEnjoyment(enjoymentData) {
+    const ratings = Object.values(enjoymentData);
+    if (ratings.length === 0) return 0;
+    const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    return (total / ratings.length).toFixed(1);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.getElementById('scroll-to-top');
@@ -188,3 +234,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('position-filter').addEventListener('input', loadLevels);
     }
 });
+

@@ -56,7 +56,7 @@ async function loadPlayerDetails() {
                 <p><span>Hardest:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
                 <p><span>OSC:</span> ${player.osc}</p>
                 <p><span>L%:</span> ${player.l_percent}</p>
-                <p><span>ЗА СКОЛЬКО ПРОЙДЕТ 1⭐:</span> ${player.time_for_1_star}</p>
+                <p><span>ATTEMPTS ARE REQUIRED TO 1⭐:</span> ${player.time_for_1_star}</p>
                 <p><span>Skill-set:</span> ${player.skill_set.join(', ')}</p>
             </div>
             <div class="completed-levels">

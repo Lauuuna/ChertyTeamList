@@ -5,6 +5,7 @@
       "phase": "10",
       "ggdl_phase": "34",
       "skill_sets": ["ship", "timings"],
+      "enjoyment": 8,
       "points": 110.3,
       "list_percent": 52,
       "players": [
@@ -75,6 +76,7 @@
       "skill_sets": ["overall"],
       "points": 79.5,
       "list_percent": 56,
+      "enjoyment": 8,
       "players": [
         {
           "id": 1,
@@ -106,6 +108,7 @@
       "skill_sets": ["timings"],
       "points": 78,
       "list_percent": 53,
+      "enjoyment": 8,
       "players": [
         {
           "id": 3,
@@ -123,6 +126,7 @@
       "skill_sets": ["timings"],
       "points": 77,
       "list_percent": 59,
+      "enjoyment": 8,
       "players": [
         {
           "id": 1,
@@ -140,6 +144,7 @@
       "skill_sets": ["wave"],
       "points": 76.6,
       "list_percent": 59,
+      "enjoyment": 8,
       "players": [
         {
           "id": 2,
@@ -171,6 +176,7 @@
       "skill_sets": ["fast-paced", "high cps", "learny"],
       "points": 74,
       "list_percent": 45,
+      "enjoyment": 9,
       "players": [
         {
           "id": 4,
@@ -188,6 +194,7 @@
       "skill_sets": ["fast-paced", "high cps", "timings"],
       "points": 72,
       "list_percent": 48,
+      "enjoyment": 7,
       "players": [
         {
           "id": 4,
@@ -205,6 +212,7 @@
       "skill_sets": ["slow-paced", "timings", "nerve control"],
       "points": 68.1,
       "list_percent": 50,
+      "enjoyment": 6,
       "players": [
         {
           "id": 5,
@@ -222,6 +230,7 @@
       "skill_sets": ["wave", "ship"],
       "points": 49,
       "list_percent": 59,
+      "enjoyment": 8,
       "players": [
         {
           "id": 4,
@@ -247,6 +256,7 @@
       "skill_sets": ["timings", "nerve control"],
       "points": 47,
       "list_percent": 60,
+      "enjoyment": 7,
       "players": [
         {
           "id": 5,
@@ -264,6 +274,7 @@
       "skill_sets": ["timings", "wave"],
       "points": 29.6,
       "list_percent": 52,
+      "enjoyment": 5,
       "players": [
         {
           "id": 2,
@@ -287,6 +298,7 @@
       "skill_sets": ["wave"],
       "points": 25.8,
       "list_percent": 52,
+      "enjoyment": 7,
       "players": [
         {
           "id": 4,
@@ -304,6 +316,7 @@
       "skill_sets": ["flow", "fast-paced", "timings"],
       "points": 24.5,
       "list_percent": 49,
+      "enjoyment": 7,
       "players": [
         {
           "id": 3,
@@ -321,6 +334,7 @@
       "skill_sets": ["ball", "timings", "fast-paced"],
       "points": 20.2,
       "list_percent": 53,
+      "enjoyment": 9,
       "players": [
         {
           "id": 4,
@@ -352,6 +366,7 @@
       "skill_sets": ["ship", "overall", "nerve control"],
       "points": 19.9,
       "list_percent": 54,
+      "enjoyment": 6,
       "players": [
         {
           "id": 5,
@@ -381,6 +396,7 @@
       "skill_sets": ["learny"],
       "points": 16.7,
       "list_percent": 49,
+      "enjoyment": 7,
       "players": [
         {
           "id": 5,
@@ -404,6 +420,7 @@
       "skill_sets": ["wave", "nerve control", "chokepoints"],
       "points": 16.3,
       "list_percent": 56,
+      "enjoyment": 5,
       "players": [
         {
           "id": 2,
@@ -435,6 +452,7 @@
       "skill_sets": ["wave", "overall"],
       "points": 15.9,
       "list_percent": 55,
+      "enjoyment": 7,
       "players": [
         {
           "id": 4,
@@ -460,6 +478,7 @@
       "skill_sets": ["X"],
       "points": 14.7,
       "list_percent": 58,
+      "enjoyment": 0,
       "players": [
         {
           "id": 4,
@@ -485,6 +504,7 @@
     "skill_sets": ["overall", "ship"],
     "points": 13.4,
     "list_percent": 57,
+    "enjoyment": 5,
     "players": [
       {
         "id": 1,
@@ -508,6 +528,7 @@
     "skill_sets": ["nerve control", "overall", "chokepoints"],
     "points": 13.1,
     "list_percent": 53,
+    "enjoyment": 7,
     "players": [
       {
         "id": 5,
@@ -525,6 +546,7 @@
     "skill_sets": ["nerve control", "ship"],
     "points": 13.1,
     "list_percent": 58,
+    "enjoyment": 8,
     "players": [
       {
         "id": 6,
@@ -542,6 +564,7 @@
     "skill_sets": ["timings", "duals", "cube"],
     "points": 13,
     "list_percent": 58,
+    "enjoyment": 7,
     "players": [
       {
         "id": 1,
@@ -559,6 +582,7 @@
     "skill_sets": ["overall"],
     "points": 13,
     "list_percent": 60,
+    "enjoyment": 8,
     "players": [
       {
         "id": 3,
@@ -576,6 +600,7 @@
     "skill_sets": ["wave", "chokepoints", "high cps"],
     "points": 13,
     "list_percent": 54,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -593,6 +618,7 @@
     "skill_sets": ["timings", "chokepoints"],
     "points": 13,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 3,
@@ -610,6 +636,7 @@
     "skill_sets": ["wave", "nerve control", "high cps"],
     "points": 13,
     "list_percent": 48,
+    "enjoyment": 9,
     "players": [
       {
         "id": 4,
@@ -627,6 +654,7 @@
     "skill_sets": ["wave", "overall", "ship"],
     "points": 11.1,
     "list_percent": 65,
+    "enjoyment": 7,
     "players": [
       {
         "id": 3,
@@ -644,6 +672,7 @@
     "skill_sets": ["flow", "chokepoints", "timings"],
     "points": 11.1,
     "list_percent": 53,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -673,6 +702,7 @@
     "skill_sets": ["flow", "chokepoints", "timings"],
     "points": 10.5,
     "list_percent": 58,
+    "enjoyment": 7,
     "players": [
       {
         "id": 5,
@@ -690,6 +720,7 @@
     "skill_sets": ["overall", "fast-paced", "timings"],
     "points": 9.7,
     "list_percent": 55,
+    "enjoyment": 8,
     "players": [
       {
         "id": 5,
@@ -708,6 +739,7 @@
     "points": 9.7,
     "list_percent": 50,
     "show_we_icon": true,
+    "enjoyment": 6,
     "players": [
       {
         "id": 4,
@@ -731,6 +763,7 @@
     "skill_sets": ["timings"],
     "points": 9.6,
     "list_percent": 54,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -748,6 +781,7 @@
     "skill_sets": ["wave", "chokepoints", "nerve control"],
     "points": 9,
     "list_percent": 63,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -765,6 +799,7 @@
     "skill_sets": ["cube", "timings", "fast-paced"],
     "points": 8.8,
     "list_percent": 50,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -794,6 +829,7 @@
     "skill_sets": ["wave", "ship", "chokepoints"],
     "points": 8.4,
     "list_percent": 54,
+    "enjoyment": 7,
     "players": [
       {
         "id": 2,
@@ -831,6 +867,7 @@
     "skill_sets": ["timings", "learny", "chokepoints"],
     "points": 8.4,
     "list_percent": 55,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -854,6 +891,7 @@
     "skill_sets": ["wave", "chokepoints", "nerve control"],
     "points": 8.4,
     "list_percent": 56,
+    "enjoyment": 6,
     "players": [
       {
         "id": 2,
@@ -901,6 +939,7 @@
     "skill_sets": ["high cps", "flow", "chokepoints"],
     "points": 8.2,
     "list_percent": 54,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -918,6 +957,7 @@
     "skill_sets": ["timings", "flow", "chokepoints"],
     "points": 8.2,
     "list_percent": 54,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -941,6 +981,7 @@
     "skill_sets": ["high cps", "wave", "fast-paced"],
     "points": 6.8,
     "list_percent": 57,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -970,6 +1011,7 @@
     "skill_sets": ["timings", "overall", "nerve control"],
     "points": 6.6,
     "list_percent": 51,
+    "enjoyment": 8,
     "players": [
       {
         "id": 3,
@@ -987,6 +1029,7 @@
     "skill_sets": ["wave", "chokepoints", "nerve control"],
     "points": 6.4,
     "list_percent": 60,
+    "enjoyment": 5,
     "players": [
       {
         "id": 5,
@@ -1010,6 +1053,7 @@
     "skill_sets": ["timings", "high cps", "fast-paced"],
     "points": 6.1,
     "list_percent": 57,
+    "enjoyment": 6,
     "players": [
       {
         "id": 4,
@@ -1047,6 +1091,7 @@
     "skill_sets": ["wave", "chokepoints", "ship"],
     "points": 6.1,
     "list_percent": 51,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1084,6 +1129,7 @@
     "skill_sets": ["flow", "chokepoints", "fast-paced"],
     "points": 6,
     "list_percent": 54,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1101,6 +1147,7 @@
     "skill_sets": ["overall", "learny", "fast-paced"],
     "points": 5.8,
     "list_percent": 54,
+    "enjoyment": 9,
     "players": [
       {
         "id": 3,
@@ -1124,6 +1171,7 @@
     "skill_sets": ["wave", "chokepoints", "fast-paced"],
     "points": 5.6,
     "list_percent": 59,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1147,6 +1195,7 @@
     "skill_sets": ["timings", "chokepoints", "fast-paced"],
     "points": 5.5,
     "list_percent": 57,
+    "enjoyment": 7,
     "players": [
       {
         "id": 3,
@@ -1170,10 +1219,11 @@
     "skill_sets": ["overall", "chokepoints", "timings"],
     "points": 5.2,
     "list_percent": 59,
+    "enjoyment": 7,
     "players": [
       {
         "id": 6,
-        "date": "2024-XX-02",
+        "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=0siQdmvtNqs",
         "progress": 100
       }
@@ -1187,6 +1237,7 @@
     "skill_sets": ["chokepoints", "timings"],
     "points": 5.1,
     "list_percent": 59,
+    "enjoyment": 6,
     "players": [
       {
         "id": 5,
@@ -1216,6 +1267,7 @@
     "skill_sets": ["fast-paced", "timings", "ship"],
     "points": 5.1,
     "list_percent": 54,
+    "enjoyment": 6,
     "players": [
       {
         "id": 2,
@@ -1305,6 +1357,7 @@
     "skill_sets": ["chokepoints", "fast-paced"],
     "points": 5.1,
     "list_percent": 56,
+    "enjoyment": 6,
     "players": [
       {
         "id": 4,
@@ -1322,6 +1375,7 @@
     "skill_sets": ["chokepoints", "wave", "ship"],
     "points": 5,
     "list_percent": 61,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1339,6 +1393,7 @@
     "skill_sets": ["chokepoints", "wave", "ship"],
     "points": 4.8,
     "list_percent": 57,
+    "enjoyment": 5,
     "players": [
       {
         "id": 2,
@@ -1390,6 +1445,7 @@
     "skill_sets": ["chokepoints", "wave"],
     "points": 3.4,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 4,
@@ -1407,6 +1463,7 @@
     "skill_sets": ["low-paced", "ball", "cube", "timings"],
     "points": 3.2,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 5,
@@ -1436,6 +1493,7 @@
     "skill_sets": ["fast-paced", "high cps", "learny"],
     "points": 3,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -1453,6 +1511,7 @@
     "skill_sets": ["timings", "cube", "chokepoints"],
     "points": 2.8,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 6,
@@ -1470,6 +1529,7 @@
     "skill_sets": ["ship", "swing", "chokepoints"],
     "points": 2.7,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 5,
@@ -1487,6 +1547,7 @@
     "skill_sets": ["timings", "high cps", "chokepoints"],
     "points": 2.6,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 1,
@@ -1510,6 +1571,7 @@
     "skill_sets": ["flow", "ship", "learny"],
     "points": 2.5,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1527,6 +1589,7 @@
     "skill_sets": ["timings", "wave", "fast-paced"],
     "points": 2.4,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1556,6 +1619,7 @@
     "skill_sets": ["high cps", "UFO", "learny"],
     "points": 2.4,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1576,6 +1640,7 @@
     "skill_sets": ["learny", "duals", "flow"],
     "points": 1.7,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1593,6 +1658,7 @@
     "skill_sets": ["timings", "chokepoints", "fast-paced"],
     "points": 1.6,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -1622,6 +1688,7 @@
     "skill_sets": ["chokepoints", "timings", "flow"],
     "points": 1.6,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -1651,6 +1718,7 @@
     "skill_sets": ["high cps", "flow", "fast-paced"],
     "points": 1.4,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1674,6 +1742,7 @@
     "skill_sets": ["slow-paced", "memory", "chokepoints"],
     "points": 1.4,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 6,
@@ -1691,6 +1760,7 @@
     "skill_sets": ["nerve control", "chokepoints", "overall"],
     "points": 1.4,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 1,
@@ -1714,6 +1784,7 @@
     "skill_sets": ["flow", "wave", "fast-paced"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 4,
@@ -1731,6 +1802,7 @@
     "skill_sets": ["lerany", "ship", "timings"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 6,
@@ -1748,6 +1820,7 @@
     "skill_sets": ["ship", "chokepoints"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -1780,7 +1853,7 @@
         "progress": 100
       },
       {
-        "id": 6,
+        "id": 9,
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=j9tusMnE3Wo",
         "progress": 100
@@ -1795,6 +1868,7 @@
     "skill_sets": ["chokepoints", "ship", "timings"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 6,
@@ -1812,6 +1886,7 @@
     "skill_sets": ["chokepoints", "ship", "timings"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -1841,6 +1916,7 @@
     "skill_sets": ["chokepoints", "ship", "overall"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 6,
@@ -1858,6 +1934,7 @@
     "skill_sets": ["flow", "high cps", "learny"],
     "points": 1.3,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -1875,6 +1952,7 @@
     "skill_sets": ["timings", "wave", "slow-paced"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 6,
@@ -1900,6 +1978,7 @@
     "skill_sets": ["chokepoints", "timings", "wave"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 2,
@@ -1941,6 +2020,7 @@
     "skill_sets": ["wave", "chokepoints", "ship"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 3,
@@ -1964,6 +2044,7 @@
     "skill_sets": ["flow", "learny", "fast-paced"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 4,
@@ -1981,6 +2062,7 @@
     "skill_sets": ["chokepoints", "wave"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 6,
@@ -1999,6 +2081,7 @@
     "points": 1.2,
     "list_percent": 100,
     "show_we_icon": true,
+    "enjoyment": 4,
     "players": [
       {
         "id": 4,
@@ -2028,6 +2111,7 @@
     "skill_sets": ["duals", "learny"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2053,6 +2137,7 @@
     "skill_sets": ["timings", "wave", "chokepoints"],
     "points": 1.2,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 16,
@@ -2076,6 +2161,7 @@
     "skill_sets": ["fast-paced"],
     "points": 1.1,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2093,6 +2179,7 @@
     "skill_sets": ["timings", "flow", "fast-paced"],
     "points": 1.1,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -2110,6 +2197,7 @@
     "skill_sets": ["ship", "wave", "fast-paced"],
     "points": 1.1,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 10,
@@ -2157,6 +2245,7 @@
     "skill_sets": ["chokepoints", "wave", "ship"],
     "points": 1.1,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 6,
@@ -2182,6 +2271,7 @@
     "skill_sets": ["timings", "choke points", "wave"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 3,
@@ -2205,6 +2295,7 @@
     "skill_sets": ["timings", "fast-paced", "overall"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2282,6 +2373,7 @@
     "skill_sets": ["timings", "overall", "chokepoints"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 6,
@@ -2305,6 +2397,7 @@
     "skill_sets": ["timings", "ship", "wave"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 4,
@@ -2322,6 +2415,7 @@
     "skill_sets": ["timings", "chokepoints"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 4,
     "players": [
       {
         "id": 10,
@@ -2345,6 +2439,7 @@
     "skill_sets": ["timings", "ship", "wave"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 4,
@@ -2362,6 +2457,7 @@
     "skill_sets": ["flow", "timings", "fast-paced"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 3,
@@ -2379,6 +2475,7 @@
     "skill_sets": ["chokepoints", "ship", "wave"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 6,
@@ -2444,11 +2541,18 @@
     "skill_sets": ["overall", "learny", "nerve control"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 2,
         "date": "2023-XX-04",
         "video_link": "https://www.youtube.com/watch?v=fpaangbj5oE",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "2024-15-10",
+        "video_link": "",
         "progress": 100
       },
       {
@@ -2467,6 +2571,7 @@
     "skill_sets": ["flow", "learny", "high cps"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2502,6 +2607,7 @@
     "skill_sets": ["gimmicky", "ship", "chokepoints"],
     "points": 1,
     "list_percent": 100,
+    "enjoyment": 4,
     "players": [
       {
         "id": 5,
@@ -2519,6 +2625,7 @@
     "skill_sets": ["duals", "timings", "chokepoints"],
     "points": 0.9,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 3,
@@ -2548,6 +2655,7 @@
     "skill_sets": ["learny", "fast-paced", "flow"],
     "points": 0.9,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2565,6 +2673,7 @@
     "skill_sets": ["flow", "ship", "timings"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 1,
@@ -2624,6 +2733,7 @@
     "skill_sets": ["high cps", "fast-paced"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2641,6 +2751,7 @@
     "skill_sets": ["wave", "cube"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 14,
@@ -2664,6 +2775,7 @@
     "skill_sets": ["wave", "spider"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
@@ -2681,6 +2793,7 @@
     "skill_sets": ["wave", "chokepoints", "nerve-control"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 6,
@@ -2704,6 +2817,7 @@
     "skill_sets": ["flow", "learny", "high cps"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 8,
     "players": [
       {
         "id": 4,
@@ -2733,6 +2847,7 @@
     "skill_sets": ["timings", "nerve-control", "slow-paced"],
     "points": 0.8,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 1,
@@ -2762,6 +2877,7 @@
     "skill_sets": ["chokepoints", "ship", "timings"],
     "points": 0.7,
     "list_percent": 100,
+    "enjoyment": 5,
     "players": [
       {
         "id": 6,
@@ -2793,6 +2909,7 @@
     "skill_sets": ["wave", "duals"],
     "points": 0.7,
     "list_percent": 100,
+    "enjoyment": 6,
     "players": [
       {
         "id": 6,
@@ -2816,6 +2933,7 @@
     "skill_sets": ["nerve-control", "wave", "learny"],
     "points": 0.7,
     "list_percent": 100,
+    "enjoyment": 7,
     "players": [
       {
         "id": 6,
