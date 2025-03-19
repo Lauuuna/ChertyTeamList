@@ -120,7 +120,7 @@ async function loadLevelDetails() {
                     <p><span>Stars:</span> ${level.points}</p>
                     <p><span>LIST%:</span> ${level.list_percent}%</p>
                     <p><span>Verified by:</span> ${firstPlayer.nickname}</p>
-                    <p class="enjoyment" id="enjoyment"><span>Enjoyment:</span> Нажмите, чтобы увидеть оценки игроков</p>
+                    <p class="enjoyment" id="enjoyment"><span>Enjoyment:</span> click to see</p>
                 </div>
                 <div class="video-player">
                     ${embedVideoLink ? `
