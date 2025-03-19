@@ -2035,7 +2035,15 @@
         "video_link": "https://www.youtube.com/watch?v=yqiZFjrbUDE",
         "progress": 100
       }
-    ]
+    ],
+    "archives": [
+        {
+          "type": "actual",
+          "date_start": "2022-26-07",
+          "date_end": "2022-03-11",
+          "duration_days": "99"
+        }
+      ]
   },
   {
     "id": 77312559,
