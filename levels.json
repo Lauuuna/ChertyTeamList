@@ -1524,5 +1524,1233 @@
         "progress": 100
       }
     ]
+  },
+
+
+
+  {
+    "id": 84325817,
+    "name": "TROLLMACHINE",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["learny", "duals", "flow"],
+    "points": 1.7,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2023-XX-09",
+        "video_link": "https://www.youtube.com/watch?v=p557hsd4rns",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 89807521,
+    "name": "FISH FISH GODMODE",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "chokepoints", "fast-paced"],
+    "points": 1.6,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2023-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=b1v7LzOQwjI",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=b1v7LzOQwjI",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2025-XX-03",
+        "video_link": "https://www.youtube.com/watch?v=-ahjYq_4IJs",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 77114615,
+    "name": "doradura",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["chokepoints", "timings", "flow"],
+    "points": 1.6,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2023-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=o6EQznnQjwM",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "2024-XX-05",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "2025-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=mTC38J5EnKQ",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 95061038,
+    "name": "9blue",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["high cps", "flow", "fast-paced"],
+    "points": 1.4,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=SMI8s0PRzXY",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-06",
+        "video_link": "https://www.youtube.com/watch?v=fIJfB_XincU",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 58023558,
+    "name": "Our Fountain",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["slow-paced", "memory", "chokepoints"],
+    "points": 1.4,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=MOq2LEk643o",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 34379100,
+    "name": "Deception Dive",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["nerve control", "chokepoints", "overall"],
+    "points": 1.4,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 1,
+        "date": "2023-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=jJIcx44_4-8",
+        "progress": 100
+      },
+      {
+        "id": 10,
+        "date": "2024-XX-12",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 103953282,
+    "name": "Marlboro reds",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["flow", "wave", "fast-paced"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 1,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=qtSdJim8Rhk",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 30194711,
+    "name": "Niflheim",
+    "phase": "1",
+    "ggdl_phase": "23",
+    "skill_sets": ["lerany", "ship", "timings"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2024-XX-08",
+        "video_link": "https://www.youtube.com/watch?v=i8T3MfGnp-w",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 95423156,
+    "name": "Me Lin A",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["ship", "chokepoints"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2023-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=DMmsmDAMJRU",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-05",
+        "video_link": "https://www.youtube.com/watch?v=6SliDB49njU",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2024-XX-05",
+        "video_link": "https://www.youtube.com/watch?v=OwFsgPAZkiw",
+        "progress": 100
+      },
+      {
+        "id": 10,
+        "date": "2024-XX-07",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "2024-XX-09",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "2024-XX-09",
+        "video_link": "https://www.youtube.com/watch?v=j9tusMnE3Wo",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 21280210,
+    "name": "The Flawless",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["chokepoints", "ship", "timings"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2023-XX-08",
+        "video_link": "https://www.youtube.com/watch?v=JsKHS0S1-_s",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 87481937,
+    "name": "Hidden in the Sand",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["chokepoints", "ship", "timings"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=kbujYuoTpjA",
+        "progress": 100
+      },
+      {
+        "id": 10,
+        "date": "2024-XX-12",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2025-XX-03",
+        "video_link": "https://www.youtube.com/watch?v=oOqQTKVxWC4",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 7174110,
+    "name": "The Ultimate Phase",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["chokepoints", "ship", "overall"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2023-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=4jBX5ekOZOc",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 73289291,
+    "name": "Delirium Tremens",
+    "phase": "1",
+    "ggdl_phase": "20",
+    "skill_sets": ["flow", "high cps", "learny"],
+    "points": 1.3,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2023-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=A2UJC4hEooc",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 19300593,
+    "name": "AcropoliX",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "wave", "slow-paced"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2022-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=bC-PzV-tntM",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 88943354,
+    "name": "Proteus",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["chokepoints", "timings", "wave"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 2,
+        "date": "2023-XX-09",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2023-XX-05",
+        "video_link": "https://www.youtube.com/watch?v=yMXc6rWhTF0",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2024-XX-09",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2024-XX-10",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=QK-byH38a0c",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 48020496,
+    "name": "Volume",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["wave", "chokepoints", "ship"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=pPhDYihxZDo",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2024-XX-12",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 107281415,
+    "name": "FIREPOWER",
+    "phase": "1",
+    "ggdl_phase": "20",
+    "skill_sets": ["flow", "learny", "fast-paced"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=OAAnI70kTN0",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 25449475,
+    "name": "Fexty",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["chokepoints", "wave"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2024-XX-09",
+        "video_link": "https://www.youtube.com/watch?v=y1p3nUysfPM",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 113890705,
+    "name": "CancerStep",
+    "phase": "1",
+    "ggdl_phase": "X",
+    "skill_sets": ["learny", "overall"],
+    "points": 1.2,
+    "list_percent": 100,
+    "show_we_icon": true,
+    "players": [
+      {
+        "id": 4,
+        "date": "2023-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=AcZqi7NaJj4",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "2023-XX-12",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 11,
+        "date": "2024-XX-03",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 70132215,
+    "name": "Vignette",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["duals", "learny"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2022-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=yqiZFjrbUDE",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 77312559,
+    "name": "Stellaluna",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["timings", "wave", "chokepoints"],
+    "points": 1.2,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 16,
+        "date": "2024-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=XKLPLzSsUqA",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=MCvEVY3TpgI",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 89277532,
+    "name": "Psychotic",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["fast-paced"],
+    "points": 1.1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=K5jxLBm3ilg",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 81257586,
+    "name": "Anya III",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "flow", "fast-paced"],
+    "points": 1.1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=a_tY_dYaITg",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 62214792,
+    "name": "Azurite",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["ship", "wave", "fast-paced"],
+    "points": 1.1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 10,
+        "date": "2023-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=ysFtkWZGLYo",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2023-XX-09",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "2024-XX-07",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=NzTfTPrN2ZM",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=MRhsjNUkH6c",
+        "progress": 100
+      },
+      {
+        "id": 2,
+        "date": "2025-XX-02",
+        "video_link": "https://www.youtube.com/watch?v=QKTgYye1otg",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 25241513,
+    "name": "Breakout",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["chokepoints", "wave", "ship"],
+    "points": 1.1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2019-XX-03",
+        "video_link": "https://www.youtube.com/watch?v=Px7XFrBBRHE",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 25241513,
+    "name": "Crowd Control",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["timings", "choke points", "wave"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "2023-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=TyGQIvhSW6A",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 61079355,
+    "name": "Acu",
+    "phase": "1",
+    "ggdl_phase": "20",
+    "skill_sets": ["timings", "fast-paced", "overall"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2022-XX-07",
+        "video_link": "https://www.youtube.com/watch?v=V8beixooDl4",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2023-XX-03",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 2,
+        "date": "2023-XX-08",
+        "video_link": "https://www.youtube.com/watch?v=0FNgwV0qLMg",
+        "progress": 100
+      },
+      {
+        "id": 8,
+        "date": "2023-XX-11",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 11,
+        "date": "2023-XX-12",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 9,
+        "date": "2024-XX-03",
+        "video_link": "https://www.youtube.com/watch?v=pub0ylzD7vQ",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=e4_FoDVGJGs",
+        "progress": 100
+      },
+      {
+        "id": 15,
+        "date": "2024-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=T6ysbaut8Zc",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "2024-XX-07",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2024-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=MEGfqI6BfYM",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 107341811,
+    "name": "Prismatic",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "overall", "chokepoints"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "2024-XX-09",
+        "video_link": "https://www.youtube.com/watch?v=rw3afgiDQjw",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=_ybfsMsh8wU",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 55985772,
+    "name": "Bangarang",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "ship", "wave"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=CFdVRl5DbMI",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 55985772,
+    "name": "Tech Manifestation",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "chokepoints"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=w7dPmWLeaAA",
+        "progress": 100
+      },
+      {
+        "id": 8,
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 63775846,
+    "name": "Forbidden Isle",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "ship", "wave"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=su7p9rT3JB4",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 60197839,
+    "name": "Precipitance",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["flow", "timings", "fast-paced"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=vfrXyDzuIIk",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 3979721,
+    "name": "Cataclysm",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["chokepoints", "ship", "wave"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "2019-XX-12",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 2,
+        "date": "2022-XX-11",
+        "video_link": "https://www.youtube.com/watch?v=DE_5bZRjPks",
+        "progress": 100
+      },
+      {
+        "id": 11,
+        "date": "2023-XX-10",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 15,
+        "date": "2024-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=rlZ24h7TCOM",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=LOHO2U_-AHE",
+        "progress": 100
+      },
+      {
+        "id": 10,
+        "date": "2024-XX-10",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=ueZXdahuX8I",
+        "progress": 100
+      },
+      {
+        "id": 8,
+        "date": "20XX-XX-XX",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 30219145,
+    "name": "HyperSonic",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["overall", "learny", "nerve control"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 2,
+        "date": "2023-XX-04",
+        "video_link": "https://www.youtube.com/watch?v=fpaangbj5oE",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 87425029,
+    "name": "niwa",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["flow", "learny", "high cps"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "2024-XX-06",
+        "video_link": "https://www.youtube.com/watch?v=NoCKl8m845U",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "2024-XX-07",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 2,
+        "date": "2024-XX-08",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=oM48txKXxzA",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 2374518,
+    "name": "Red World",
+    "phase": "1",
+    "ggdl_phase": "20",
+    "skill_sets": ["gimmicky", "ship", "chokepoints"],
+    "points": 1,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "2024-XX-10",
+        "video_link": "https://www.youtube.com/watch?v=ZH8iubNQBXE",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2024-XX-12",
+        "video_link": "https://www.youtube.com/watch?v=4wVGrFjEJ7o",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 69433311,
+    "name": "Lin Anya",
+    "phase": "0",
+    "ggdl_phase": "20",
+    "skill_sets": ["duals", "timings", "chokepoints"],
+    "points": 0.9,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 3,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=GVu7S_o6uR4",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 10,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 82671886,
+    "name": "TAURINE",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["learny", "fast-paced", "flow"],
+    "points": 0.9,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=JlA90QTueG8",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 62809982,
+    "name": "Thanatophobia",
+    "phase": "0",
+    "ggdl_phase": "20",
+    "skill_sets": ["flow", "ship", "timings"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 1,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 10,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 16,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 9,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=vfeaIqRqv_0",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 11,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=br8mXaR6OZ4",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 90772080,
+    "name": "KETAMINE",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["high cps", "fast-paced"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=52y_-3RtA0E",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 112614077,
+    "name": "Purgatory",
+    "phase": "0",
+    "ggdl_phase": "17",
+    "skill_sets": ["wave", "cube"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 14,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=OdUuK5QCx3w",
+        "progress": 100
+      },
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 68718751,
+    "name": "Optic Daydream",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["wave", "spider"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=UuxVJDri-rk",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 9700312,
+    "name": "Crimson Clutter",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["wave", "chokepoints", "nerve-control"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=88Vr0mNtLas",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=S-ZU0FCw_sQ",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 61137742,
+    "name": "Leyak",
+    "phase": "0",
+    "ggdl_phase": "18",
+    "skill_sets": ["flow", "learny", "high cps"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 4,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=E2ZL98xGE8w",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 12,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 73725400,
+    "name": "CraZy III",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["timings", "nerve-control", "slow-paced"],
+    "points": 0.8,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 1,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=47rBv19ov9I",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 6,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 814678,
+    "name": "ICE Carbon Diablo X",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["chokepoints", "ship", "timings"],
+    "points": 0.7,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=yHqjzCPx3J8",
+        "progress": 100
+      },
+      {
+        "id": 1,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 21952243,
+    "name": "Quest For Perfection",
+    "phase": "0",
+    "ggdl_phase": "19",
+    "skill_sets": ["wave", "duals"],
+    "points": 0.7,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=114zaxTl7WU",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "X",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 10284725,
+    "name": "DeltaNova",
+    "phase": "0",
+    "ggdl_phase": "18",
+    "skill_sets": ["nerve-control", "wave", "learny"],
+    "points": 0.7,
+    "list_percent": 100,
+    "players": [
+      {
+        "id": 6,
+        "date": "X",
+        "video_link": "https://www.youtube.com/watch?v=VWYtRJSUhs8",
+        "progress": 100
+      }
+    ]
   }
 ]

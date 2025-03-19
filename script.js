@@ -67,7 +67,7 @@ async function loadLevels() {
                     <p>${firstPlayer.nickname}</p>
                 </div>
                 <div class="preview">
-                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'>Превью недоступно</p>';" />` : '<p class="no-preview">Превью недоступно</p>'}
+                    ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class=\\'no-preview\\'></p>';" />` : '<p class="no-preview"></p>'}
                 </div>
             `;
 
