@@ -1,45 +1,46 @@
 async function fetchData(url) {
-    const response = await fetch(url);
-    return await response.json();
-  }
-
-  function getPlayerInfo(playerId, players) {
-    return players.find(player => player.id === playerId);
-  }
-  
-  function calculatePlayerPoints(player, levels) {
-    let totalPoints = 0;
-    player.levels_completed.forEach(levelName => {
-        const level = levels.find(l => l.name === levelName);
-        if (level) {
-            totalPoints += level.points;
-        }
-    });
-    return Math.round(totalPoints * 10) / 10; 
+  const response = await fetch(url);
+  return await response.json();
 }
 
-  async function loadPlayers() {
-    const levels = await fetchData('levels.json');
-    const players = await fetchData('players.json');
-    const playersList = document.getElementById('players-list');
-    playersList.innerHTML = '';
+function calculatePlayerPoints(playerId, levels) {
+  let totalPoints = 0;
+  levels.forEach(level => {
+      const playerProgress = level.players.find(p => p.id === playerId);
+      if (playerProgress && playerProgress.progress === 100) {
+          totalPoints += level.points;
+      }
+  });
+  return Math.round(totalPoints * 10) / 10;
+}
 
-    players.sort((a, b) => calculatePlayerPoints(b, levels) - calculatePlayerPoints(a, levels));
-  
-    players.forEach((player, index) => {
+async function loadPlayers() {
+  const levels = await fetchData('levels.json');
+  const players = await fetchData('players.json');
+  const playersList = document.getElementById('players-list');
+  playersList.innerHTML = '';
+
+  const playersWithPoints = players.map(player => ({
+      ...player,
+      points: calculatePlayerPoints(player.id, levels)
+  }));
+
+  playersWithPoints.sort((a, b) => b.points - a.points);
+
+  playersWithPoints.forEach((player, index) => {
       const playerCard = document.createElement('div');
       playerCard.className = 'player-card';
       playerCard.innerHTML = `
-        <h2>#${index + 1} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
-        <p>Stars: ${calculatePlayerPoints(player, levels)}</p>
+          <h2>#${index + 1} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
+          <p>Stars: ${player.points}</p>
       `;
       playerCard.addEventListener('click', () => {
-        window.location.href = `player.html?id=${player.id}`;
+          window.location.href = `player.html?id=${player.id}`;
       });
       playersList.appendChild(playerCard);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    loadPlayers();
   });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadPlayers();
+});
