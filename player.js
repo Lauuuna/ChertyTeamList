@@ -47,17 +47,36 @@ async function loadPlayerDetails() {
         playersWithPoints.sort((a, b) => b.points - a.points);
         const playerPosition = playersWithPoints.findIndex(p => p.id === playerId) + 1;
 
+        const lPercent = parseFloat(player.l_percent) || 0;
+
         playerDetails.innerHTML = `
-            <div class="player-card with-border" data-channel-link="${player.channel_link}">
+            <div class="player-card" data-channel-link="${player.channel_link}">
                 <h2>#${playerPosition} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
             </div>
             <div class="player-info">
-                <p><span>Stars:</span> ${totalPoints}</p>
-                <p><span>Hardest:</span> ${hardestLevel ? hardestLevel.name : 'Нет данных'}</p>
-                <p><span>OSC:</span> ${player.osc}</p>
-                <p><span>L%:</span> ${player.l_percent}</p>
-                <p><span>ATTEMPTS ARE REQUIRED TO 1⭐:</span> ${player.time_for_1_star}</p>
-                <p><span>Skill-set:</span> ${player.skill_set.join(', ')}</p>
+                <div class="info-card">
+                    <h3>Stars</h3>
+                    <p>${totalPoints}</p>
+                </div>
+                <div class="info-card">
+                    <h3>OSC</h3>
+                    <p>${player.osc}</p>
+                </div>
+                <div class="info-card">
+                    <h3>L%</h3>
+                    <p>${player.l_percent}</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: ${lPercent}%"></div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3>Attempts for 1⭐</h3>
+                    <p>${player.time_for_1_star}</p>
+                </div>
+                <div class="info-card">
+                    <h3>Skill-set</h3>
+                    <p>${player.skill_set.join(', ')}</p>
+                </div>
             </div>
             <div class="completed-levels">
                 <h3>COMPLETIONS</h3>
@@ -72,9 +91,10 @@ async function loadPlayerDetails() {
                     <tbody>
                         ${completedLevels.map(level => {
                             const position = levels.indexOf(level) + 1;
+                            const isHardest = hardestLevel && level.id === hardestLevel.id;
                             return `
                                 <tr onclick="window.location.href='level.html?id=${position}'">
-                                    <td>${level.name}</td>
+                                    <td>${level.name} ${isHardest ? '<span class="hardest-marker">[Hardest]</span>' : ''}</td>
                                     <td>#${position}</td>
                                     <td>${level.points}</td>
                                 </tr>
@@ -111,14 +131,14 @@ async function loadPlayerDetails() {
                 </div>
             ` : ''}
         `;
-        const playerCard = document.querySelector('.player-card.with-border');
+        const playerCard = document.querySelector('.player-card');
         if (playerCard && player.channel_link) {
             playerCard.addEventListener('click', () => {
                 window.open(player.channel_link, '_blank');
             });
         }
     } else {
-        playerDetails.innerHTML = '<p>Игрок не найден.</p>';
+        playerDetails.innerHTML = '<p>Player not found.</p>';
     }
 }
 

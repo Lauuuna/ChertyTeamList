@@ -1,12 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player</title>
+    <title>Player Info</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .player-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .player-card {
+            background: #2c2c2c;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player-card h2 {
+            font-size: 2em;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .player-card img.flag {
+            width: 40px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .player-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .player-info .info-card {
+            background: #3a3a3a;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player-info .info-card h3 {
+            font-size: 1em;
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+
+        .player-info .info-card p {
+            font-size: 1.2em;
+            color: #ff4444;
+            margin: 0;
+        }
+
+        .progress-bar {
+            background: #2c2c2c;
+            border-radius: 10px;
+            height: 8px;
+            margin-top: 8px;
+            overflow: hidden;
+            width: 80%;
+        }
+
+        .progress-bar .progress {
+            background: #ff4444;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .completed-levels, .progress-levels {
+            background: #3a3a3a;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .completed-levels h3, .progress-levels h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        table th {
+            background: #444;
+            color: #fff;
+        }
+
+        table td {
+            color: #ddd;
+        }
+
+        table tr:hover {
+            background: #444;
+            cursor: pointer;
+        }
+
+        .hardest-marker {
+            color: #ff4444;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    </style>
 </head>
 <body>
   <header>
