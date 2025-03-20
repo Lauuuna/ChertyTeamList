@@ -48,7 +48,7 @@ async function loadPlayerDetails() {
         const playerPosition = playersWithPoints.findIndex(p => p.id === playerId) + 1;
 
         playerDetails.innerHTML = `
-            <div class="player-card with-border">
+            <div class="player-card with-border" data-channel-link="${player.channel_link}">
                 <h2>#${playerPosition} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
             </div>
             <div class="player-info">
@@ -111,6 +111,12 @@ async function loadPlayerDetails() {
                 </div>
             ` : ''}
         `;
+        const playerCard = document.querySelector('.player-card.with-border');
+        if (playerCard && player.channel_link) {
+            playerCard.addEventListener('click', () => {
+                window.open(player.channel_link, '_blank');
+            });
+        }
     } else {
         playerDetails.innerHTML = '<p>Игрок не найден.</p>';
     }
