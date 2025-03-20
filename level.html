@@ -21,47 +21,18 @@
   </header>
 
   <main>
-    <div id="level-details" class="level-details">
-      <h2>#${levelId} - ${level.name} ${level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : ''} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
-      <div class="level-info">
-          <p><span>ID:</span> ${level.id}</p>
-          <p><span>Phase:</span> ${level.phase}</p>
-          <p><span>GGDL:</span> ${level.ggdl_phase}</p>
-          <p><span>Skill-sets:</span> ${level.skill_sets.join(', ')}</p>
-          <p><span>Stars:</span> ${level.points}</p>
-          <p><span>LIST%:</span> ${level.list_percent}%</p>
-          <p><span>Игрок:</span> ${firstPlayer.nickname}</p>
-          <p class="enjoyment" id="enjoyment"><span>Enjoyment:</span></p>
-      </div>
-      <div class="video-player">
-          ${embedVideoLink ? `
-              <iframe src="${embedVideoLink}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          ` : `
-              <p class="video-error"></p>
-          `}
-      </div>
-      <h3>(${level.players.length}):</h3>
-      <ul class="player-list">
-          ${level.players.map(player => {
-              const playerData = getPlayerInfo(player.id, players);
-              return `
-                  <li onclick="window.open('${player.video_link}', '_blank')">
-                      <p class="player-name">${playerData.nickname}</p>
-                      <p class="player-date">${player.date} (${player.progress}%)</p>
-                  </li>
-              `;
-          }).join('')}
-      </ul>
-  </div>
-  
-  <div id="enjoyment-modal" class="modal">
-      <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Оценки игроков</h2>
-          <div id="enjoyment-list"></div>
-      </div>
-  </div>
-  </main>
+        <div id="level-details" class="level-details">
+        </div>
+
+        <div id="enjoyment-modal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Player Opinions</h2>
+                <div id="enjoyment-list"></div>
+            <button id="send-opinion" class="send-opinion-button">Send Opinion</button>
+            </div>
+        </div>
+    </main>
 
   <div id="particles-js"></div>
   <canvas id="star-background"></canvas>
