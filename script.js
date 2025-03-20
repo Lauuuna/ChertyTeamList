@@ -351,8 +351,6 @@ async function loadLevelDetails() {
                     content += `<p>There are no opinions.</p>`;
                 }
 
-                content += `<button id="send-opinion" class="send-opinion-button">Send Opinion</button>`;
-
                 enjoymentList.innerHTML = content;
 
                 const sendOpinionButton = document.getElementById('send-opinion');
