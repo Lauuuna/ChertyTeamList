@@ -92,7 +92,6 @@ function displaySkillPoints(skillPoints) {
 function displayRecommendedLevels(levels, players) {
     const levelsList = document.getElementById('levels-list');
     levelsList.innerHTML = levels.map(level => {
-        const position = levels.indexOf(level) + 1;
         let previewUrl = '';
         if (level.players[0]?.video_link) {
             const videoLink = level.players[0].video_link;
@@ -112,10 +111,11 @@ function displayRecommendedLevels(levels, players) {
         }
         const player = players.find(p => p.id === level.players[0]?.id);
         const playerName = player ? player.nickname : 'Unknown Player';
+
         return `
-            <div class="level-card" data-level-id="${position}">
+            <div class="level-card" data-level-id="${level.id}">
                 <div>
-                    <h2>#${position} - ${level.name} ${level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : ''} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
+                    <h2>${level.name} ${level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : ''} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                     <p>${playerName}</p>
                 </div>
                 <div class="preview">
@@ -128,7 +128,7 @@ function displayRecommendedLevels(levels, players) {
     document.querySelectorAll('.level-card').forEach(card => {
         card.addEventListener('click', () => {
             const levelId = card.getAttribute('data-level-id');
-            window.location.href = `level.html?id=${levelId}`;
+            window.location.href = `level.html?id=${levelId}`; // Переход по ID уровня
         });
     });
 }

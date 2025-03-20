@@ -93,7 +93,7 @@ async function loadPlayerDetails() {
                             const position = levels.indexOf(level) + 1;
                             const isHardest = hardestLevel && level.id === hardestLevel.id;
                             return `
-                                <tr onclick="window.location.href='level.html?id=${position}'">
+                                <tr onclick="window.location.href='level.html?id=${level.id}'">
                                     <td>${level.name} ${isHardest ? '<span class="hardest-marker">[Hardest]</span>' : ''}</td>
                                     <td>#${position}</td>
                                     <td>${level.points}</td>
@@ -119,7 +119,7 @@ async function loadPlayerDetails() {
                                 const playerProgress = level.players.find(p => p.id === playerId);
                                 const position = levels.indexOf(level) + 1;
                                 return `
-                                    <tr onclick="window.location.href='level.html?id=${position}'">
+                                    <tr onclick="window.location.href='level.html?id=${level.id}'">
                                         <td>${level.name}</td>
                                         <td>#${position}</td>
                                         <td>${playerProgress.progress}%</td>
