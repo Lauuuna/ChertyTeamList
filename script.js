@@ -154,15 +154,15 @@ async function loadLevelDetails() {
 
                 let content = '';
                 if (totalEnjoyment !== null) {
-                    content += `<p><strong>Enjoyment:</strong> ${totalEnjoyment}/10</p>`;
+                    content += `<p><strong>Enjoyment:</strong> ${totalEnjoyment}</p>`;
                 }
                 if (levelEnjoyment) {
                     content += Object.entries(levelEnjoyment).map(([playerId, rating]) => {
                         const player = players.find(p => p.id === parseInt(playerId));
-                        return `<p><strong>${player?.nickname || 'Unknown Player'}:</strong> ${rating}/10</p>`;
+                        return `<p><strong>${player?.nickname || 'Unknown Player'}:</strong> ${rating}</p>`;
                     }).join('');
                 } else {
-                    content += `<p>There are no opinions. Maybe you will be the first?</p>`;
+                    content += `<p>There are no opinions.</p>`;
                 }
 
                 content += `<button id="send-opinion" class="send-opinion-button">Send Opinion</button>`;
@@ -190,26 +190,26 @@ async function loadLevelDetails() {
     }
 }
 
-function calculateAverageEnjoyment(enjoymentData) {
-    const ratings = Object.values(enjoymentData);
-    if (ratings.length === 0) return 0;
-    const total = ratings.reduce((sum, rating) => sum + rating, 0);
-    return (total / ratings.length).toFixed(1);
-}
+//function calculateAverageEnjoyment(enjoymentData) {
+    //const ratings = Object.values(enjoymentData);
+    //if (ratings.length === 0) return 0;
+    //const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    //return (total / ratings.length).toFixed(1);
+//}
 
-function calculateAverageEnjoyment(enjoymentData) {
-    const ratings = Object.values(enjoymentData);
-    if (ratings.length === 0) return 0;
-    const total = ratings.reduce((sum, rating) => sum + rating, 0);
-    return (total / ratings.length).toFixed(1);
-}
+//function calculateAverageEnjoyment(enjoymentData) {
+    //const ratings = Object.values(enjoymentData);
+    //if (ratings.length === 0) return 0;
+    //const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    //return (total / ratings.length).toFixed(1);
+//}
 
-function calculateAverageEnjoyment(enjoymentData) {
-    const ratings = Object.values(enjoymentData);
-    if (ratings.length === 0) return 0;
-    const total = ratings.reduce((sum, rating) => sum + rating, 0);
-    return (total / ratings.length).toFixed(1);
-}
+//function calculateAverageEnjoyment(enjoymentData) {
+    //const ratings = Object.values(enjoymentData);
+    //if (ratings.length === 0) return 0;
+    //const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    //return (total / ratings.length).toFixed(1);
+//}
 
 document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.getElementById('scroll-to-top');
