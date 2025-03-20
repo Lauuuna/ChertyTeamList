@@ -1451,6 +1451,24 @@
       }
     ]
   },
+  {
+    "id": 59899374,
+    "name": "Prismatic Haze",
+    "phase": "3",
+    "ggdl_phase": "24",
+    "skill_sets": ["flow", "wave", "high cps"],
+    "points": 4.8,
+    "list_percent": 100,
+    "enjoyment": 8,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-10-01",
+        "video_link": "https://www.youtube.com/watch?v=3PU2ugfmG4U",
+        "progress": 100
+      }
+    ]
+  },
 
 
 
@@ -1571,6 +1589,24 @@
     ]
   },
   {
+    "id": 73005068,
+    "name": "sunburn",
+    "phase": "2",
+    "ggdl_phase": "22",
+    "skill_sets": ["timings", "chokepoints", "gimmicky"],
+    "points": 2.4,
+    "list_percent": 100,
+    "enjoyment": 7,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-18-03",
+        "video_link": "https://www.youtube.com/watch?v=TJW0igkGVSw",
+        "progress": 100
+      }
+    ]
+  },
+  {
     "id": 69108628,
     "name": "Broken Signal",
     "phase": "2",
@@ -1634,7 +1670,7 @@
       {
         "id": 4,
         "date": "2023-XX-09",
-        "video_link": "https://www.youtube.com/watch?v=p557hsd4rns",
+        "video_link": "https://www.youtube.com/watch?v=BOgj9X56PT4",
         "progress": 100
       }
     ]
@@ -1850,6 +1886,24 @@
     ]
   },
   {
+    "id": 95757926,
+    "name": "Cupid",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["timings", "fast-paced", "flow"],
+    "points": 1.3,
+    "list_percent": 100,
+    "enjoyment": 8,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-05-11",
+        "video_link": "https://www.youtube.com/watch?v=0ebefZfZQqE",
+        "progress": 100
+      }
+    ]
+  },
+  {
     "id": 21280210,
     "name": "The Flawless",
     "phase": "1",
@@ -2038,7 +2092,7 @@
       {
         "id": 4,
         "date": "2024-XX-10",
-        "video_link": "https://youtu.be/8b12cGalHno?si=hUvFaSNKswz669MM",
+        "video_link": "https://www.youtube.com/watch?v=8b12cGalHno",
         "progress": 100
       }
     ]
@@ -2433,6 +2487,24 @@
     ]
   },
   {
+    "id": 48765988,
+    "name": "Polish Alphabet",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "ball", "gimmicky"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 5,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-07-01",
+        "video_link": "https://www.youtube.com/watch?v=zkJMofMWjGo",
+        "progress": 100
+      }
+    ]
+  },
+  {
     "id": 55985772,
     "name": "Tech Manifestation",
     "phase": "1",
@@ -2451,6 +2523,30 @@
       {
         "id": 8,
         "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 48454650,
+    "name": "Penombre",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["timings", "ship", "memory"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 7,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-XX-01",
+        "video_link": "https://www.youtube.com/watch?v=6mw35X-qVsw",
+        "progress": 100
+      },
+      {
+        "id": 3,
+        "date": "2025-XX-01",
         "video_link": "",
         "progress": 100
       }
@@ -2560,6 +2656,42 @@
         "id": 8,
         "date": "20XX-XX-XX",
         "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 81549790,
+    "name": "RTX ON",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["timings", "wave", "chokepoints"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 8,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-10-01",
+        "video_link": "https://www.youtube.com/watch?v=zE0kYu8Uev8",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 63433024,
+    "name": "reverence",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["flow", "wave", "chokepoints"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 8,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-18-03",
+        "video_link": "https://www.youtube.com/watch?v=arn_H4QM_1o",
         "progress": 100
       }
     ]
