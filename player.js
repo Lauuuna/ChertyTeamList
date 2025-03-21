@@ -116,7 +116,7 @@ async function loadPlayerDetails() {
                                 <th>Level</th>
                                 <th>Position</th>
                                 <th>Progress</th>
-                                <th>Points</th>
+                                <th>Stars</th>
                             </tr>
                         </thead>
                         <tbody>
