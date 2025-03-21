@@ -1008,14 +1008,8 @@
         "progress": 100
       },
       {
-        "id": 2,
-        "date": "2024-XX-09",
-        "video_link": "",
-        "progress": 100
-      },
-      {
         "id": 12,
-        "date": "202X-XX-XX",
+        "date": "2024-XX-09",
         "video_link": "",
         "progress": 100
       }
@@ -2614,6 +2608,60 @@
         "id": 3,
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=vfrXyDzuIIk",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 92128198,
+    "name": "idol19",
+    "phase": "1",
+    "ggdl_phase": "22",
+    "skill_sets": ["nerve-control", "learny", "overall"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 7,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-13-03",
+        "video_link": "https://www.youtube.com/watch?v=2ZECH2SRf38",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 108558924,
+    "name": "maths",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["high cps", "fast-paced", "wave"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 9,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-10-01",
+        "video_link": "https://www.youtube.com/watch?v=-Nj1KrAUhTo",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 78687216,
+    "name": "disruption",
+    "phase": "1",
+    "ggdl_phase": "21",
+    "skill_sets": ["high cps", "flow", "wave"],
+    "points": 1,
+    "list_percent": 100,
+    "enjoyment": 7,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-03-02",
+        "video_link": "https://www.youtube.com/watch?v=fwjIXntIiko",
         "progress": 100
       }
     ]
