@@ -104,7 +104,7 @@ async function loadPlayerDetails() {
                                     ${item.text ? `<p>${item.text}</p>` : ''}
                                 </td>
                             </tr>
-                        `).join('') : '<tr><td>No information available.</td></tr>'}
+                        `).join('') : '<tr><td>No content available.</td></tr>'}
                     </tbody>
                 </table>
             </div>
