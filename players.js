@@ -7,11 +7,15 @@ function calculatePlayerPoints(playerId, levels) {
   let totalPoints = 0;
   levels.forEach(level => {
       const playerProgress = level.players.find(p => p.id === playerId);
-      if (playerProgress && playerProgress.progress === 100) {
-          totalPoints += level.points;
+      if (playerProgress) {
+          if (playerProgress.progress === 100) {
+              totalPoints += level.points;
+          } else {
+              totalPoints += level.points / 5;
+          }
       }
   });
-  return Math.round(totalPoints * 10) / 10;
+  return Math.round(totalPoints * 10) / 10; 
 }
 
 async function loadPlayers() {

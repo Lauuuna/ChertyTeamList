@@ -7,12 +7,16 @@ function calculatePlayerPoints(playerId, levels) {
     let totalPoints = 0;
     levels.forEach(level => {
         const playerProgress = level.players.find(p => p.id === playerId);
-        if (playerProgress && playerProgress.progress === 100) {
-            totalPoints += level.points;
+        if (playerProgress) {
+            if (playerProgress.progress === 100) {
+                totalPoints += level.points;
+            } else {
+                totalPoints += level.points / 5;
+            }
         }
     });
-    return Math.round(totalPoints * 10) / 10;
-}
+    return Math.round(totalPoints * 10) / 10; 
+  }
 
 async function loadPlayerDetails() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -112,17 +116,20 @@ async function loadPlayerDetails() {
                                 <th>Level</th>
                                 <th>Position</th>
                                 <th>Progress</th>
+                                <th>Points</th>
                             </tr>
                         </thead>
                         <tbody>
                             ${progresses.map(level => {
                                 const playerProgress = level.players.find(p => p.id === playerId);
                                 const position = levels.indexOf(level) + 1;
+                                const points = playerProgress.progress === 100 ? level.points : level.points / 5;
                                 return `
-                                    <tr onclick="window.location.href='level.html?id=${level.id}'">
+                                    <tr onclick="window.location.href='level.html?id=${level.id}'"> 
                                         <td>${level.name}</td>
                                         <td>#${position}</td>
                                         <td>${playerProgress.progress}%</td>
+                                        <td>${points.toFixed(1)}</td>
                                     </tr>
                                 `;
                             }).join('')}
