@@ -2056,6 +2056,30 @@
     ]
   },
   {
+    "id": 99043213,
+    "name": "knightmare",
+    "phase": "1",
+    "ggdl_phase": "X",
+    "skill_sets": ["wave", "ship"],
+    "points": 1.2,
+    "list_percent": 100,
+    "enjoyment": 9,
+    "players": [
+      {
+        "id": 4,
+        "date": "2025-28-01",
+        "video_link": "https://www.youtube.com/watch?v=aPDLCTcjbGI",
+        "progress": 100
+      },
+      {
+        "id": 7,
+        "date": "2025-29-01",
+        "video_link": "https://www.youtube.com/watch?v=V67QZwmScVY",
+        "progress": 100
+      }
+    ]
+  },
+  {
     "id": 48020496,
     "name": "Volume",
     "phase": "1",

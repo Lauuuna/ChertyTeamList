@@ -1,1 +1,1 @@
-Официальный сайт Cherty Team List.
+Официальный сайт Cherti List.

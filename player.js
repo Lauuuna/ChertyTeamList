@@ -16,13 +16,14 @@ function calculatePlayerPoints(playerId, levels) {
         }
     });
     return Math.round(totalPoints * 10) / 10; 
-  }
+}
 
 async function loadPlayerDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const playerId = parseInt(urlParams.get('id'));
     const levels = await fetchData('levels.json');
     const players = await fetchData('players.json');
+    const aboutMe = await fetchData('about-me.json');
     const player = players.find(p => p.id === playerId);
     const playerDetails = document.getElementById('player-details');
 
@@ -55,7 +56,13 @@ async function loadPlayerDetails() {
 
         playerDetails.innerHTML = `
             <div class="player-card" data-channel-link="${player.channel_link}">
-                <h2>#${playerPosition} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
+                <img src="${player.banner}" alt="Banner" class="player-banner">
+                <div class="player-avatar-container">
+                    <img src="${player.avatar}" alt="Avatar" class="player-avatar">
+                    <div class="player-info-header">
+                        <h2>#${playerPosition} - ${player.nickname} <img src="flags/${player.flag}.png" class="flag" alt="${player.flag}"></h2>
+                    </div>
+                </div>
             </div>
             <div class="player-info">
                 <div class="info-card">
@@ -81,6 +88,25 @@ async function loadPlayerDetails() {
                     <h3>Skill-set</h3>
                     <p>${player.skill_set.join(', ')}</p>
                 </div>
+            </div>
+            <div class="about-me">
+                <h3>ABOUT ME</h3>
+                <table>
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${aboutMe[playerId] ? aboutMe[playerId].map(item => `
+                            <tr>
+                                <td>
+                                    ${item.image ? `<img src="${item.image}" alt="About Me Image" style="width: ${item.width || 'auto'}; height: ${item.height || 'auto'}">` : ''}
+                                    ${item.text ? `<p>${item.text}</p>` : ''}
+                                </td>
+                            </tr>
+                        `).join('') : '<tr><td>No information available.</td></tr>'}
+                    </tbody>
+                </table>
             </div>
             <div class="completed-levels">
                 <h3>COMPLETIONS</h3>

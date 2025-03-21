@@ -128,7 +128,7 @@ function displayRecommendedLevels(levels, players) {
     document.querySelectorAll('.level-card').forEach(card => {
         card.addEventListener('click', () => {
             const levelId = card.getAttribute('data-level-id');
-            window.location.href = `level.html?id=${levelId}`; // Переход по ID уровня
+            window.location.href = `level.html?id=${levelId}`;
         });
     });
 }
