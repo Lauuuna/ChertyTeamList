@@ -2098,19 +2098,19 @@
     ]
   },
   {
-    "id": 480204965,
-    "name": "Volume",
+    "id": 92782493,
+    "name": "blacklights",
     "phase": "1",
-    "ggdl_phase": "22",
-    "skill_sets": ["wave", "chokepoints", "ship"],
+    "ggdl_phase": "21",
+    "skill_sets": ["wave", "overall", "timings"],
     "points": 1.2,
     "list_percent": 100,
-    "enjoyment": 5,
+    "enjoyment": 7,
     "players": [
       {
         "id": 4,
         "date": "2024-15-05",
-        "video_link": "https://www.youtube.com/watch?v=vVahpd0xUhc",
+        "video_link": "https://www.youtube.com/watch?v=IMSnxczYMp4",
         "progress": 100
       }
     ]
