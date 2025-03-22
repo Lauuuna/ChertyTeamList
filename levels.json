@@ -1814,6 +1814,24 @@
     ]
   },
   {
+    "id": 90109092,
+    "name": "Perm Circles",
+    "phase": "1",
+    "ggdl_phase": "X",
+    "skill_sets": ["wave"],
+    "points": 1.3,
+    "list_percent": 100,
+    "enjoyment": 6,
+    "players": [
+      {
+        "id": 6,
+        "date": "2025-XX-XX",
+        "video_link": "https://www.youtube.com/watch?v=SCtkcTaQeEU",
+        "progress": 100
+      }
+    ]
+  },
+  {
     "id": 30194711,
     "name": "Niflheim",
     "phase": "1",
@@ -1934,6 +1952,12 @@
       {
         "id": 10,
         "date": "2024-XX-12",
+        "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2025-16-01",
         "video_link": "",
         "progress": 100
       },
@@ -2069,6 +2093,12 @@
         "id": 7,
         "date": "2025-29-01",
         "video_link": "https://www.youtube.com/watch?v=V67QZwmScVY",
+        "progress": 100
+      },
+      {
+        "id": 5,
+        "date": "2025-18-02",
+        "video_link": "",
         "progress": 100
       }
     ]
