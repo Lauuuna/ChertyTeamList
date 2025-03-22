@@ -3225,23 +3225,5 @@
         "progress": 100
       }
     ]
-  },
-  {
-    "id": "Official Level",
-    "name": "Stereo Madness",
-    "phase": "-5",
-    "ggdl_phase": "-20",
-    "skill_sets": ["timings"],
-    "points": 0.1,
-    "list_percent": 100,
-    "enjoyment": 11,
-    "players": [
-      {
-        "id": 14,
-        "date": "2016-XX-XX",
-        "video_link": "https://www.youtube.com/watch?v=bbVEbqU9wPo",
-        "progress": 100
-      }
-    ]
   }
 ]
