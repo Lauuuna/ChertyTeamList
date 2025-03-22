@@ -1992,7 +1992,7 @@
     "name": "Perm Circles",
     "phase": "1",
     "ggdl_phase": "X",
-    "skill_sets": ["wave"],
+    "skill_sets": ["wave", "chokepoints"],
     "points": 1.3,
     "list_percent": 100,
     "enjoyment": 7,

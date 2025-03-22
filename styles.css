@@ -717,9 +717,6 @@ input[type="number"] {
 .phase-0 {
   background-color: #aa0000;
 }
-.phase--5 {
-  background-color: #000000;
-}
 
 #phase-filter {
   appearance: none;
