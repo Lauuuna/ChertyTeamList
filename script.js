@@ -260,14 +260,30 @@ async function loadLevelDetails() {
             levelDetails.innerHTML = `
                 <h2>#${levelPosition} - ${level.name} <span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span></h2>
                 <div class="level-info">
-                    <p><span>ID:</span> ${level.id}</p>
-                    <p><span>Phase:</span> ${level.phase}</p>
-                    <p><span>GGDL:</span> ${level.ggdl_phase}</p>
-                    <p><span>Skill-sets:</span> ${level.skill_sets.join(', ')}</p>
-                    <p><span>Stars:</span> ${level.points}</p>
-                    <p><span>LIST%:</span> ${level.list_percent}%</p>
-                    <p><span>Verified by:</span> ${firstPlayer.nickname}</p>
-                    <p class="enjoyment" id="enjoyment"><span>Enjoyment:</span> Click to see</p>
+                    <div class="info-card">
+                        <h3>ID</h3>
+                        <p>${level.id}</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>GGDL</h3>
+                        <p>${level.ggdl_phase}</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Skill-sets</h3>
+                        <p>${level.skill_sets.join(', ')}</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Stars</h3>
+                        <p>${level.points}</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>LIST%</h3>
+                        <p>${level.list_percent}%</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Verified by</h3>
+                        <p>${firstPlayer.nickname}</p>
+                    </div>
                 </div>
                 <div class="video-player">
                     ${embedVideoLink ? `
@@ -276,22 +292,25 @@ async function loadLevelDetails() {
                         <p class="video-error">Video unavailable.</p>
                     `}
                 </div>
-                <h3>(${level.players.length}) Total Records:</h3>
-                <ul class="player-list">
-                    ${level.players.map(player => {
-                        const playerData = getPlayerInfo(player.id, players);
-                        return `
-                            <li onclick="window.open('${player.video_link}', '_blank')">
-                                <p class="player-name">${playerData.nickname}</p>
-                                <p class="player-date">${player.date} (${player.progress}%)</p>
-                            </li>
-                        `;
-                    }).join('')}
-                </ul>
+                <div class="total-records">
+                    <h3>Total Records (${level.players.length})</h3>
+                    <ul class="player-list">
+                        ${level.players.map(player => {
+                            const playerData = getPlayerInfo(player.id, players);
+                            return `
+                                <li onclick="window.open('${player.video_link}', '_blank')">
+                                    <p class="player-name">${playerData.nickname}</p>
+                                    <p class="player-date">${player.date} (${player.progress}%)</p>
+                                </li>
+                            `;
+                        }).join('')}
+                    </ul>
+                </div>
+                <button class="enjoyment-button" id="enjoyment-button">View Enjoyment</button>
             `;
 
-            const enjoymentBlock = document.getElementById('enjoyment');
-            enjoymentBlock.addEventListener('click', async () => {
+            const enjoymentButton = document.getElementById('enjoyment-button');
+            enjoymentButton.addEventListener('click', async () => {
                 const enjoymentData = await fetchData('enjoyment.json');
                 const levelEnjoyment = enjoymentData[level.id];
                 const modal = document.getElementById('enjoyment-modal');
