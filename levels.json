@@ -222,10 +222,24 @@
         }
       ]
     },
-
-
-
-
+    {
+      "id": 86412942,
+      "name": "Knights of Thunder",
+      "phase": "8",
+      "ggdl_phase": "32",
+      "skill_sets": ["fast-paced", "flow", "high cps"],
+      "points": 72,
+      "list_percent": 52,
+      "enjoyment": 8,
+      "players": [
+        {
+          "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
+          "date": "2025-XX-03",
+          "video_link": "https://www.youtube.com/watch?v=8sCNXeD0apw",
+          "progress": 100
+        }
+      ]
+    },
     {
       "id": 88421468,
       "name": "AKIRA",
