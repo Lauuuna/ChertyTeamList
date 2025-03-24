@@ -6,17 +6,17 @@
       "ggdl_phase": "34",
       "skill_sets": ["ship", "timings"],
       "enjoyment": 8,
-      "points": 110.3,
+      "points": 151.5,
       "list_percent": 52,
       "players": [
         {
-          "id": 1,
+          "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
           "date": "2025-XX-01",
           "video_link": "https://www.youtube.com/watch?v=6CxgMThFR3Q",
           "progress": 100
         },
         {
-          "id": 2,
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "2025-XX-XX",
           "video_link": "",
           "progress": 78
@@ -43,11 +43,11 @@
       "phase": "10",
       "ggdl_phase": "34",
       "skill_sets": ["wave", "high cps", "fast-paced"],
-      "points": 106.8,
+      "points": 146,
       "list_percent": 53,
       "players": [
         {
-          "id": 2,
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "2024-XX-12",
           "video_link": "https://www.youtube.com/watch?v=7H-KXhwTLCU",
           "progress": 100
@@ -74,12 +74,12 @@
       "phase": "9",
       "ggdl_phase": "33",
       "skill_sets": ["overall"],
-      "points": 79.5,
+      "points": 109.3,
       "list_percent": 56,
       "enjoyment": 8,
       "players": [
         {
-          "id": 1,
+          "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=lzA9TJvgvHg",
           "progress": 100
@@ -106,12 +106,12 @@
       "phase": "9",
       "ggdl_phase": "33",
       "skill_sets": ["timings"],
-      "points": 78,
+      "points": 107.1,
       "list_percent": 53,
       "enjoyment": 8,
       "players": [
         {
-          "id": 3,
+          "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=69bq1R_IGGc",
           "progress": 100
@@ -124,12 +124,12 @@
       "phase": "9",
       "ggdl_phase": "33",
       "skill_sets": ["timings"],
-      "points": 77,
+      "points": 105.4,
       "list_percent": 59,
       "enjoyment": 8,
       "players": [
         {
-          "id": 1,
+          "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=OfbDkoXhAxw&t=1s",
           "progress": 100
@@ -142,12 +142,12 @@
       "phase": "9",
       "ggdl_phase": "33",
       "skill_sets": ["wave"],
-      "points": 76.6,
+      "points": 97.9,
       "list_percent": 59,
       "enjoyment": 8,
       "players": [
         {
-          "id": 2,
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "2023-XX-12",
           "video_link": "https://www.youtube.com/watch?v=h7bzA4BwkA0",
           "progress": 100
@@ -174,12 +174,12 @@
       "phase": "9",
       "ggdl_phase": "32",
       "skill_sets": ["fast-paced", "high cps", "learny"],
-      "points": 74,
+      "points": 101.1,
       "list_percent": 45,
       "enjoyment": 9,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=4EUj4fWdiGc&t=1s",
           "progress": 100
@@ -192,12 +192,12 @@
       "phase": "9",
       "ggdl_phase": "32",
       "skill_sets": ["fast-paced", "high cps", "timings"],
-      "points": 72,
+      "points": 92,
       "list_percent": 48,
       "enjoyment": 7,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=Fs9QBWlwSgs",
           "progress": 100
@@ -210,30 +210,34 @@
       "phase": "9",
       "ggdl_phase": "32",
       "skill_sets": ["slow-paced", "timings", "nerve control"],
-      "points": 68.1,
+      "points": 92,
       "list_percent": 50,
       "enjoyment": 6,
       "players": [
         {
-          "id": 5,
+          "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
           "date": "2024-XX-12",
           "video_link": "https://www.youtube.com/watch?v=eud4S1Cutag",
           "progress": 100
         }
       ]
     },
+
+
+
+
     {
       "id": 88421468,
       "name": "AKIRA",
       "phase": "8",
       "ggdl_phase": "32",
       "skill_sets": ["wave", "ship"],
-      "points": 49,
+      "points": 66.4,
       "list_percent": 59,
       "enjoyment": 8,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2024-XX-10",
           "video_link": "https://www.youtube.com/watch?v=HAJy9WCzut0",
           "progress": 100
@@ -254,36 +258,40 @@
       "phase": "8",
       "ggdl_phase": "30",
       "skill_sets": ["timings", "nerve control"],
-      "points": 47,
+      "points": 63.3,
       "list_percent": 60,
       "enjoyment": 7,
       "players": [
         {
-          "id": 5,
+          "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=83NbxBwhgnc",
           "progress": 100
         }
       ]
     },
+
+
+
+
     {
       "id": 52919433,
       "name": "Arctic Lights",
       "phase": "7",
       "ggdl_phase": "32",
       "skill_sets": ["timings", "wave"],
-      "points": 29.6,
+      "points": 39.5,
       "list_percent": 52,
       "enjoyment": 5,
       "players": [
         {
-          "id": 2,
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "2024-XX-06",
           "video_link": "https://www.youtube.com/watch?v=Q0Gl0wkGLEc",
           "progress": 100
         },
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2024-XX-XX",
           "video_link": "",
           "progress": 54
@@ -296,12 +304,12 @@
       "phase": "6",
       "ggdl_phase": "32",
       "skill_sets": ["wave"],
-      "points": 25.8,
+      "points": 35.2,
       "list_percent": 52,
       "enjoyment": 7,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2024-XX-03",
           "video_link": "https://www.youtube.com/watch?v=AU-EFqzmzRY",
           "progress": 100
@@ -314,12 +322,12 @@
       "phase": "6",
       "ggdl_phase": "31",
       "skill_sets": ["flow", "fast-paced", "timings"],
-      "points": 24.5,
+      "points": 33.3,
       "list_percent": 49,
       "enjoyment": 7,
       "players": [
         {
-          "id": 3,
+          "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=vPfTkh3dShM",
           "progress": 100
@@ -332,18 +340,18 @@
       "phase": "6",
       "ggdl_phase": "30",
       "skill_sets": ["ball", "timings", "fast-paced"],
-      "points": 20.2,
+      "points": 26.9,
       "list_percent": 53,
       "enjoyment": 9,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2024-XX-10",
           "video_link": "https://www.youtube.com/watch?v=v8_1yqlGmqA",
           "progress": 100
         },
         {
-          "id": 3,
+          "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=31JYfWaazQk",
           "progress": 100
@@ -364,24 +372,24 @@
       "phase": "6",
       "ggdl_phase": "31",
       "skill_sets": ["ship", "overall", "nerve control"],
-      "points": 20.1,
+      "points": 26.7,
       "list_percent": 54,
       "enjoyment": 6,
       "players": [
         {
-          "id": 5,
+          "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
           "date": "2025-XX-01",
           "video_link": "https://www.youtube.com/watch?v=6jkz542bp64",
           "progress": 100
         },
         {
-          "id": 3,
+          "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
           "date": "2025-XX-02",
           "video_link": "https://www.youtube.com/watch?v=Yy0usq3_SEg",
           "progress": 100
         },
         {
-          "id": 2,
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "202X-XX-XX",
           "video_link": "",
           "progress": 77
@@ -394,12 +402,12 @@
       "phase": "6",
       "ggdl_phase": "22",
       "skill_sets": ["wave", "high cps"],
-      "points": 19.9,
+      "points": 26.6,
       "list_percent": 100,
       "enjoyment": 6,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2025-19-03",
           "video_link": "https://www.youtube.com/watch?v=_7HgzHm-dyI",
           "progress": 100
@@ -412,18 +420,18 @@
       "phase": "5",
       "ggdl_phase": "29",
       "skill_sets": ["learny"],
-      "points": 16.7,
+      "points": 22.6,
       "list_percent": 49,
       "enjoyment": 7,
       "players": [
         {
-          "id": 5,
+          "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
           "date": "2024-XX-11",
           "video_link": "https://www.youtube.com/watch?v=kLoUgomz170",
           "progress": 100
         },
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2025-XX-01",
           "video_link": "https://www.youtube.com/watch?v=PH9sd9jihfY&t=3s",
           "progress": 100
@@ -436,18 +444,18 @@
       "phase": "5",
       "ggdl_phase": "30",
       "skill_sets": ["wave", "nerve control", "chokepoints"],
-      "points": 16.3,
+      "points": 22,
       "list_percent": 56,
       "enjoyment": 5,
       "players": [
         {
-          "id": 2,
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "2023-XX-061",
           "video_link": "https://www.youtube.com/watch?v=PdAz36aqFKY",
           "progress": 100
         },
         {
-          "id": 5,
+          "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
           "date": "2025-XX-01",
           "video_link": "https://www.youtube.com/watch?v=p2coLwulbh8",
           "progress": 100
@@ -468,12 +476,12 @@
       "phase": "5",
       "ggdl_phase": "30",
       "skill_sets": ["wave", "overall"],
-      "points": 15.9,
+      "points": 21.5,
       "list_percent": 55,
       "enjoyment": 7,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2024-XX-09",
           "video_link": "https://www.youtube.com/watch?v=vosTJeNbWE0",
           "progress": 100
@@ -494,24 +502,24 @@
       "phase": "5",
       "ggdl_phase": "29",
       "skill_sets": ["chokepoints", "wave", "timings"],
-      "points": 15.3,
+      "points": 20.6,
       "list_percent": 100,
       "enjoyment": 6,
       "players": [
         {
-          "id": 1,
+          "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
           "date": "2025-22-03",
           "video_link": "https://www.youtube.com/watch?v=NHM0shbQSeQ",
           "progress": 100
         },
         {
-          "id": 3,
+          "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
           "date": "2025-XX-XX",
           "video_link": "",
           "progress": 81
         },
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2025-XX-XX",
           "video_link": "",
           "progress": 75
@@ -524,12 +532,12 @@
       "phase": "5",
       "ggdl_phase": "X",
       "skill_sets": ["X"],
-      "points": 14.7,
+      "points": 19.6,
       "list_percent": 58,
       "enjoyment": 0,
       "players": [
         {
-          "id": 4,
+          "id": "c70984ba-e74c-4335-96e6-373c75252736",
           "date": "2023-XX-09",
           "video_link": "https://www.youtube.com/watch?v=jGKbhKfBHjg",
           "progress": 100
@@ -550,18 +558,18 @@
     "phase": "5",
     "ggdl_phase": "X",
     "skill_sets": ["overall", "ship"],
-    "points": 13.4,
+    "points": 17.7,
     "list_percent": 57,
     "enjoyment": 5,
     "players": [
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=tHTN9V8txhI",
         "progress": 100
       },
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "20XX-XX-XX",
         "video_link": "",
         "progress": 92
@@ -574,12 +582,12 @@
     "phase": "5",
     "ggdl_phase": "28",
     "skill_sets": ["nerve control", "overall", "chokepoints"],
-    "points": 13.1,
+    "points": 17.4,
     "list_percent": 53,
     "enjoyment": 7,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-08",
         "video_link": "https://www.youtube.com/watch?v=cIir9Em0h4k",
         "progress": 100
@@ -592,12 +600,12 @@
     "phase": "5",
     "ggdl_phase": "28",
     "skill_sets": ["nerve control", "ship"],
-    "points": 13.1,
+    "points": 17.4,
     "list_percent": 58,
     "enjoyment": 8,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=oJgsY2uhjG0",
         "progress": 100
@@ -610,12 +618,12 @@
     "phase": "5",
     "ggdl_phase": "27",
     "skill_sets": ["timings", "duals", "cube"],
-    "points": 13,
+    "points": 17.3,
     "list_percent": 58,
     "enjoyment": 7,
     "players": [
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=oxGK2o6-T44",
         "progress": 100
@@ -628,12 +636,12 @@
     "phase": "5",
     "ggdl_phase": "27",
     "skill_sets": ["overall"],
-    "points": 13,
+    "points": 17.3,
     "list_percent": 60,
     "enjoyment": 8,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=j67qVyajj5M",
         "progress": 100
@@ -651,7 +659,7 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=lQ46WT_0ngQ",
         "progress": 100
@@ -664,12 +672,12 @@
     "phase": "5",
     "ggdl_phase": "27",
     "skill_sets": ["timings", "chokepoints"],
-    "points": 13,
+    "points": 17.2,
     "list_percent": 100,
     "enjoyment": 6,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=sx84tcnNgAI",
         "progress": 100
@@ -682,12 +690,12 @@
     "phase": "5",
     "ggdl_phase": "27",
     "skill_sets": ["wave", "nerve control", "high cps"],
-    "points": 13,
+    "points": 17.1,
     "list_percent": 48,
     "enjoyment": 9,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=Vdh6LLObPOI",
         "progress": 100
@@ -700,12 +708,12 @@
     "phase": "4",
     "ggdl_phase": "27",
     "skill_sets": ["wave", "overall", "ship"],
-    "points": 11.1,
+    "points": 15,
     "list_percent": 65,
     "enjoyment": 7,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-03",
         "video_link": "https://www.youtube.com/watch?v=P60OCKQbe40",
         "progress": 100
@@ -718,24 +726,24 @@
     "phase": "4",
     "ggdl_phase": "27",
     "skill_sets": ["flow", "chokepoints", "timings"],
-    "points": 11.1,
+    "points": 14.9,
     "list_percent": 53,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-04",
         "video_link": "https://www.youtube.com/watch?v=yOFwoAogwY8",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=6bM75sd_fK4",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=1w046iGLPQY",
         "progress": 100
@@ -753,7 +761,7 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-08",
         "video_link": "https://www.youtube.com/watch?v=Z3kBrNRCa04",
         "progress": 100
@@ -766,12 +774,12 @@
     "phase": "4",
     "ggdl_phase": "26",
     "skill_sets": ["overall", "fast-paced", "timings"],
-    "points": 9.7,
+    "points": 14.1,
     "list_percent": 55,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-08",
         "video_link": "https://www.youtube.com/watch?v=iRMXG_NdlbQ",
         "progress": 100
@@ -784,19 +792,19 @@
     "phase": "4",
     "ggdl_phase": "X",
     "skill_sets": ["fast-paced", "overall"],
-    "points": 9.7,
+    "points": 12.8,
     "list_percent": 50,
     "show_we_icon": true,
     "enjoyment": 6,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-02",
         "video_link": "https://www.youtube.com/watch?v=moDSgLmC1yo",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2024-XX-03",
         "video_link": "",
         "progress": 100
@@ -809,12 +817,12 @@
     "phase": "4",
     "ggdl_phase": "27",
     "skill_sets": ["timings"],
-    "points": 9.6,
+    "points": 12.7,
     "list_percent": 54,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=06QrbUAOtk8",
         "progress": 100
@@ -827,12 +835,12 @@
     "phase": "4",
     "ggdl_phase": "25",
     "skill_sets": ["wave", "chokepoints", "nerve control"],
-    "points": 9,
+    "points": 11.8,
     "list_percent": 63,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=jIw4o7D_HNU",
         "progress": 100
@@ -845,24 +853,24 @@
     "phase": "4",
     "ggdl_phase": "25",
     "skill_sets": ["cube", "timings", "fast-paced"],
-    "points": 8.8,
+    "points": 11.5,
     "list_percent": 50,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-07",
         "video_link": "https://www.youtube.com/watch?v=rFG6NPhSMc8",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-07",
         "video_link": "https://www.youtube.com/watch?v=w5UbAnhdxIM",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=N66PSvRohiA",
         "progress": 100
@@ -875,24 +883,24 @@
     "phase": "4",
     "ggdl_phase": "26",
     "skill_sets": ["wave", "ship", "chokepoints"],
-    "points": 8.4,
+    "points": 11,
     "list_percent": 54,
     "enjoyment": 7,
     "players": [
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2024-XX-04",
         "video_link": "https://www.youtube.com/watch?v=7vIyXZbSkjs",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-07",
         "video_link": "https://www.youtube.com/watch?v=_Vo_sBlFB44",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=8_wDVuQqXE8",
         "progress": 100
@@ -913,18 +921,18 @@
     "phase": "4",
     "ggdl_phase": "25",
     "skill_sets": ["timings", "learny", "chokepoints"],
-    "points": 8.4,
+    "points": 11,
     "list_percent": 55,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=zfc2pFUvQsM",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 73
@@ -937,42 +945,42 @@
     "phase": "4",
     "ggdl_phase": "27",
     "skill_sets": ["wave", "chokepoints", "nerve control"],
-    "points": 8.4,
+    "points": 10.9,
     "list_percent": 56,
     "enjoyment": 6,
     "players": [
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2023-XX-06",
         "video_link": "https://www.youtube.com/watch?v=3HWvilwlCAE",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-05",
         "video_link": "https://www.youtube.com/watch?v=3HWvilwlCAE",
         "progress": 100
       },
       {
-        "id": 15,
+        "id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=PYrtGvHFgOo",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=Yg2xI4IMU9E",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2025-XX-03",
         "video_link": "https://www.youtube.com/watch?v=3G3sGQZE2Wc",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 66
@@ -985,12 +993,12 @@
     "phase": "4",
     "ggdl_phase": "24",
     "skill_sets": ["high cps", "flow", "chokepoints"],
-    "points": 8.2,
+    "points": 10.7,
     "list_percent": 54,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-07",
         "video_link": "https://www.youtube.com/watch?v=qhfB1ObXuMo",
         "progress": 100
@@ -1003,18 +1011,18 @@
     "phase": "4",
     "ggdl_phase": "25",
     "skill_sets": ["timings", "flow", "chokepoints"],
-    "points": 8.2,
+    "points": 10.6,
     "list_percent": 54,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-07",
         "video_link": "https://www.youtube.com/watch?v=SN3BC5rgoos",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=LmBQsnTpF5s",
         "progress": 100
@@ -1027,18 +1035,18 @@
     "phase": "3",
     "ggdl_phase": "25",
     "skill_sets": ["high cps", "wave", "fast-paced"],
-    "points": 6.8,
+    "points": 9,
     "list_percent": 57,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-12",
         "video_link": "https://www.youtube.com/watch?v=cFQstEfAfpM",
         "progress": 100
       },
       {
-        "id": 12,
+        "id": "00fb331d-585f-4396-8558-f148eec150c7",
         "date": "2024-XX-09",
         "video_link": "",
         "progress": 100
@@ -1051,12 +1059,12 @@
     "phase": "3",
     "ggdl_phase": "25",
     "skill_sets": ["timings", "overall", "nerve control"],
-    "points": 6.6,
+    "points": 6.8,
     "list_percent": 51,
     "enjoyment": 8,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=TU6eYpjJbWU",
         "progress": 100
@@ -1069,18 +1077,18 @@
     "phase": "3",
     "ggdl_phase": "25",
     "skill_sets": ["wave", "chokepoints", "nerve control"],
-    "points": 6.4,
+    "points": 8.5,
     "list_percent": 60,
     "enjoyment": 5,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-03",
         "video_link": "https://www.youtube.com/watch?v=mGnVf8tpSwQ",
         "progress": 100
       },
       {
-        "id": 8,
+        "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 100
@@ -1093,24 +1101,24 @@
     "phase": "3",
     "ggdl_phase": "X",
     "skill_sets": ["timings", "high cps", "fast-paced"],
-    "points": 6.1,
+    "points": 8.1,
     "list_percent": 57,
     "enjoyment": 6,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-02",
         "video_link": "https://www.youtube.com/watch?v=iUItMg1V1Bk",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=zaONevPPygw",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "2024-XX-12",
         "video_link": "",
         "progress": 100
@@ -1131,24 +1139,24 @@
     "phase": "3",
     "ggdl_phase": "24",
     "skill_sets": ["wave", "chokepoints", "ship"],
-    "points": 6.1,
+    "points": 8,
     "list_percent": 51,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2022-XX-11",
         "video_link": "https://www.youtube.com/watch?v=7owgGd-I_AA",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "2024-XX-05",
         "video_link": "https://www.youtube.com/watch?v=KUMjyVUlS_A",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=vhnFe14OXq0",
         "progress": 100
@@ -1174,7 +1182,7 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=GploYzaDyYI",
         "progress": 100
@@ -1187,18 +1195,18 @@
     "phase": "3",
     "ggdl_phase": "23",
     "skill_sets": ["overall", "learny", "fast-paced"],
-    "points": 5.8,
+    "points": 7.8,
     "list_percent": 54,
     "enjoyment": 9,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=wTkpD3w9DTQ",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-12",
         "video_link": "",
         "progress": 100
@@ -1211,18 +1219,18 @@
     "phase": "3",
     "ggdl_phase": "25",
     "skill_sets": ["wave", "chokepoints", "fast-paced"],
-    "points": 5.6,
+    "points": 7.3,
     "list_percent": 59,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=dSKX0j8bJmg",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=FWiaiaTxDdY",
         "progress": 100
@@ -1235,18 +1243,18 @@
     "phase": "3",
     "ggdl_phase": "25",
     "skill_sets": ["timings", "chokepoints", "fast-paced"],
-    "points": 5.5,
+    "points": 7.2,
     "list_percent": 57,
     "enjoyment": 7,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-02",
         "video_link": "https://www.youtube.com/watch?v=OcysyuI4ZTg",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-12",
         "video_link": "",
         "progress": 68
@@ -1259,12 +1267,12 @@
     "phase": "3",
     "ggdl_phase": "24",
     "skill_sets": ["overall", "chokepoints", "timings"],
-    "points": 5.2,
+    "points": 6.7,
     "list_percent": 59,
     "enjoyment": 7,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=0siQdmvtNqs",
         "progress": 100
@@ -1277,24 +1285,24 @@
     "phase": "3",
     "ggdl_phase": "24",
     "skill_sets": ["chokepoints", "timings"],
-    "points": 5.1,
+    "points": 6.6,
     "list_percent": 59,
     "enjoyment": 6,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-03",
         "video_link": "https://www.youtube.com/watch?v=amBFD7TAX5w",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-06",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 8,
+        "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "2023-XX-11",
         "video_link": "",
         "progress": 100
@@ -1307,84 +1315,84 @@
     "phase": "3",
     "ggdl_phase": "24",
     "skill_sets": ["fast-paced", "timings", "ship"],
-    "points": 5.1,
+    "points": 6.6,
     "list_percent": 54,
     "enjoyment": 6,
     "players": [
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2023-XX-01",
         "video_link": "https://www.youtube.com/watch?v=QCSBwvf-OWQ",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2023-XX-10",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-02",
         "video_link": "https://www.youtube.com/watch?v=DaopwPVZJx8",
         "progress": 100
       },
       {
-        "id": 11,
+        "id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
         "date": "2024-XX-04",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2024-XX-08",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=mpJwd3Qr37M",
         "progress": 100
       },
       {
-        "id": 15,
+        "id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=qxdD1wivQcw",
         "progress": 100
       },
       {
-        "id": 8,
+        "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 13,
+        "id": "9b6dd468-a5bf-402c-a762-c445fef5d7c0",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 16,
+        "id": "a571665d-c68a-4070-a1d8-a0ca9958f311",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 90
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 86
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 81
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 79
@@ -1397,12 +1405,12 @@
     "phase": "3",
     "ggdl_phase": "23",
     "skill_sets": ["chokepoints", "fast-paced"],
-    "points": 5.1,
+    "points": 6.5,
     "list_percent": 56,
     "enjoyment": 6,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=GCtTvjPeK_I",
         "progress": 100
@@ -1415,12 +1423,12 @@
     "phase": "3",
     "ggdl_phase": "23",
     "skill_sets": ["chokepoints", "wave", "ship"],
-    "points": 5,
+    "points": 6.4,
     "list_percent": 61,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-01",
         "video_link": "https://www.youtube.com/watch?v=0JarWgDIFhg",
         "progress": 100
@@ -1433,42 +1441,42 @@
     "phase": "3",
     "ggdl_phase": "23",
     "skill_sets": ["chokepoints", "wave", "ship"],
-    "points": 4.8,
+    "points": 6.2,
     "list_percent": 57,
     "enjoyment": 5,
     "players": [
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2023-XX-07",
         "video_link": "https://www.youtube.com/watch?v=JA_yDSLE1m0",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-01",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-05",
         "video_link": "https://www.youtube.com/watch?v=9RaIxlLJM-0",
         "progress": 100
       },
       {
-        "id": 15,
+        "id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
         "date": "2024-XX-06",
         "video_link": "https://www.youtube.com/watch?v=NRy1LyPUFfE",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-06",
         "video_link": "https://www.youtube.com/live/0PyEDn_V0BE",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-11",
         "video_link": "",
         "progress": 100
@@ -1481,12 +1489,12 @@
     "phase": "3",
     "ggdl_phase": "24",
     "skill_sets": ["flow", "wave", "high cps"],
-    "points": 4.8,
+    "points": 6.1,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-10-01",
         "video_link": "https://www.youtube.com/watch?v=3PU2ugfmG4U",
         "progress": 100
@@ -1494,21 +1502,18 @@
     ]
   },
 
-
-
-
   {
     "id": 84766628,
     "name": "Cat Planet",
     "phase": "2",
     "ggdl_phase": "23",
     "skill_sets": ["chokepoints", "wave"],
-    "points": 3.4,
+    "points": 4.4,
     "list_percent": 100,
     "enjoyment": 6,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-06",
         "video_link": "https://www.youtube.com/watch?v=p557hsd4rns",
         "progress": 100
@@ -1522,12 +1527,12 @@
     "phase": "2",
     "ggdl_phase": "21",
     "skill_sets": ["fast-paced", "high cps", "learny"],
-    "points": 3,
+    "points": 3.8,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=q4Utrq6KtKQ",
         "progress": 100
@@ -1540,12 +1545,12 @@
     "phase": "2",
     "ggdl_phase": "22",
     "skill_sets": ["timings", "cube", "chokepoints"],
-    "points": 2.8,
+    "points": 3.5,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=AUr5i0rEOEc",
         "progress": 100
@@ -1558,12 +1563,12 @@
     "phase": "2",
     "ggdl_phase": "22",
     "skill_sets": ["ship", "swing", "chokepoints"],
-    "points": 2.7,
+    "points": 3.4,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=_55lIoyQxUI",
         "progress": 100
@@ -1576,18 +1581,18 @@
     "phase": "2",
     "ggdl_phase": "23",
     "skill_sets": ["timings", "high cps", "chokepoints"],
-    "points": 2.6,
+    "points": 3.2,
     "list_percent": 100,
     "enjoyment": 6,
     "players": [
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=zfgE0bTjTg8",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=fnWCA41nxfU",
         "progress": 100
@@ -1600,12 +1605,12 @@
     "phase": "2",
     "ggdl_phase": "22",
     "skill_sets": ["flow", "ship", "learny"],
-    "points": 2.5,
+    "points": 3.1,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-11",
         "video_link": "https://www.youtube.com/watch?v=jjHMDojnuyY",
         "progress": 100
@@ -1618,12 +1623,12 @@
     "phase": "2",
     "ggdl_phase": "22",
     "skill_sets": ["timings", "chokepoints", "gimmicky"],
-    "points": 2.4,
+    "points": 3,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-18-03",
         "video_link": "https://www.youtube.com/watch?v=TJW0igkGVSw",
         "progress": 100
@@ -1636,24 +1641,24 @@
     "phase": "2",
     "ggdl_phase": "22",
     "skill_sets": ["timings", "wave", "fast-paced"],
-    "points": 2.4,
+    "points": 2.9,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=3xo1b5kMTbE",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=tUnw-MzMBR8",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=3pjPStxQgdY",
         "progress": 100
@@ -1666,12 +1671,12 @@
     "phase": "2",
     "ggdl_phase": "21",
     "skill_sets": ["high cps", "UFO", "learny"],
-    "points": 2.4,
+    "points": 2.9,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=Sq8srqp8Vb8",
         "progress": 100
@@ -1687,12 +1692,12 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["learny", "duals", "flow"],
-    "points": 1.7,
+    "points": 2.1,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-09",
         "video_link": "https://www.youtube.com/watch?v=BOgj9X56PT4",
         "progress": 100
@@ -1705,24 +1710,24 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["timings", "chokepoints", "fast-paced"],
-    "points": 1.6,
+    "points": 1.9,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-07",
         "video_link": "https://www.youtube.com/watch?v=b1v7LzOQwjI",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-02",
         "video_link": "https://www.youtube.com/watch?v=b1v7LzOQwjI",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-03",
         "video_link": "https://www.youtube.com/watch?v=-ahjYq_4IJs",
         "progress": 100
@@ -1735,24 +1740,24 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["chokepoints", "timings", "flow"],
-    "points": 1.6,
+    "points": 1.9,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-07",
         "video_link": "https://www.youtube.com/watch?v=o6EQznnQjwM",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2024-XX-05",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-12",
         "video_link": "https://youtu.be/mTC38J5EnKQ?si=cx4da3V9m45tAZ3E",
         "progress": 100
@@ -1765,18 +1770,18 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["high cps", "flow", "fast-paced"],
-    "points": 1.4,
+    "points": 1.7,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-01",
         "video_link": "https://www.youtube.com/watch?v=SMI8s0PRzXY",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-06",
         "video_link": "https://www.youtube.com/watch?v=fIJfB_XincU",
         "progress": 100
@@ -1789,12 +1794,12 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["slow-paced", "memory", "chokepoints"],
-    "points": 1.4,
+    "points": 1.7,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=MOq2LEk643o",
         "progress": 100
@@ -1807,18 +1812,18 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["nerve control", "chokepoints", "overall"],
-    "points": 1.4,
+    "points": 1.6,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=jJIcx44_4-8",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2024-XX-12",
         "video_link": "",
         "progress": 100
@@ -1831,12 +1836,12 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["flow", "wave", "fast-paced"],
-    "points": 1.3,
+    "points": 1.5,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=qtSdJim8Rhk",
         "progress": 100
@@ -1849,12 +1854,12 @@
     "phase": "1",
     "ggdl_phase": "23",
     "skill_sets": ["lerany", "ship", "timings"],
-    "points": 1.3,
+    "points": 1.5,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-08",
         "video_link": "https://www.youtube.com/watch?v=i8T3MfGnp-w",
         "progress": 100
@@ -1867,42 +1872,42 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["ship", "chokepoints"],
-    "points": 1.3,
+    "points": 1.5,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=DMmsmDAMJRU",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-05",
         "video_link": "https://www.youtube.com/watch?v=6SliDB49njU",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-05",
         "video_link": "https://www.youtube.com/watch?v=OwFsgPAZkiw",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2024-XX-07",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-09",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=j9tusMnE3Wo",
         "progress": 100
@@ -1915,12 +1920,12 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["timings", "fast-paced", "flow"],
-    "points": 1.3,
+    "points": 1.5,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-05-11",
         "video_link": "https://www.youtube.com/watch?v=0ebefZfZQqE",
         "progress": 100
@@ -1933,12 +1938,12 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["chokepoints", "ship", "timings"],
-    "points": 1.3,
+    "points": 1.5,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2023-09-08",
         "video_link": "https://www.youtube.com/watch?v=JsKHS0S1-_s",
         "progress": 100
@@ -1951,30 +1956,30 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["chokepoints", "ship", "timings"],
-    "points": 1.3,
+    "points": 1.5,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-01",
         "video_link": "https://www.youtube.com/watch?v=kbujYuoTpjA",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2024-XX-12",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-16-01",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2025-XX-03",
         "video_link": "https://www.youtube.com/watch?v=oOqQTKVxWC4",
         "progress": 100
@@ -1987,12 +1992,12 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["chokepoints", "ship", "overall"],
-    "points": 1.3,
+    "points": 1.4,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2023-XX-04",
         "video_link": "https://www.youtube.com/watch?v=4jBX5ekOZOc",
         "progress": 100
@@ -2005,12 +2010,12 @@
     "phase": "1",
     "ggdl_phase": "20",
     "skill_sets": ["flow", "high cps", "learny"],
-    "points": 1.3,
+    "points": 1.4,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-07",
         "video_link": "https://www.youtube.com/watch?v=A2UJC4hEooc",
         "progress": 100
@@ -2023,12 +2028,12 @@
     "phase": "1",
     "ggdl_phase": "X",
     "skill_sets": ["wave", "chokepoints"],
-    "points": 1.3,
+    "points": 1.4,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2025-XX-XX",
         "video_link": "https://www.youtube.com/watch?v=1wbVRKIHXSQ",
         "progress": 100
@@ -2041,12 +2046,12 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["timings", "wave", "slow-paced"],
-    "points": 1.2,
+    "points": 1.4,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2022-XX-11",
         "video_link": "https://www.youtube.com/watch?v=bC-PzV-tntM",
         "progress": 100
@@ -2067,36 +2072,36 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["chokepoints", "timings", "wave"],
-    "points": 1.2,
+    "points": 1.4,
     "list_percent": 100,
     "enjoyment": 6,
     "players": [
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2023-XX-09",
         "video_link": "https://www.youtube.com/watch?v=bH3hGeyNhuo",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2023-XX-05",
         "video_link": "https://www.youtube.com/watch?v=yMXc6rWhTF0",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-09",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2024-XX-10",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=QK-byH38a0c",
         "progress": 100
@@ -2109,24 +2114,24 @@
     "phase": "1",
     "ggdl_phase": "X",
     "skill_sets": ["wave", "ship"],
-    "points": 1.2,
+    "points": 1.3,
     "list_percent": 100,
     "enjoyment": 9,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-28-01",
         "video_link": "https://www.youtube.com/watch?v=aPDLCTcjbGI",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2025-29-01",
         "video_link": "https://www.youtube.com/watch?v=V67QZwmScVY",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-18-02",
         "video_link": "",
         "progress": 100
@@ -2139,18 +2144,18 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["wave", "chokepoints", "ship"],
-    "points": 1.2,
+    "points": 1.3,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=pPhDYihxZDo",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-12",
         "video_link": "",
         "progress": 100
@@ -2163,12 +2168,12 @@
     "phase": "1",
     "ggdl_phase": "21",
     "skill_sets": ["wave", "overall", "timings"],
-    "points": 1.2,
+    "points": 1.3,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-15-05",
         "video_link": "https://www.youtube.com/watch?v=IMSnxczYMp4",
         "progress": 100
@@ -2181,12 +2186,12 @@
     "phase": "1",
     "ggdl_phase": "20",
     "skill_sets": ["flow", "learny", "fast-paced"],
-    "points": 1.2,
+    "points": 1.3,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=8b12cGalHno",
         "progress": 100
@@ -2199,12 +2204,12 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["chokepoints", "wave"],
-    "points": 1.2,
+    "points": 1.3,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=y1p3nUysfPM",
         "progress": 100
@@ -2217,25 +2222,25 @@
     "phase": "1",
     "ggdl_phase": "X",
     "skill_sets": ["learny", "overall"],
-    "points": 1.2,
+    "points": 1.3,
     "list_percent": 100,
     "show_we_icon": true,
     "enjoyment": 4,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-11",
         "video_link": "https://www.youtube.com/watch?v=AcZqi7NaJj4",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2023-XX-12",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 11,
+        "id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
         "date": "2024-XX-03",
         "video_link": "",
         "progress": 100
@@ -2253,25 +2258,25 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=NabtjDi2OgU",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2025-XX-02",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-02",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-21-03",
         "video_link": "",
         "progress": 100
@@ -2289,7 +2294,7 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2022-XX-07",
         "video_link": "https://www.youtube.com/watch?v=yqiZFjrbUDE",
         "progress": 100
@@ -2315,13 +2320,13 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 16,
+        "id": "a571665d-c68a-4070-a1d8-a0ca9958f311",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=XKLPLzSsUqA",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=MCvEVY3TpgI",
         "progress": 100
@@ -2334,12 +2339,12 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["fast-paced"],
-    "points": 1.1,
+    "points": 1.2,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=K5jxLBm3ilg",
         "progress": 100
@@ -2357,7 +2362,7 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-07",
         "video_link": "https://www.youtube.com/watch?v=a_tY_dYaITg",
         "progress": 100
@@ -2375,37 +2380,37 @@
     "enjoyment": 6,
     "players": [
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2023-XX-07",
         "video_link": "https://www.youtube.com/watch?v=ysFtkWZGLYo",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-XX-09",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-07",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=NzTfTPrN2ZM",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=MRhsjNUkH6c",
         "progress": 100
       },
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=QKTgYye1otg",
         "progress": 100
@@ -2423,7 +2428,7 @@
     "enjoyment": 6,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2019-XX-03",
         "video_link": "https://www.youtube.com/watch?v=Px7XFrBBRHE",
         "progress": 100
@@ -2444,18 +2449,18 @@
     "phase": "1",
     "ggdl_phase": "22",
     "skill_sets": ["timings", "choke points", "wave"],
-    "points": 1,
+    "points": 1.1,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2023-XX-10",
         "video_link": "https://www.youtube.com/watch?v=TyGQIvhSW6A",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-10",
         "video_link": "",
         "progress": 100
@@ -2473,67 +2478,67 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2022-XX-07",
         "video_link": "https://www.youtube.com/watch?v=V8beixooDl4",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2023-XX-03",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2023-XX-08",
         "video_link": "https://www.youtube.com/watch?v=0FNgwV0qLMg",
         "progress": 100
       },
       {
-        "id": 8,
+        "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "2023-XX-11",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 11,
+        "id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
         "date": "2023-XX-12",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "2024-XX-03",
         "video_link": "https://www.youtube.com/watch?v=pub0ylzD7vQ",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-04",
         "video_link": "https://www.youtube.com/watch?v=e4_FoDVGJGs",
         "progress": 100
       },
       {
-        "id": 15,
+        "id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
         "date": "2024-XX-04",
         "video_link": "https://www.youtube.com/watch?v=T6ysbaut8Zc",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-07",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=MEGfqI6BfYM",
         "progress": 100
       },
       {
-        "id": 13,
+        "id": "9b6dd468-a5bf-402c-a762-c445fef5d7c0",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 100
@@ -2551,13 +2556,13 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-XX-09",
         "video_link": "https://www.youtube.com/watch?v=rw3afgiDQjw",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=_ybfsMsh8wU",
         "progress": 100
@@ -2575,7 +2580,7 @@
     "enjoyment": 6,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=CFdVRl5DbMI",
         "progress": 100
@@ -2593,7 +2598,7 @@
     "enjoyment": 5,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-07-01",
         "video_link": "https://www.youtube.com/watch?v=zkJMofMWjGo",
         "progress": 100
@@ -2611,13 +2616,13 @@
     "enjoyment": 4,
     "players": [
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=w7dPmWLeaAA",
         "progress": 100
       },
       {
-        "id": 8,
+        "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 100
@@ -2635,13 +2640,13 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=6mw35X-qVsw",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-XX-01",
         "video_link": "",
         "progress": 100
@@ -2659,19 +2664,19 @@
     "enjoyment": 6,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-11",
         "video_link": "https://www.youtube.com/watch?v=su7p9rT3JB4",
         "progress": 100
       },      
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-XX-01",
         "video_link": "https://youtu.be/ytF68pkQ_JQ?si=QXTPqqbhdVlfOCuT",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=0QoUW08BwtA",
         "progress": 100
@@ -2689,7 +2694,7 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=vfrXyDzuIIk",
         "progress": 100
@@ -2707,7 +2712,7 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-13-03",
         "video_link": "https://www.youtube.com/watch?v=2ZECH2SRf38",
         "progress": 100
@@ -2725,7 +2730,7 @@
     "enjoyment": 9,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-10-01",
         "video_link": "https://www.youtube.com/watch?v=-Nj1KrAUhTo",
         "progress": 100
@@ -2743,7 +2748,7 @@
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-03-02",
         "video_link": "https://www.youtube.com/watch?v=fwjIXntIiko",
         "progress": 100
@@ -2761,55 +2766,55 @@
     "enjoyment": 5,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2019-XX-12",
         "video_link": "https://www.youtube.com/watch?v=f_Fu6Ibx8tU",
         "progress": 100
       },
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2022-XX-11",
         "video_link": "https://www.youtube.com/watch?v=DE_5bZRjPks",
         "progress": 100
       },
       {
-        "id": 11,
+        "id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
         "date": "2023-XX-10",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 15,
+        "id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
         "date": "2024-XX-01",
         "video_link": "https://www.youtube.com/watch?v=rlZ24h7TCOM",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-04",
         "video_link": "https://www.youtube.com/watch?v=LOHO2U_-AHE",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "2024-XX-10",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2024-XX-10",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2024-XX-10",
         "video_link": "https://www.youtube.com/watch?v=ueZXdahuX8I",
         "progress": 100
       },
       {
-        "id": 8,
+        "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "20XX-XX-XX",
         "video_link": "",
         "progress": 100
@@ -2827,7 +2832,7 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-10-01",
         "video_link": "https://www.youtube.com/watch?v=zE0kYu8Uev8",
         "progress": 100
@@ -2845,7 +2850,7 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2025-18-03",
         "video_link": "https://www.youtube.com/watch?v=arn_H4QM_1o",
         "progress": 100
@@ -2863,13 +2868,13 @@
     "enjoyment": 6,
     "players": [
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2023-XX-04",
         "video_link": "https://www.youtube.com/watch?v=fpaangbj5oE",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2024-15-10",
         "video_link": "",
         "progress": 100
@@ -2887,25 +2892,25 @@
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "2023-28-05",
         "video_link": "https://www.youtube.com/watch?v=oM48txKXxzA",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2024-XX-06",
         "video_link": "https://www.youtube.com/watch?v=NoCKl8m845U",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "2024-XX-07",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 2,
+        "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "2024-XX-08",
         "video_link": "",
         "progress": 100
@@ -2923,7 +2928,7 @@
     "enjoyment": 4,
     "players": [
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=4wVGrFjEJ7o",
         "progress": 100
@@ -2936,24 +2941,24 @@
     "phase": "0",
     "ggdl_phase": "20",
     "skill_sets": ["duals", "timings", "chokepoints"],
-    "points": 0.9,
+    "points": 0.8,
     "list_percent": 100,
     "enjoyment": 6,
     "players": [
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=GVu7S_o6uR4",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "X",
         "video_link": "",
         "progress": 100
@@ -2966,12 +2971,12 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["learny", "fast-paced", "flow"],
-    "points": 0.9,
+    "points": 0.8,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=JlA90QTueG8",
         "progress": 100
@@ -2984,54 +2989,54 @@
     "phase": "0",
     "ggdl_phase": "20",
     "skill_sets": ["flow", "ship", "timings"],
-    "points": 0.8,
+    "points": 0.7,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=-PClYRMzE6c",
         "progress": 100
       },
       {
-        "id": 10,
+        "id": "defa590e-504e-4f3d-9497-643a72673762",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 16,
+        "id": "a571665d-c68a-4070-a1d8-a0ca9958f311",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 9,
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=vfeaIqRqv_0",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 11,
+        "id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 3,
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=br8mXaR6OZ4",
         "progress": 100
@@ -3044,12 +3049,12 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["high cps", "fast-paced"],
-    "points": 0.8,
+    "points": 0.7,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=52y_-3RtA0E",
         "progress": 100
@@ -3062,18 +3067,18 @@
     "phase": "0",
     "ggdl_phase": "17",
     "skill_sets": ["wave", "cube"],
-    "points": 0.8,
+    "points": 0.7,
     "list_percent": 100,
     "enjoyment": 2,
     "players": [
       {
-        "id": 14,
+        "id": "8375417c-a931-4ab6-86de-fbb6ea762068",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=OdUuK5QCx3w",
         "progress": 100
       },
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "",
         "progress": 100
@@ -3086,12 +3091,12 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["wave", "spider"],
-    "points": 0.8,
+    "points": 0.7,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=UuxVJDri-rk",
         "progress": 100
@@ -3104,18 +3109,18 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["wave", "chokepoints", "nerve-control"],
-    "points": 0.8,
+    "points": 0.6,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=88Vr0mNtLas",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=S-ZU0FCw_sQ",
         "progress": 100
@@ -3128,24 +3133,24 @@
     "phase": "0",
     "ggdl_phase": "18",
     "skill_sets": ["flow", "learny", "high cps"],
-    "points": 0.8,
+    "points": 0.6,
     "list_percent": 100,
     "enjoyment": 8,
     "players": [
       {
-        "id": 4,
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=E2ZL98xGE8w",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 12,
+        "id": "00fb331d-585f-4396-8558-f148eec150c7",
         "date": "X",
         "video_link": "",
         "progress": 100
@@ -3158,24 +3163,24 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["timings", "nerve-control", "slow-paced"],
-    "points": 0.8,
+    "points": 0.6,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=47rBv19ov9I",
         "progress": 100
       },
       {
-        "id": 5,
+        "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "X",
         "video_link": "",
         "progress": 100
       },
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "X",
         "video_link": "",
         "progress": 100
@@ -3188,18 +3193,18 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["chokepoints", "ship", "timings"],
-    "points": 0.7,
+    "points": 0.5,
     "list_percent": 100,
     "enjoyment": 5,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=yHqjzCPx3J8",
         "progress": 100
       },
       {
-        "id": 1,
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
         "date": "X",
         "video_link": "",
         "progress": 100
@@ -3220,18 +3225,18 @@
     "phase": "0",
     "ggdl_phase": "19",
     "skill_sets": ["wave", "duals"],
-    "points": 0.7,
+    "points": 0.5,
     "list_percent": 100,
     "enjoyment": 6,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=114zaxTl7WU",
         "progress": 100
       },
       {
-        "id": 7,
+        "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "X",
         "video_link": "",
         "progress": 100
@@ -3244,12 +3249,12 @@
     "phase": "0",
     "ggdl_phase": "18",
     "skill_sets": ["nerve-control", "wave", "learny"],
-    "points": 0.7,
+    "points": 0.5,
     "list_percent": 100,
     "enjoyment": 7,
     "players": [
       {
-        "id": 6,
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "X",
         "video_link": "https://www.youtube.com/watch?v=VWYtRJSUhs8",
         "progress": 100

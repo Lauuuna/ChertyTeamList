@@ -1,6 +1,7 @@
 [
     {
-      "id": 1,
+      "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
+      "user_id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
       "nickname": "tami.q",
       "flag": "kz", 
       "osc": 3.778,
@@ -12,7 +13,8 @@
       "channel_link": "https://www.youtube.com/@tami.q"
     },
     {
-      "id": 2,
+      "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
+      "user_id": "2f26542e-600e-4970-a385-d1f46d93b16a",
       "nickname": "angyedz",
       "flag": "ru",
       "osc": 3.503,
@@ -24,7 +26,8 @@
       "channel_link": "http://www.youtube.com/@Angyedz"
     },
     {
-      "id": 3,
+      "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
+      "user_id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
       "nickname": "sailers",
       "flag": "ru",
       "osc": 2.939,
@@ -36,7 +39,8 @@
       "channel_link": "http://www.youtube.com/@Sailers_gd"
     },
     {
-      "id": 4,
+      "id": "c70984ba-e74c-4335-96e6-373c75252736",
+      "user_id": "c70984ba-e74c-4335-96e6-373c75252736",
       "nickname": "miffiewxx",
       "flag": "fi",
       "osc": 3.781,
@@ -48,7 +52,8 @@
       "channel_link": "https://www.youtube.com/@miffiewxx"
     },
     {
-      "id": 5,
+      "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
+      "user_id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
       "nickname": "imasssaya",
       "flag": "ru",
       "osc": 2.827,
@@ -60,7 +65,8 @@
       "channel_link": "http://www.youtube.com/@imasssaya"
     },
     {
-      "id": 6,
+      "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
+      "user_id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
       "nickname": "spacekz",
       "flag": "kz",
       "osc": 2.793,
@@ -72,7 +78,8 @@
       "channel_link": "https://www.youtube.com/channel/UCmKmDuAyD9EwF9FHV9JKhYw"
     },
     {
-      "id": 7,
+      "id": "a29ff419-27d9-403d-992d-77e377e76161",
+      "user_id": "a29ff419-27d9-403d-992d-77e377e76161",
       "nickname": "washaio",
       "flag": "be",
       "osc": 1.449,
@@ -84,7 +91,8 @@
       "channel_link": "https://www.youtube.com/@Rewtym"
     },
     {
-      "id": 8,
+      "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
+      "user_id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
       "nickname": "niffy",
       "flag": "be",
       "osc": "X",
@@ -96,7 +104,8 @@
       "channel_link": ""
     },
     {
-      "id": 9,
+      "id": "61aab92c-376d-4759-9c0e-5826b250a099",
+      "user_id": "61aab92c-376d-4759-9c0e-5826b250a099",
       "nickname": "geryndiy",
       "flag": "ru",
       "osc": 2.365,
@@ -108,7 +117,8 @@
       "channel_link": "https://www.youtube.com/@geryndiy"
     },
     {
-      "id": 10,
+      "id": "defa590e-504e-4f3d-9497-643a72673762",
+      "user_id": "defa590e-504e-4f3d-9497-643a72673762",
       "nickname": "azeronir",
       "flag": "ru",
       "osc": "X",
@@ -120,7 +130,8 @@
       "channel_link": "https://www.youtube.com/@Azeronir"
     },
     {
-      "id": 11,
+      "id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
+      "user_id": "fcd7e1c9-645d-44e9-96d0-0f90d3c0819f",
       "nickname": "verynicepeek",
       "flag": "ru",
       "osc": "X",
@@ -132,7 +143,8 @@
       "channel_link": "https://youtube.com/@nicepeek23?si=NGcUsYLhSVcf4BLW"
     },
     {
-      "id": 12,
+      "id": "00fb331d-585f-4396-8558-f148eec150c7",
+      "user_id": "00fb331d-585f-4396-8558-f148eec150c7",
       "nickname": "uharbuz",
       "flag": "ru",
       "osc": 3.452,
@@ -144,7 +156,8 @@
       "channel_link": "https://www.youtube.com/@kotyarachik"
     },
     {
-      "id": 13,
+      "id": "9b6dd468-a5bf-402c-a762-c445fef5d7c0",
+      "user_id": "9b6dd468-a5bf-402c-a762-c445fef5d7c0",
       "nickname": "bapehuk",
       "flag": "ru",
       "osc": "X",
@@ -156,7 +169,8 @@
       "channel_link": ""
     },
     {
-      "id": 14,
+      "id": "8375417c-a931-4ab6-86de-fbb6ea762068",
+      "user_id": "8375417c-a931-4ab6-86de-fbb6ea762068",
       "nickname": "Lauuuna",
       "flag": "ca",
       "osc": "X",
@@ -168,7 +182,8 @@
       "channel_link": "https://www.youtube.com/@launeow"
     },
     {
-      "id": 15,
+      "id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
+      "user_id": "fb10ddad-6a62-4fed-8403-3c0decb3c739",
       "nickname": "dobbietz",
       "flag": "gr",
       "osc": "X",
@@ -180,7 +195,8 @@
       "channel_link": "https://www.youtube.com/@Dobbietz"
     },
     {
-      "id": 16,
+      "id": "a571665d-c68a-4070-a1d8-a0ca9958f311",
+      "user_id": "a571665d-c68a-4070-a1d8-a0ca9958f311",
       "nickname": "termterrifyz",
       "flag": "ru",
       "osc": "X",

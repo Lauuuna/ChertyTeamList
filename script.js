@@ -217,7 +217,7 @@ async function loadLevels() {
             `;
 
             levelCard.addEventListener('click', () => {
-                window.location.href = `level.html?id=${level.id}`; // Переход по ID уровня
+                window.location.href = `level.html?id=${level.id}`; 
             });
             levelsList.appendChild(levelCard);
         });

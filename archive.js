@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="archive-dates">${archive.date_start} - ${archive.date_end} (${archive.duration_days} дней)</p>
                 `;
                 archiveLevelCard.addEventListener('click', () => {
-                    window.location.href = `level.html?id=${level.id}`; // Переход по ID уровня
+                    window.location.href = `level.html?id=${level.id}`; 
                 });
                 archiveList.appendChild(archiveLevelCard);
             }

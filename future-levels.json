@@ -1,0 +1,222 @@
+[
+    {
+        "id": 27690100,
+        "name": "Slaughterhouse",
+        "skill_sets": ["fast-paced", "chokepoints", "wave"],
+        "enjoyment": 2,
+        "players": [
+            {
+                "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
+                "nickname": "angyedz",
+                "video_link": "https://www.youtube.com/watch?v=sysQa0IE1n4",
+                "progress": "52%, 49-89%, 74-100" 
+            }
+        ]
+    },
+    {
+        "id": 76962930,
+        "name": "Sakupen Circles",
+        "skill_sets": ["wave"],
+        "enjoyment": 4,
+        "players": [
+            {
+                "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
+                "nickname": "tami.q",
+                "video_link": "https://www.youtube.com/watch?v=KLmC4Pi99-A",
+                "progress": "51%, 37-67%, 53-100" 
+            }
+        ]
+    },
+    {
+        "id": 75206202,
+        "name": "Firework",
+        "skill_sets": ["timings", "nerve-control", "cube"],
+        "enjoyment": 4,
+        "players": [
+            {
+                "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
+                "nickname": "spacekz",
+                "video_link": "https://www.youtube.com/watch?v=8RcZVS0kzCg",
+                "progress": "44%, 45-100" 
+            }
+        ]
+    },
+    {
+        "id": 88203501,
+        "name": "UNKNOWN",
+        "skill_sets": ["wave", "chokepoints", "high cps"],
+        "enjoyment": 7,
+        "players": [
+            {
+                "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
+                "nickname": "tami.q",
+                "video_link": "https://www.youtube.com/watch?v=aJAnfV8NbaE",
+                "progress": "93%, 43-100" 
+            },
+            {
+                "id": "00fb331d-585f-4396-8558-f148eec150c7",
+                "nickname": "uharbuz",
+                "video_link": "",
+                "progress": "38%, 37-100" 
+            }
+        ]
+    },
+    {
+        "id": 71025973,
+        "name": "Oblivion",
+        "skill_sets": ["timings", "chokepoints", "fast-paced"],
+        "enjoyment": 8,
+        "players": [
+            {
+                "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
+                "nickname": "tami.q",
+                "video_link": "https://www.youtube.com/watch?v=gSBuyBbyWcE",
+                "progress": "55%, 41-100" 
+            },
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "",
+                "progress": "31%, 27-47%, 47-100" 
+            }
+        ]
+    },
+    {
+        "id": 95524621,
+        "name": "Crackhead Circles",
+        "skill_sets": ["wave"],
+        "enjoyment": 10,
+        "players": [
+            {
+                "id": "00fb331d-585f-4396-8558-f148eec150c7",
+                "nickname": "uharbuz",
+                "video_link": "https://www.youtube.com/watch?v=UmB7ryRF6eI",
+                "progress": "53% x2, 31-100" 
+            }
+        ]
+    },
+    {
+        "id": 88136707,
+        "name": "Sky Shredder",
+        "skill_sets": ["UFO", "ship", "timings"],
+        "enjoyment": 10,
+        "players": [
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "https://www.youtube.com/watch?v=uc0AMZFAHwM",
+                "progress": "74%, 39-100" 
+            }
+        ]
+    },
+    {
+        "id": 94156085,
+        "name": "Shimmer",
+        "skill_sets": ["X"],
+        "enjoyment": 8,
+        "players": [
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "https://www.youtube.com/watch?v=_vuXb2PHiOI",
+                "progress": "27%, 25-47%, 45-100" 
+            }
+        ]
+    },
+        {
+        "id": 82172844,
+        "name": "cobwebs",
+        "skill_sets": ["X"],
+        "enjoyment": 8,
+        "players": [
+            {
+                "id": "00fb331d-585f-4396-8558-f148eec150c7",
+                "nickname": "uharbuz",
+                "video_link": "https://www.youtube.com/watch?v=cV1iYMF6dGg",
+                "progress": "92%, 22-100" 
+            },
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "",
+                "progress": "52%, 52-100" 
+            }
+        ]
+    },
+    {
+        "id": 82172844,
+        "name": "Bloodlust",
+        "skill_sets": ["nerve control", "overall", "swing"],
+        "enjoyment": 6,
+        "players": [
+            {
+                "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
+                "nickname": "tami.q",
+                "video_link": "https://www.youtube.com/watch?v=pZlRHWuVDn4",
+                "progress": "85%, 30-100" 
+            },
+            {
+                "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
+                "nickname": "angyedz",
+                "video_link": "",
+                "progress": "78" 
+            }
+        ]
+    },
+    {
+        "id": 84507862,
+        "name": "no jokes",
+        "skill_sets": ["X"],
+        "enjoyment": "X",
+        "players": [
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "https://www.youtube.com/watch?v=c_RyviSQRY0",
+                "progress": "58%, 48-100" 
+            }
+        ]
+    },
+    {
+        "id": 94390380,
+        "name": "cridium",
+        "skill_sets": ["X"],
+        "enjoyment": "X",
+        "players": [
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "https://www.youtube.com/watch?v=i3dY7MhBwVA",
+                "progress": "X" 
+            }
+        ]
+    },
+    {
+        "id": 38655495,
+        "name": "Plasma Pulse Finale",
+        "skill_sets": ["X"],
+        "enjoyment": 7,
+        "players": [
+            {
+                "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
+                "nickname": "spacekz",
+                "video_link": "https://www.youtube.com/watch?v=msrj2aoP3pE",
+                "progress": "X" 
+            }
+        ]
+    },
+    {
+        "id": 64658786,
+        "name": "wasureta",
+        "skill_sets": ["fast-paced", "flow", "high cps"],
+        "enjoyment": 7,
+        "players": [
+            {
+                "id": "c70984ba-e74c-4335-96e6-373c75252736",
+                "nickname": "miffiewxx",
+                "video_link": "https://www.youtube.com/watch?v=LDdnsp53PJs",
+                "progress": "63%, 38-100" 
+            }
+        ]
+    }
+]
