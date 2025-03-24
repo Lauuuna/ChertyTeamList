@@ -1,9 +1,7 @@
-// Инициализация Supabase клиента
 const supabaseUrl = 'https://ivriytixvxgntxkougjr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cml5dGl4dnhnbnR4a291Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzY0NDgsImV4cCI6MjA1ODI1MjQ0OH0.hByLZ98uqgJaKLPvZ3jf6_-SnCDIkttG2S9RfgNahtE';
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-// Кэш для игроков
 const playersCache = new Map();
 
 async function fetchData(url) {
@@ -55,16 +53,12 @@ async function loadLevelDetails() {
         const position = levels.indexOf(level) + 1;
         const verifierNickname = await getPlayerInfo(level.players[0]?.id);
         
-        // WE иконка для страницы уровня
         const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : '';
         
-        // NEW иконка для страницы уровня
         const newIcon = level.show_new_icon ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon">' : '';
         
-        // Phase бейдж
         const phaseBadge = `<span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span>`;
 
-        // Видео превью
         let videoId = '';
         if (level.players[0]?.video_link) {
             const videoLink = level.players[0].video_link;
@@ -76,7 +70,6 @@ async function loadLevelDetails() {
         }
         const embedVideoLink = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
-        // Получаем ники всех игроков из базы
         const playerRecords = await Promise.all(level.players.map(async player => {
             const nickname = await getPlayerInfo(player.id);
             return { ...player, nickname };
@@ -133,14 +126,12 @@ async function loadLevelDetails() {
             <button class="enjoyment-button" id="enjoyment-button">View Enjoyment</button>
         `;
 
-        // Обработчик для кнопки Enjoyment
         document.getElementById('enjoyment-button')?.addEventListener('click', async () => {
             const enjoymentData = await fetchData('enjoyment.json');
             const levelEnjoyment = enjoymentData[level.id] || {};
             const modal = document.getElementById('enjoyment-modal');
             const enjoymentList = document.getElementById('enjoyment-list');
             
-            // Рассчитываем средний enjoyment
             const ratings = Object.values(levelEnjoyment).filter(r => typeof r === 'number');
             const averageRating = ratings.length > 0 
                 ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1)
@@ -148,7 +139,6 @@ async function loadLevelDetails() {
             
             let content = '<div class="enjoyment-container">';
             
-            // Добавляем средний рейтинг
             if (averageRating) {
                 content += `
                     <div class="enjoyment-header">
@@ -160,7 +150,6 @@ async function loadLevelDetails() {
                 `;
             }
             
-            // Добавляем индивидуальные оценки
             if (Object.keys(levelEnjoyment).length > 0) {
                 content += `
                     <div class="enjoyment-divider"></div>
@@ -200,7 +189,6 @@ async function loadLevelDetails() {
             modal.style.display = 'flex';
         });
 
-        // Обработчики модального окна
         const closeModal = document.querySelector('.close');
         if (closeModal) {
             closeModal.addEventListener('click', () => {
@@ -219,7 +207,6 @@ async function loadLevelDetails() {
     }
 }
 
-// Инициализация
 document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.includes('level.html')) {
         loadLevelDetails();

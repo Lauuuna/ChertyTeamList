@@ -1,11 +1,9 @@
-// Инициализация Supabase клиента
 const supabaseUrl = 'https://ivriytixvxgntxkougjr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cml5dGl4dnhnbnR4a291Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzY0NDgsImV4cCI6MjA1ODI1MjQ0OH0.hByLZ98uqgJaKLPvZ3jf6_-SnCDIkttG2S9RfgNahtE';
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-// Кэш для игроков
 const playersCache = new Map();
-let allLevels = []; // Глобальная переменная для хранения всех уровней
+let allLevels = []; 
 
 async function fetchData(url) {
     try {
@@ -80,20 +78,16 @@ async function loadLevels() {
             const position = allLevels.indexOf(level) + 1;
             const playerNickname = await getPlayerInfo(level.players[0]?.id);
             
-            // WE иконка
             const weIcon = level.show_we_icon 
                 ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' 
                 : '';
             
-            // NEW иконка
             const newIcon = level.show_new_icon
                 ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon">'
                 : '';
             
-            // Phase бейдж с оригинальными классами
             const phaseBadge = `<span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span>`;
             
-            // Видео превью
             let previewUrl = '';
             if (level.players[0]?.video_link) {
                 const videoId = extractYouTubeId(level.players[0].video_link);
@@ -125,7 +119,6 @@ async function loadLevels() {
     }
 }
 
-// Вспомогательные функции
 async function preloadPlayerNicknames(playerIds) {
     const uniqueIds = [...new Set(playerIds)];
     const uncachedIds = uniqueIds.filter(id => !playersCache.has(id));
@@ -155,7 +148,6 @@ function extractYouTubeId(url) {
     return (match && match[2].length === 11) ? match[2] : null;
 }
 
-// Обработчики событий
 function setupEventListeners() {
     const searchInput = document.getElementById('search-input');
     const phaseFilter = document.getElementById('phase-filter');
@@ -175,7 +167,6 @@ function setupEventListeners() {
     });
 }
 
-// Инициализация
 document.addEventListener('DOMContentLoaded', async () => {
     if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
         await loadAllLevels();
