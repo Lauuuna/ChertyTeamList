@@ -909,11 +909,12 @@ input[type="number"] {
 }
 
 .we-icon {
-  width: 30px;
-  height: 30px;
-  vertical-align: middle;
-  margin-left: 5px;
-}
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 15px;
+    animation: pulse 2s infinite;
+  }
 
 nav a {
   color: #ff4444;
@@ -1431,3 +1432,20 @@ nav a {
 .enjoyment-button:active {
   transform: translateY(0);
 }
+
+.new-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+

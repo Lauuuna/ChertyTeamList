@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        window.supabaseClient = supabase.createClient(
+            'https://ivriytixvxgntxkougjr.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cml5dGl4dnhnbnR4a291Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzY0NDgsImV4cCI6MjA1ODI1MjQ0OH0.hByLZ98uqgJaKLPvZ3jf6_-SnCDIkttG2S9RfgNahtE'
+        );
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cherti List</title>
     <link rel="stylesheet" href="styles.css">
@@ -10,7 +17,7 @@
 </head>
 <body>
   <header>
-    <h1>Cherti List <span class="beta">v1.2</span></h1>
+    <h1>Cherti List <span class="beta">v1.3.2</span></h1>
     <nav>
       <a href="index.html">Demon List</a>
       <a href="future.html">Future List</a>

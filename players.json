@@ -206,5 +206,18 @@
       "avatar": "avatars/avatar.png",
       "banner": "banners/banner.png",
       "channel_link": ""
+    },
+    {
+      "id": "04313f0f-005a-4cfe-aaad-840dc5305aaf",
+      "user_id": "04313f0f-005a-4cfe-aaad-840dc5305aaf",
+      "nickname": "nngd",
+      "flag": "ru",
+      "osc": "X",
+      "l_percent": "X",
+      "time_for_1_star": "X",
+      "skill_set": ["overall"],
+      "avatar": "avatars/avatar.png",
+      "banner": "banners/banner.png",
+      "channel_link": ""
     }
   ]

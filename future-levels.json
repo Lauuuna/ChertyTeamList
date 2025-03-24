@@ -9,7 +9,7 @@
                 "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
                 "nickname": "angyedz",
                 "video_link": "https://www.youtube.com/watch?v=sysQa0IE1n4",
-                "progress": "52%, 49-89%, 74-100" 
+                "progress": "52%, 49-89%, 74-100%" 
             }
         ]
     },
@@ -23,7 +23,7 @@
                 "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
                 "nickname": "tami.q",
                 "video_link": "https://www.youtube.com/watch?v=KLmC4Pi99-A",
-                "progress": "51%, 37-67%, 53-100" 
+                "progress": "51%, 37-67%, 53-100%" 
             }
         ]
     },
@@ -37,7 +37,7 @@
                 "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
                 "nickname": "spacekz",
                 "video_link": "https://www.youtube.com/watch?v=8RcZVS0kzCg",
-                "progress": "44%, 45-100" 
+                "progress": "44%, 45-100%" 
             }
         ]
     },
@@ -51,13 +51,13 @@
                 "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
                 "nickname": "tami.q",
                 "video_link": "https://www.youtube.com/watch?v=aJAnfV8NbaE",
-                "progress": "93%, 43-100" 
+                "progress": "93%, 43-100%" 
             },
             {
                 "id": "00fb331d-585f-4396-8558-f148eec150c7",
                 "nickname": "uharbuz",
                 "video_link": "",
-                "progress": "38%, 37-100" 
+                "progress": "38%, 37-100%" 
             }
         ]
     },
@@ -71,13 +71,13 @@
                 "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
                 "nickname": "tami.q",
                 "video_link": "https://www.youtube.com/watch?v=gSBuyBbyWcE",
-                "progress": "55%, 41-100" 
+                "progress": "55%, 41-100%" 
             },
             {
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "",
-                "progress": "31%, 27-47%, 47-100" 
+                "progress": "31%, 27-47%, 47-100%" 
             }
         ]
     },
@@ -91,7 +91,7 @@
                 "id": "00fb331d-585f-4396-8558-f148eec150c7",
                 "nickname": "uharbuz",
                 "video_link": "https://www.youtube.com/watch?v=UmB7ryRF6eI",
-                "progress": "53% x2, 31-100" 
+                "progress": "53% x2, 31-100%" 
             }
         ]
     },
@@ -105,7 +105,7 @@
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "https://www.youtube.com/watch?v=uc0AMZFAHwM",
-                "progress": "74%, 39-100" 
+                "progress": "74%, 39-100%" 
             }
         ]
     },
@@ -119,7 +119,7 @@
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "https://www.youtube.com/watch?v=_vuXb2PHiOI",
-                "progress": "27%, 25-47%, 45-100" 
+                "progress": "27%, 25-47%, 45-100%" 
             }
         ]
     },
@@ -133,13 +133,13 @@
                 "id": "00fb331d-585f-4396-8558-f148eec150c7",
                 "nickname": "uharbuz",
                 "video_link": "https://www.youtube.com/watch?v=cV1iYMF6dGg",
-                "progress": "92%, 22-100" 
+                "progress": "92%, 22-100%" 
             },
             {
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "",
-                "progress": "52%, 52-100" 
+                "progress": "52%, 52-100%" 
             }
         ]
     },
@@ -153,13 +153,13 @@
                 "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
                 "nickname": "tami.q",
                 "video_link": "https://www.youtube.com/watch?v=pZlRHWuVDn4",
-                "progress": "85%, 30-100" 
+                "progress": "85%, 30-100%" 
             },
             {
                 "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
                 "nickname": "angyedz",
                 "video_link": "",
-                "progress": "78" 
+                "progress": "78%" 
             }
         ]
     },
@@ -173,7 +173,7 @@
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "https://www.youtube.com/watch?v=c_RyviSQRY0",
-                "progress": "58%, 48-100" 
+                "progress": "58%, 48-100%" 
             }
         ]
     },
@@ -187,7 +187,7 @@
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "https://www.youtube.com/watch?v=i3dY7MhBwVA",
-                "progress": "X" 
+                "progress": "X%" 
             }
         ]
     },
@@ -201,7 +201,7 @@
                 "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
                 "nickname": "spacekz",
                 "video_link": "https://www.youtube.com/watch?v=msrj2aoP3pE",
-                "progress": "X" 
+                "progress": "X%" 
             }
         ]
     },
@@ -215,7 +215,7 @@
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
                 "nickname": "miffiewxx",
                 "video_link": "https://www.youtube.com/watch?v=LDdnsp53PJs",
-                "progress": "63%, 38-100" 
+                "progress": "63%, 38-100%" 
             }
         ]
     }
