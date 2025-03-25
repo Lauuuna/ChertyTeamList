@@ -2,145 +2,135 @@
 <html lang="ru">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-     window.supabase = supabase.createClient(
-            'https://ivriytixvxgntxkougjr.supabase.co',
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cml5dGl4dnhnbnR4a291Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzY0NDgsImV4cCI6MjA1ODI1MjQ0OH0.hByLZ98uqgJaKLPvZ3jf6_-SnCDIkttG2S9RfgNahtE'
-        );
-    </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Selection</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        #skill-points {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-        }
-
-        #skill-points h2 {
-            text-align: center; 
-            margin-bottom: 20px;
-        }
-
-        #skill-points-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-            width: 100%; 
-        }
-
-        #recommendations-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .recommendations-container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            gap: 20px;
         }
 
         .player-selector {
-            margin-bottom: 20px;
-        }
-
-        .player-selector label {
-            font-size: 1.2em;
-            color: #fff;
-            margin-right: 10px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         .player-selector select {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #444;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px solid #444;
             background-color: #222;
             color: #fff;
-            font-size: 1em;
+            font-size: 16px;
+            width: 300px;
+            max-width: 100%;
         }
 
-        #skill-points, #recommended-levels {
-            background-color: #333;
-            border-radius: 10px;
-            padding: 20px;
-            width: 80%;
-            max-width: 800px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        #skill-points-list {
+        .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
         }
 
-        .skill-point {
-            background-color: #444;
-            border-radius: 5px;
-            padding: 10px;
-            transition: background-color 0.3s ease;
+        .skill-stats {
+            background-color: #222;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
         }
 
-        .skill-point:hover {
-            background-color: #555;
+        .skill-stats h2 {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
         }
 
-        .skill-point h3 {
-            font-size: 1.2em;
-            margin: 0;
+        .radar-chart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .balance-info {
+            margin-top: 20px;
+            text-align: center;
             color: #fff;
         }
 
-        .skill-point p {
-            margin: 5px 0;
-            color: #aaa;
+        .balance-score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4444;
+            margin: 10px 0;
         }
 
-        #recommended-levels {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
+        .balance-rank {
+            font-size: 16px;
+            color: #ddd;
         }
 
-        #recommended-levels h2 {
-            text-align: center; 
+        .recommended-levels {
+            background-color: #222;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .recommended-levels h2 {
+            color: #fff;
+            margin-top: 0;
             margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
         }
 
-        #levels-list {
+        .levels-list {
             display: flex;
             flex-direction: column;
-            align-items: center; 
-            gap: 10px;
-            margin-top: 10px;
-            width: 100%;
+            align-items: center;
+            padding: 10px;
         }
 
         .level-card {
             background-color: #333;
             border-radius: 10px;
             padding: 20px;
-            width: 100%;
+            margin: 10px;
+            width: 90%;
             max-width: 600px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .level-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .level-card h2 {
             margin: 0;
             font-size: 1.5em;
+            color: #fff;
         }
 
         .level-card p {
             margin: 5px 0;
+            color: #ddd;
         }
 
         .level-card .preview {
@@ -149,46 +139,81 @@
             border-radius: 10px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .level-card .preview img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: opacity 0.3s;
         }
 
-        .level-card:hover .preview {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .level-card .phase-badge {
+        .phase-badge {
             font-size: 0.8em;
             padding: 4px 8px;
             border-radius: 12px;
             margin-left: 10px;
             color: #fff;
-            background-color: #666;
         }
 
-        .level-card .phase-10 { background-color: #270000; }
-        .level-card .phase-9 { background-color: #5e5500; }
-        .level-card .phase-8 { background-color: #005e00; }
-        .level-card .phase-7 { background-color: #09005e; }
-        .level-card .phase-6 { background-color: #5e0047; }
-        .level-card .phase-5 { background-color: #5e0000; }
-        .level-card .phase-4 { background-color: #9faa00; }
-        .level-card .phase-3 { background-color: #00aa47; }
-        .level-card .phase-2 { background-color: #0003aa; }
-        .level-card .phase-1 { background-color: #aa009c; }
-        .level-card .phase-0 { background-color: #aa0000; }
+        .phase-10 { background-color: #270000; }
+        .phase-9 { background-color: #5e5500; }
+        .phase-8 { background-color: #005e00; }
+        .phase-7 { background-color: #09005e; }
+        .phase-6 { background-color: #5e0047; }
+        .phase-5 { background-color: #5e0000; }
+        .phase-4 { background-color: #9faa00; }
+        .phase-3 { background-color: #00aa47; }
+        .phase-2 { background-color: #0003aa; }
+        .phase-1 { background-color: #aa009c; }
+        .phase-0 { background-color: #aa0000; }
+
+        .we-icon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-left: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        .new-icon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-left: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 900px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .radar-chart-container {
+                height: 250px;
+                width: 250px;
+            }
+            
+            .level-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .level-card .preview {
+                margin-top: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Automatic Selection<span class="beta">v1.3.3</span></h1>
+        <h1>Automatic Selection <span class="beta">v1.2</span></h1>
         <nav>
             <a href="index.html">Demon List</a>
             <a href="future.html">Future List</a>
@@ -202,30 +227,38 @@
     </header>
 
     <main>
-        <div id="recommendations-container">
+        <div class="recommendations-container">
             <div class="player-selector">
-                <label for="player-select">select a player:</label>
                 <select id="player-select">
-                    <option value="">select a player</option>
+                    <option value="">Select a player</option>
                 </select>
             </div>
 
-            <div id="skill-points" class="roulette-card">
-                <h2>Current skill-sets stats</h2>
-                <div id="skill-points-list"></div>
-            </div>
-
-            <div id="recommended-levels" class="roulette-card">
-                <h2>Recommended Levels</h2>
-                <div id="levels-list"></div>
+            <div class="stats-container">
+                <div class="skill-stats">
+                    <h2>Skill Balance</h2>
+                    <div class="radar-chart-container">
+                        <canvas id="radar-chart"></canvas>
+                    </div>
+                    <div class="balance-info">
+                        <div>Balance Score:</div>
+                        <div class="balance-score" id="balance-score">0%</div>
+                        <div class="balance-rank" id="balance-rank">Rank: -</div>
+                    </div>
+                </div>
+                
+                <div class="recommended-levels">
+                    <h2>Recommended Levels</h2>
+                    <div id="levels-list" class="levels-list"></div>
+                </div>
             </div>
         </div>
     </main>
 
     <div id="particles-js"></div>
     <canvas id="star-background"></canvas>
-
     <script src="particles-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="stars.js"></script>
     <script src="animations.js"></script>
     <script src="sounds.js"></script>

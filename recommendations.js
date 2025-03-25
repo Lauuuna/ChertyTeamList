@@ -1,169 +1,203 @@
-if (!window.supabase) {
-    console.error('Supabase не инициализирован! Проверьте подключение в HTML');
-    throw new Error('Supabase не загружен');
-}
+const supabaseUrl = 'https://ivriytixvxgntxkougjr.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cml5dGl4dnhnbnR4a291Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzY0NDgsImV4cCI6MjA1ODI1MjQ0OH0.hByLZ98uqgJaKLPvZ3jf6_-SnCDIkttG2S9RfgNahtE';
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-const ALL_SKILL_SETS = [
-    "cube", "ship", "ball", "ufo", "wave", "robot", "spider", "swing", 
-    "overall", "nerve-control", "learny", "chokepoints", "flow", 
+const ALL_SKILLS = [
+    "cube", "ship", "ball", "ufo", "wave", "robot", "spider", "swing",
+    "nerve-control", "learny", "chokepoints", "flow",
     "fast-paced", "low-paced", "high cps", "timings"
 ];
 
+let radarChart = null;
+let allPlayersBalance = [];
+let levels = [];
+let players = [];
+
 async function fetchData(url) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        return await response.json();
-    } catch (error) {
-        console.error('Ошибка загрузки данных:', error);
-        return [];
-    }
+    const response = await fetch(url);
+    return await response.json();
 }
 
 async function fetchPlayers() {
-    try {
-        const { data, error } = await window.supabase
-            .from('players')
-            .select('*');
-        
-        if (error) throw error;
-        return data;
-    } catch (error) {
-        console.error('Ошибка Supabase, используем локальный файл:', error);
-        return fetchData('players.json');
-    }
+    const { data, error } = await supabaseClient.from('players').select('*');
+    return error ? await fetchData('players.json') : data;
 }
 
 function calculateSkillPoints(playerId, levelsData) {
-    const skillPoints = new Map(ALL_SKILL_SETS.map(skill => [skill, 0]));
-    
+    const skillPoints = new Map(ALL_SKILLS.map(skill => [skill, 0]));
     levelsData.forEach(level => {
         const playerProgress = level.players.find(p => p.id === playerId);
         if (playerProgress?.progress === 100) {
             level.skill_sets?.forEach(skill => {
-                skillPoints.set(skill, (skillPoints.get(skill) || 0) + level.points);
+                if (ALL_SKILLS.includes(skill)) skillPoints.set(skill, (skillPoints.get(skill) || 0) + level.points);
             });
         }
     });
-    
     return skillPoints;
 }
 
-function selectLevels(playerId, skillPoints, levelsData, numLevels = 5) {
-    const selectedLevels = [];
-    const skillPointsCopy = new Map(skillPoints);
-    
-    const availableLevels = levelsData
-        .filter(level => {
-            const playerProgress = level.players.find(p => p.id === playerId);
-            return (!playerProgress || playerProgress.progress < 100);
-        })
-        .sort((a, b) => (b.enjoyment || 0) - (a.enjoyment || 0) || a.points - b.points);
+function calculateBalanceScore(skillPoints) {
+    const values = Array.from(skillPoints.values());
+    const total = values.reduce((a, b) => a + b, 0);
+    if (total === 0) return 0;
 
-    while (selectedLevels.length < numLevels && availableLevels.length > 0) {
-        const minSkill = [...skillPointsCopy.entries()].reduce((a, b) => a[1] < b[1] ? a : b)[0];
-        
-        const foundIndex = availableLevels.findIndex(level => 
-            level.skill_sets?.includes(minSkill)
-        );
-        
-        if (foundIndex !== -1) {
-            const [foundLevel] = availableLevels.splice(foundIndex, 1);
-            selectedLevels.push(foundLevel);
-            foundLevel.skill_sets?.forEach(skill => {
-                skillPointsCopy.set(skill, (skillPointsCopy.get(skill) || 0) + foundLevel.points);
-            });
-        } else {
-            selectedLevels.push(availableLevels.shift());
+    const max = Math.max(...values);
+    const normalized = values.map(v => v / max);
+    
+    let entropy = 0;
+    for (const val of normalized) {
+        if (val > 0.1) {
+            entropy -= val * Math.log(val);
         }
     }
     
-    return selectedLevels;
+    const maxEntropy = Math.log(ALL_SKILLS.length);
+    const balance = (entropy / maxEntropy) * 100;
+    
+    return Math.round(balance * 10) / 10;
 }
 
-function displaySkillPoints(skillPoints) {
-    const container = document.getElementById('skill-points-list');
-    if (!container) return;
-    
-    container.innerHTML = ALL_SKILL_SETS.map(skill => `
-        <div class="skill-point">
-            <h3>${skill}</h3>
-            <p>${(skillPoints.get(skill) || 0).toFixed(1)}</p>
-        </div>
-    `).join('');
+async function calculateAllPlayersBalance(players, levelsData) {
+    allPlayersBalance = await Promise.all(players.map(async player => {
+        const skillPoints = calculateSkillPoints(player.id, levelsData);
+        return { playerId: player.id, balance: calculateBalanceScore(skillPoints) };
+    }));
+    allPlayersBalance.sort((a, b) => b.balance - a.balance);
 }
 
-function displayRecommendedLevels(levels, players) {
-    const container = document.getElementById('levels-list');
-    if (!container) return;
-    
-    container.innerHTML = levels.map(level => {
-        const player = players.find(p => p.id === level.players[0]?.id);
-        let previewUrl = '';
-        
-        if (level.players[0]?.video_link) {
-            const link = level.players[0].video_link;
-            const videoId = link.includes('youtube.com') 
-                ? link.split('v=')[1].split('&')[0] 
-                : link.split('/').pop();
-            previewUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
-        }
-        
-        return `
-            <div class="level-card" data-level-id="${level.id}">
-                <div>
-                    <h2>${level.name}</h2>
-                    <p>${player?.nickname || 'Unknown'}</p>
-                </div>
-                <div class="preview">
-                    ${previewUrl 
-                        ? `<img src="${previewUrl}" alt="Preview" onerror="this.parentElement.innerHTML='<p>No preview</p>'">` 
-                        : '<p>No preview</p>'}
-                </div>
-            </div>
-        `;
-    }).join('');
+function getPlayerBalanceRank(playerId) {
+    const index = allPlayersBalance.findIndex(p => p.playerId === playerId);
+    return index >= 0 ? index + 1 : null;
+}
 
-    document.querySelectorAll('.level-card').forEach(card => {
-        card.addEventListener('click', () => {
-            window.location.href = `level.html?id=${card.dataset.levelId}`;
-        });
+function getPlayerMaxPhase(playerId, levelsData) {
+    const completedLevels = levelsData.filter(level => level.players.some(p => p.id === playerId && p.progress === 100));
+    return completedLevels.length ? Math.max(...completedLevels.map(level => parseInt(level.phase))) : 5;
+}
+
+function getRecommendedLevels(playerId, skillPoints, levelsData, count = 5) {
+    const completedLevelIds = levelsData.filter(level => level.players.some(p => p.id === playerId && p.progress === 100)).map(level => level.id);
+    const maxPhase = getPlayerMaxPhase(playerId, levelsData);
+    let minPhase = Math.max(0, maxPhase - 2);
+    let maxAllowedPhase = Math.min(10, maxPhase + 2);
+
+    if (maxPhase <= 2) minPhase = 0, maxAllowedPhase = Math.min(4, maxPhase + 2);
+    else if (maxPhase >= 8) minPhase = Math.max(6, maxPhase - 2), maxAllowedPhase = 10;
+
+    const playerTotalPoints = Array.from(skillPoints.values()).reduce((sum, val) => sum + val, 0);
+    const avgPlayerSkill = playerTotalPoints / ALL_SKILLS.length;
+
+    return levelsData
+        .filter(level => !completedLevelIds.includes(level.id) && parseInt(level.phase) >= minPhase && parseInt(level.phase) <= maxAllowedPhase)
+        .map(level => {
+            const levelSkills = (level.skill_sets || []).filter(skill => ALL_SKILLS.includes(skill));
+            const levelDifficulty = level.points * (1 + parseInt(level.phase) * 0.1);
+            const avgSkillValue = levelSkills.length ? levelSkills.reduce((sum, skill) => sum + (skillPoints.get(skill) || 0), 0) / levelSkills.length : 0;
+            const variance = levelSkills.length ? levelSkills.reduce((sum, skill) => sum + Math.pow((skillPoints.get(skill) || 0) - avgSkillValue, 2), 0) / levelSkills.length : 0;
+            const difficultyScore = 1 - Math.min(1, Math.abs(levelDifficulty - avgPlayerSkill) / 100);
+            const balanceScore = 1 / (1 + Math.sqrt(variance));
+            return { ...level, score: (difficultyScore * 0.6) + (balanceScore * 0.4), avgSkillValue };
+        })
+        .sort((a, b) => b.score - a.score)
+        .slice(0, count);
+}
+
+function displayPlayerSelector(players) {
+    const select = document.getElementById('player-select');
+    select.innerHTML = '<option value="">Select a player</option>';
+    players.forEach(player => {
+        const option = document.createElement('option');
+        option.value = player.id;
+        option.textContent = player.nickname;
+        select.appendChild(option);
     });
 }
 
+function updateRadarChart(skillPoints) {
+    const ctx = document.getElementById('radar-chart').getContext('2d');
+    if (radarChart) radarChart.destroy();
+    radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ALL_SKILLS,
+            datasets: [{
+                data: ALL_SKILLS.map(skill => skillPoints.get(skill) || 0),
+                backgroundColor: 'rgba(255, 68, 68, 0.2)',
+                borderColor: 'rgba(255, 68, 68, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(255, 68, 68, 1)',
+                pointRadius: 4
+            }]
+        },
+        options: {
+            scales: {
+                r: {
+                    angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                    pointLabels: { color: '#fff', font: { size: 10 } },
+                    ticks: { display: false, backdropColor: 'transparent' }
+                }
+            },
+            plugins: { legend: { display: false } },
+            elements: { line: { tension: 0.1 } }
+        }
+    });
+}
+
+function displayBalanceInfo(playerId) {
+    const skillPoints = calculateSkillPoints(playerId, levels);
+    const balanceScore = calculateBalanceScore(skillPoints);
+    const rank = getPlayerBalanceRank(playerId);
+    document.getElementById('balance-score').textContent = `${balanceScore.toFixed(1)}%`;
+    document.getElementById('balance-rank').textContent = rank ? `Rank: #${rank}` : 'Rank: -';
+}
+
+function displayRecommendedLevels(recommendedLevels, players) {
+    const container = document.getElementById('levels-list');
+    container.innerHTML = '';
+    recommendedLevels.forEach(level => {
+        const player = players.find(p => p.id === level.players[0]?.id);
+        const videoId = level.players[0]?.video_link ? extractYouTubeId(level.players[0].video_link) : null;
+        const previewUrl = videoId ? `https://img.youtube.com/vi/${videoId}/0.jpg` : null;
+        const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : '';
+        const newIcon = level.show_new_icon ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon">' : '';
+        const phaseBadge = `<span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span>`;
+
+        const levelCard = document.createElement('div');
+        levelCard.className = 'level-card';
+        levelCard.innerHTML = `
+            <div>
+                <h2>${level.name}${weIcon}${newIcon} ${phaseBadge}</h2>
+                <p>${player?.nickname || 'Unknown'}</p>
+            </div>
+            <div class="preview">
+                ${previewUrl ? `<img src="${previewUrl}" alt="Preview" onerror="this.onerror=null; this.parentElement.innerHTML='<p class="no-preview"></p>'">` : '<p class="no-preview"></p>'}
+            </div>
+        `;
+        levelCard.addEventListener('click', () => window.location.href = `level.html?id=${level.id}`);
+        container.appendChild(levelCard);
+    });
+}
+
+function extractYouTubeId(url) {
+    if (!url) return null;
+    const match = url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
 async function initRecommendations() {
-    try {
-        const [levels, players] = await Promise.all([
-            fetchData('levels.json'),
-            fetchPlayers()
-        ]);
-        
-        const select = document.getElementById('player-select');
-        if (!select) return;
-        
-        select.innerHTML = '<option value="">select a player</option>';
-        players.forEach(player => {
-            const option = document.createElement('option');
-            option.value = player.id;
-            option.textContent = player.nickname;
-            select.appendChild(option);
-        });
-        
-        select.addEventListener('change', async (e) => {
-            const playerId = e.target.value;
-            if (!playerId) return;
-            
-            const skillPoints = calculateSkillPoints(playerId, levels);
-            displaySkillPoints(skillPoints);
-            
-            const recommended = selectLevels(playerId, skillPoints, levels);
-            displayRecommendedLevels(recommended, players);
-        });
-        
-    } catch (error) {
-        console.error('Ошибка инициализации:', error);
-        alert('Error loading data. Please try again later.');
-    }
+    [levels, players] = await Promise.all([fetchData('levels.json'), fetchPlayers()]);
+    await calculateAllPlayersBalance(players, levels);
+    displayPlayerSelector(players);
+    
+    document.getElementById('player-select').addEventListener('change', async (e) => {
+        const playerId = e.target.value;
+        if (!playerId) return;
+        const skillPoints = calculateSkillPoints(playerId, levels);
+        updateRadarChart(skillPoints);
+        displayBalanceInfo(playerId);
+        displayRecommendedLevels(getRecommendedLevels(playerId, skillPoints, levels), players);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', initRecommendations);
