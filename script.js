@@ -3,7 +3,35 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
 const playersCache = new Map();
-let allLevels = []; 
+let allLevels = [];
+
+function isAnyFilterActive() {
+    return document.getElementById('search-input').value !== '' ||
+           document.getElementById('phase-filter').value !== '' ||
+           document.getElementById('position-filter').value !== '' ||
+           document.getElementById('single-record-filter').checked;
+}
+
+function clearAllFilters() {
+    document.getElementById('search-input').value = '';
+    document.getElementById('phase-filter').value = '';
+    document.getElementById('position-filter').value = '';
+    document.getElementById('single-record-filter').checked = false;
+    loadLevels();
+}
+
+function scrollToLevel(levelId) {
+    const levelCard = document.querySelector(`.level-card[data-level-id="${levelId}"]`);
+    if (levelCard) {
+        const y = levelCard.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2) + (levelCard.offsetHeight / 2);
+        window.scrollTo({
+            top: y,
+            behavior: 'auto'
+        });
+        levelCard.classList.add('highlight');
+        setTimeout(() => levelCard.classList.remove('highlight'), 1000);
+    }
+}
 
 async function fetchData(url) {
     try {
@@ -39,13 +67,17 @@ async function getPlayerInfo(playerId) {
     }
 }
 
-function filterLevels(levels, searchText, phaseFilter, positionFilter) {
+function filterLevels(levels, searchText, phaseFilter, positionFilter, singleRecordOnly) {
     const searchLower = searchText.toLowerCase();
     return levels.filter((level, index) => {
         const matchesSearch = level.name.toLowerCase().includes(searchLower);
         const matchesPhase = !phaseFilter || level.phase === phaseFilter;
         const matchesPosition = !positionFilter || (index + 1) === parseInt(positionFilter);
-        return matchesSearch && matchesPhase && matchesPosition;
+        
+        const completedRecords = level.players.filter(p => p.progress === 100).length;
+        const matchesSingleRecord = !singleRecordOnly || completedRecords === 1;
+        
+        return matchesSearch && matchesPhase && matchesPosition && matchesSingleRecord;
     });
 }
 
@@ -69,13 +101,15 @@ async function loadLevels() {
         const searchText = document.getElementById('search-input').value;
         const phaseFilter = document.getElementById('phase-filter').value;
         const positionFilter = document.getElementById('position-filter').value;
+        const singleRecordOnly = document.getElementById('single-record-filter').checked;
+        const filtersActive = isAnyFilterActive();
 
-        const filteredLevels = filterLevels(allLevels, searchText, phaseFilter, positionFilter);
+        const filteredLevels = filterLevels(allLevels, searchText, phaseFilter, positionFilter, singleRecordOnly);
 
         levelsList.innerHTML = '';
 
         for (const level of filteredLevels) {
-            const position = allLevels.indexOf(level) + 1;
+            const originalPosition = allLevels.indexOf(level) + 1;
             const playerNickname = await getPlayerInfo(level.players[0]?.id);
             
             const weIcon = level.show_we_icon 
@@ -96,10 +130,12 @@ async function loadLevels() {
 
             const levelCard = document.createElement('div');
             levelCard.className = 'level-card';
+            levelCard.dataset.levelId = level.id;
             levelCard.innerHTML = `
                 <div>
-                    <h2>#${position} - ${level.name}${weIcon}${newIcon} ${phaseBadge}</h2>
+                    <h2>#${originalPosition} - ${level.name}${weIcon}${newIcon} ${phaseBadge}</h2>
                     <p>${playerNickname}</p>
+                    ${filtersActive ? `<button class="view-in-list" data-level-id="${level.id}">View in the list</button>` : ''}
                 </div>
                 <div class="preview">
                     ${previewUrl 
@@ -108,10 +144,24 @@ async function loadLevels() {
                 </div>
             `;
 
-            levelCard.addEventListener('click', () => {
-                window.location.href = `level.html?id=${level.id}`;
+            levelCard.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('view-in-list')) {
+                    window.location.href = `level.html?id=${level.id}`;
+                }
             });
+            
             levelsList.appendChild(levelCard);
+        }
+
+        if (filtersActive) {
+            document.querySelectorAll('.view-in-list').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const levelId = button.dataset.levelId;
+                    clearAllFilters();
+                    setTimeout(() => scrollToLevel(levelId), 50);
+                });
+            });
         }
     } catch (error) {
         console.error('Error loading levels:', error);
@@ -152,6 +202,7 @@ function setupEventListeners() {
     const searchInput = document.getElementById('search-input');
     const phaseFilter = document.getElementById('phase-filter');
     const positionFilter = document.getElementById('position-filter');
+    const singleRecordFilter = document.getElementById('single-record-filter');
     
     let searchTimeout;
     
@@ -165,6 +216,7 @@ function setupEventListeners() {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(loadLevels, 300);
     });
+    singleRecordFilter.addEventListener('change', loadLevels);
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

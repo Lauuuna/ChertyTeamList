@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         window.supabaseClient = supabase.createClient(
@@ -17,7 +16,7 @@
 </head>
 <body>
   <header>
-    <h1>Cherti List <span class="beta">v1.3.2</span></h1>
+    <h1>Cherti List <span class="beta">v1.3.3</span></h1>
     <nav>
       <a href="index.html">Demon List</a>
       <a href="future.html">Future List</a>
@@ -45,6 +44,10 @@
         <option value="0">Phase 0</option>
       </select>
       <input type="number" id="position-filter" placeholder="Position" autocomplete="off">
+      <div class="filter-option">
+        <input type="checkbox" id="single-record-filter">
+        <label for="single-record-filter">Show levels without entries</label>
+      </div>
     </div>
   </header>
 

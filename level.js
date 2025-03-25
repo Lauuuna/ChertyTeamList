@@ -54,9 +54,7 @@ async function loadLevelDetails() {
         const verifierNickname = await getPlayerInfo(level.players[0]?.id);
         
         const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : '';
-        
         const newIcon = level.show_new_icon ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon">' : '';
-        
         const phaseBadge = `<span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span>`;
 
         let videoId = '';
@@ -70,7 +68,7 @@ async function loadLevelDetails() {
         }
         const embedVideoLink = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
-        const playerRecords = await Promise.all(level.players.map(async player => {
+        const playerRecords = await Promise.all(level.players.slice(1).map(async player => {
             const nickname = await getPlayerInfo(player.id);
             return { ...player, nickname };
         }));

@@ -598,20 +598,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #333;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .search-container input, .search-container select {
   padding: 10px;
   border-radius: 5px;
@@ -622,16 +608,8 @@ input[type="number"] {
   outline: none;
 }
 
-.search-container input::placeholder {
-  color: #aaa;
-}
-
 .search-container input:focus, .search-container select:focus {
   border-color: #ff4444;
-}
-
-.search-container input[type="number"] {
-  width: 100px;
 }
 
 .archive-level-card {
@@ -1354,9 +1332,6 @@ nav a {
   outline: none;
 }
 
-.search-container input::placeholder {
-  color: #aaa;
-}
 
 .search-container input:focus, .search-container select:focus {
   border-color: #ff4444;
@@ -1447,5 +1422,159 @@ nav a {
   100% { transform: scale(1); }
 }
 
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
 
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
+.checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #222;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #333;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #ff4444;
+}
+
+.checkmark:after {
+  content: "";
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.filter-option:hover {
+  background-color: #3d3d3d;
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  accent-color: #ff4444;
+  cursor: pointer;
+}
+
+.filter-option label {
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.search-container input, 
+.search-container select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus, 
+.search-container select:focus {
+  border-color: #ff4444;
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
+}
+
+.search-container input::placeholder {
+  color: #aaa;
+}
+
+.search-container input[type="number"] {
+  width: 100px;
+}
+
+.level-card {
+  position: relative;
+}
+
+.view-in-list {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.view-in-list:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+.level-card.highlight {
+  animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+  0% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
+}
