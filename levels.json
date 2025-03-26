@@ -1183,12 +1183,6 @@
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=vhnFe14OXq0",
         "progress": 100
-      },
-      {
-        "id": "9b6dd468-a5bf-402c-a762-c445fef5d7c0",
-        "date": "2025-XX-01",
-        "video_link": "",
-        "progress": 86
       }
     ],
     "archives": [
@@ -1489,7 +1483,7 @@
     "ggdl_phase": "26",
     "skill_sets": ["timings", "wave", "chokepoints"],
     "points": 6.3,
-    "list_percent": 100,
+    "list_percent": 56,
     "enjoyment": 3,
     "show_new_icon": true,
     "players": [
@@ -1503,6 +1497,25 @@
         "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
         "date": "2025-24-03",
         "video_link": "https://www.youtube.com/watch?v=TTUUUAK3fSw",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 62551239,
+    "name": "Sigma Interface",
+    "phase": "3",
+    "ggdl_phase": "24",
+    "skill_sets": ["slow-paced", "wave", "timings"],
+    "points": 6.3,
+    "list_percent": 57,
+    "enjoyment": 7,
+    "show_new_icon": true,
+    "players": [
+      {
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
+        "date": "2025-26-03",
+        "video_link": "https://youtu.be/4k-mphepr_g?si=F8wDSuSDOrFm1Qlp",
         "progress": 100
       }
     ]
@@ -2333,6 +2346,12 @@
         "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
         "date": "2025-24-03",
         "video_link": "https://www.youtube.com/watch?v=f1TLumSG0zk",
+        "progress": 100
+      },
+      {
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
+        "date": "2025-24-03",
+        "video_link": "https://www.youtube.com/watch?v=3n1w2utzQ2E",
         "progress": 100
       }
     ]
