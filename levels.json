@@ -1183,6 +1183,12 @@
         "date": "2024-XX-12",
         "video_link": "https://www.youtube.com/watch?v=vhnFe14OXq0",
         "progress": 100
+      },
+      {
+        "id": "9b6dd468-a5bf-402c-a762-c445fef5d7c0",
+        "date": "2025-XX-01",
+        "video_link": "",
+        "progress": 86
       }
     ],
     "archives": [
