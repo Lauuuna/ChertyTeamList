@@ -662,6 +662,12 @@
         "date": "2025-XX-01",
         "video_link": "https://www.youtube.com/watch?v=j67qVyajj5M",
         "progress": 100
+      },
+      {
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
+        "date": "2025-XX-01",
+        "video_link": "",
+        "progress": 95
       }
     ]
   },
