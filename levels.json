@@ -73,9 +73,9 @@
       "name": "qoUEO",
       "phase": "9",
       "ggdl_phase": "33",
-      "skill_sets": ["X"],
+      "skill_sets": ["wave", "chokepoints"],
       "points": 109.5,
-      "list_percent": 53,
+      "list_percent": 27,
       "players": [
         {
           "id": "00fb331d-585f-4396-8558-f148eec150c7",
