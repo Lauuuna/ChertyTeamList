@@ -72,7 +72,7 @@
                 "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
                 "nickname": "tami.q",
                 "video_link": "https://www.youtube.com/watch?v=gSBuyBbyWcE",
-                "progress": "55%, 41-100%" 
+                "progress": "85%, 33-100%" 
             },
             {
                 "id": "c70984ba-e74c-4335-96e6-373c75252736",
@@ -145,7 +145,7 @@
         ]
     },
     {
-        "id": 82172844,
+        "id": 42584142,
         "name": "Bloodlust",
         "skill_sets": ["nerve control", "overall", "swing"],
         "enjoyment": 6,
