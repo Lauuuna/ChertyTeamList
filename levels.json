@@ -1511,6 +1511,12 @@
         "progress": 100
       },
       {
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
+        "date": "202X-XX-XX",
+        "video_link": "",
+        "progress": 95
+      },
+      {
         "id": "a571665d-c68a-4070-a1d8-a0ca9958f311",
         "date": "202X-XX-XX",
         "video_link": "",
@@ -1527,12 +1533,6 @@
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 81
-      },
-      {
-        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
-        "date": "202X-XX-XX",
-        "video_link": "",
-        "progress": 79
       }
     ]
   },
@@ -1637,6 +1637,12 @@
         "date": "2025-26-03",
         "video_link": "https://youtu.be/4k-mphepr_g?si=F8wDSuSDOrFm1Qlp",
         "progress": 100
+      },
+      {
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
+        "date": "2025-XX-XX",
+        "video_link": "",
+        "progress": 91
       }
     ]
   },
@@ -2908,6 +2914,12 @@
         "id": "a29ff419-27d9-403d-992d-77e377e76161",
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=0QoUW08BwtA",
+        "progress": 100
+      },
+      {
+        "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
+        "date": "2025-XX-03",
+        "video_link": "",
         "progress": 100
       }
     ]
