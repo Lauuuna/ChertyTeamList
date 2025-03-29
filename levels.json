@@ -1447,30 +1447,6 @@
     ]
   },
   {
-    "id": 113620104,
-    "name": "Clown Control",
-    "phase": "3",
-    "ggdl_phase": "23",
-    "skill_sets": ["chokepoints", "flow"],
-    "points": 6.4,
-    "list_percent": 50,
-    "enjoyment": 8,
-    "players": [
-      {
-        "id": "c70984ba-e74c-4335-96e6-373c75252736",
-        "date": "2025-21-01",
-        "video_link": "https://www.youtube.com/watch?v=gyVxfpWGqRc",
-        "progress": 100
-      },
-      {
-        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
-        "date": "2025-28-03",
-        "video_link": "https://www.youtube.com/watch?v=QQSmffwcrDk",
-        "progress": 100
-      }
-    ]
-  },
-  {
     "id": 10565740,
     "name": "Bloodbath",
     "phase": "3",
@@ -1557,6 +1533,30 @@
         "date": "202X-XX-XX",
         "video_link": "",
         "progress": 79
+      }
+    ]
+  },
+  {
+    "id": 113620104,
+    "name": "Clown Control",
+    "phase": "3",
+    "ggdl_phase": "23",
+    "skill_sets": ["chokepoints", "flow"],
+    "points": 6.3,
+    "list_percent": 50,
+    "enjoyment": 8,
+    "players": [
+      {
+        "id": "c70984ba-e74c-4335-96e6-373c75252736",
+        "date": "2025-21-01",
+        "video_link": "https://www.youtube.com/watch?v=gyVxfpWGqRc",
+        "progress": 100
+      },
+      {
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
+        "date": "2025-28-03",
+        "video_link": "https://www.youtube.com/watch?v=QQSmffwcrDk",
+        "progress": 100
       }
     ]
   },
