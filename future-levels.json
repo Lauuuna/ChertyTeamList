@@ -4,6 +4,7 @@
         "name": "Slaughterhouse",
         "skill_sets": ["fast-paced", "chokepoints", "wave"],
         "enjoyment": 2,
+        "background": "levels/slaughterhouse.png",
         "players": [
             {
                 "id": "2f26542e-600e-4970-a385-d1f46d93b16a",

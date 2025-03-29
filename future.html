@@ -2,41 +2,65 @@
 <html lang="ru">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future List</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="future-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Future List <span class="beta">v1.3.4</span></h1>
-    <nav>
-        <a href="index.html">Demon List</a>
-        <a href="future.html">Future List</a>
-        <a href="archive.html">Archive</a>
-        <a href="players.html">Top Players</a>
-        <a href="https://lauuuuna.github.io/ChertiTeamDashBoard/">Dashboard</a>
-        <a href="recommendations.html">Automatic Selection</a>
-        <a href="https://forms.gle/cXuwy3YN7Rp1eyra9" id="submit-record">Submit a Record</a>
-        <a href="https://discord.gg/cg4QTF59z9" id="discord-link">Discord</a>
-    </nav>
-  </header>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>Demon List</h1>
+            <div class="future-badge">FUTURE</div>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html"><i class="fas fa-fire"></i> Demon List</a>
+            <a href="future.html"><i class="fas fa-clock"></i> Future List</a>
+            <a href="archive.html"><i class="fas fa-archive"></i> Archive</a>
+            <a href="players.html"><i class="fas fa-users"></i> Top Players</a>
+            <a href="dashboard.html" class="active"><i class="fas fa-user-cog"></i> Dashboard</a>
+            <a href="weekly-hardest.html"><i class="fas fa-crown"></i> Weekly Hardest</a>
+        </div>
+        <div class="sidebar-footer">
+            <a href="https://discord.gg/cg4QTF59z9" id="discord-link"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://forms.gle/cXuwy3YN7Rp1eyra9" id="submit-record"><i class="fas fa-paper-plane"></i> Submit a Record</a>
+        </div>
+    </div>
 
-  <main>
-    <div id="levels-list" class="levels-list"></div>
-  </main>
+    <div class="main-content">
+        <button class="filter-button" id="filter-button">
+            <i class="fas fa-filter"></i> Filters
+        </button>
 
-  <div id="particles-js"></div>
-  <canvas id="star-background"></canvas>
-  <script src="particles-config.js"></script>
-  <script src="future.js"></script>
-  <script src="stars.js"></script>
-  <script src="animations.js"></script>
-  <script src="sounds.js"></script>
-  <button id="scroll-to-top" title="Наверх">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+        <div class="filter-panel" id="filter-panel">
+            <h2>Filters</h2>
+            <div class="filter-group">
+                <label for="search-input">Search by name</label>
+                <input type="text" id="search-input" placeholder="Level name">
+            </div>
+            <div class="filter-group">
+                <label for="skill-filter">Skill Set</label>
+                <select id="skill-filter">
+                    <option value="">All skill sets</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="position-filter">Position</label>
+                <input type="number" id="position-filter" placeholder="Any position">
+            </div>
+            <div class="filter-actions">
+                <button id="apply-filters">Apply</button>
+                <button id="clear-filters">Clear</button>
+            </div>
+        </div>
+
+        <div id="levels-list" class="levels-list"></div>
+    </div>
+
+    <button id="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="future.js"></script>
 </body>
 </html>

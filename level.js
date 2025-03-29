@@ -46,17 +46,16 @@ async function loadLevelDetails() {
         const levelDetails = document.getElementById('level-details');
         
         if (!level) {
-            levelDetails.innerHTML = '<p>Level not found</p>';
+            levelDetails.innerHTML = '<div class="error-message">Level not found</div>';
             return;
         }
 
         const position = levels.indexOf(level) + 1;
         const verifierNickname = await getPlayerInfo(level.players[0]?.id);
         
-        const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon">' : '';
-        const newIcon = level.show_new_icon ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon">' : '';
-        const phaseBadge = `<span class="phase-badge phase-${level.phase}">Phase ${level.phase}</span>`;
-
+        const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon" title="Weekly Extreme">' : '';
+        const newIcon = level.show_new_icon ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon" title="New Level">' : '';
+        
         let videoId = '';
         if (level.players[0]?.video_link) {
             const videoLink = level.players[0].video_link;
@@ -66,7 +65,6 @@ async function loadLevelDetails() {
                 videoId = videoLink.split('/').pop();
             }
         }
-        const embedVideoLink = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
         const playerRecords = await Promise.all(level.players.slice(1).map(async player => {
             const nickname = await getPlayerInfo(player.id);
@@ -74,8 +72,15 @@ async function loadLevelDetails() {
         }));
 
         levelDetails.innerHTML = `
-            <h2>#${position} - ${level.name}${weIcon}${newIcon} ${phaseBadge}</h2>
-            <div class="level-info">
+            <div class="level-header">
+                <div class="level-position">#${position}</div>
+                <div class="level-title">
+                    <h1 class="level-name">${level.name}${weIcon}${newIcon}</h1>
+                    <span class="level-phase phase-${level.phase}">Phase ${level.phase}</span>
+                </div>
+            </div>
+            
+            <div class="level-info-grid">
                 <div class="info-card">
                     <h3>ID</h3>
                     <p>${level.id || 'N/A'}</p>
@@ -105,13 +110,15 @@ async function loadLevelDetails() {
                     <p>${verifierNickname}</p>
                 </div>
             </div>
-            <div class="video-player">
-                ${embedVideoLink ? `
-                    <iframe src="${embedVideoLink}" frameborder="0" allowfullscreen></iframe>
-                ` : '<p class="video-error">Video unavailable.</p>'}
+            
+            ${videoId ? `
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="total-records">
-                <h3>Total Records (${playerRecords.length})</h3>
+            ` : '<div class="video-error">Video unavailable</div>'}
+            
+            <div class="records-section">
+                <h2 class="section-title">Total Records (${playerRecords.length})</h2>
                 <ul class="player-list">
                     ${playerRecords.map(player => `
                         <li ${player.video_link ? `onclick="window.open('${player.video_link}', '_blank')"` : ''}>
@@ -121,7 +128,10 @@ async function loadLevelDetails() {
                     `).join('')}
                 </ul>
             </div>
-            <button class="enjoyment-button" id="enjoyment-button">View Enjoyment</button>
+            
+            <button class="enjoyment-button" id="enjoyment-button">
+                <i class="fas fa-star"></i> View Enjoyment Ratings
+            </button>
         `;
 
         document.getElementById('enjoyment-button')?.addEventListener('click', async () => {
@@ -130,7 +140,17 @@ async function loadLevelDetails() {
             const modal = document.getElementById('enjoyment-modal');
             const enjoymentList = document.getElementById('enjoyment-list');
             
-            const ratings = Object.values(levelEnjoyment).filter(r => typeof r === 'number');
+            const ratings = [];
+            const opinions = [];
+            
+            Object.entries(levelEnjoyment).forEach(([playerId, opinion]) => {
+                const match = opinion.match(/enjoyment - (\d+)/);
+                if (match) {
+                    ratings.push(parseInt(match[1]));
+                    opinions.push({ playerId, rating: match[1], text: opinion });
+                }
+            });
+            
             const averageRating = ratings.length > 0 
                 ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1)
                 : null;
@@ -142,28 +162,28 @@ async function loadLevelDetails() {
                     <div class="enjoyment-header">
                         <h3>Average Enjoyment</h3>
                         <div class="enjoyment-rating">
-                            <span class="rating-value">${averageRating}</span>/10
+                            <span class="rating-value">${averageRating}</span>
                         </div>
                     </div>
                 `;
             }
             
-            if (Object.keys(levelEnjoyment).length > 0) {
+            if (opinions.length > 0) {
                 content += `
                     <div class="enjoyment-divider"></div>
                     <h3 class="individual-ratings-title">Individual Ratings</h3>
                     <div class="enjoyment-ratings">
                 `;
                 
-                const ratingsContent = await Promise.all(Object.entries(levelEnjoyment).map(async ([playerId, rating]) => {
+                const ratingsContent = await Promise.all(opinions.map(async ({ playerId, rating, text }) => {
                     const nickname = await getPlayerInfo(playerId);
                     return `
                         <div class="enjoyment-item">
-                            <span class="player-name">${nickname || `Player ${playerId}`}</span>
-                            <div class="rating-bar">
-                                <div class="rating-fill" style="width: ${rating * 10}%"></div>
+                            <div class="player-rating-header">
+                                <span class="player-name">${nickname || `Player ${playerId}`}</span>
                                 <span class="rating-value">${rating}</span>
                             </div>
+                            <p class="player-opinion">${text.replace(/enjoyment - \d+, /, '')}</p>
                         </div>
                     `;
                 }));
@@ -175,33 +195,40 @@ async function loadLevelDetails() {
             
             content += `
                 </div>
-                <button id="send-opinion" class="send-opinion-button">Send Your Opinion</button>
+                <button id="send-opinion" class="send-opinion-button">
+                    <i class="fas fa-paper-plane"></i> Submit Your Opinion
+                </button>
             `;
             
             enjoymentList.innerHTML = content;
             
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
             document.getElementById('send-opinion')?.addEventListener('click', () => {
                 window.open('https://forms.gle/ASiLaXuWrrsHcDga9', '_blank');
             });
-            
-            modal.style.display = 'flex';
         });
 
         const closeModal = document.querySelector('.close');
         if (closeModal) {
             closeModal.addEventListener('click', () => {
-                document.getElementById('enjoyment-modal').style.display = 'none';
+                const modal = document.getElementById('enjoyment-modal');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
             });
         }
 
         window.addEventListener('click', (event) => {
             if (event.target === document.getElementById('enjoyment-modal')) {
-                document.getElementById('enjoyment-modal').style.display = 'none';
+                const modal = document.getElementById('enjoyment-modal');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
             }
         });
     } catch (error) {
         console.error('Error loading level details:', error);
-        document.getElementById('level-details').innerHTML = '<p>Error loading level details.</p>';
+        document.getElementById('level-details').innerHTML = '<div class="error-message">Error loading level details</div>';
     }
 }
 

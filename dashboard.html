@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-header">
+                    <span>LEVELS</span>
+                </div>
+                <a href="index.html"><i class="fas fa-fire"></i> Demon List</a>
+                <a href="future.html"><i class="fas fa-clock"></i> Future List</a>
+                <a href="archive.html"><i class="fas fa-archive"></i> Archive</a>
+                <a href="weekly-hardest.html"><i class="fas fa-crown"></i> Weekly Hardest</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-header">
+                    <span>PLAYERS</span>
+                </div>
+                <a href="players.html"><i class="fas fa-users"></i> Top Players</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-header">
+                    <span>USER</span>
+                </div>
+                <a href="dashboard.html" class="active"><i class="fas fa-user-cog"></i> Dashboard</a>
+            </div>
+        </div>
+        <div class="user-panel">
+            <div class="user-avatar" id="sidebar-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+                <div class="username">Not logged in</div>
+                <div class="user-status">#0000</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="channel-header">
+            <div class="channel-info">
+                <i class="fas fa-hashtag"></i>
+                <h2>Player Dashboard</h2>
+            </div>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="tab-container">
+                <div class="tab-header">
+                    <button class="tab-btn active" data-tab="login-tab">Login</button>
+                    <button class="tab-btn" data-tab="profile-tab">Profile</button>
+                    <button class="tab-btn" data-tab="wave-tab">My Wave</button>
+                </div>
+                
+                <div class="tab-content active" id="login-tab">
+                    <div class="login-form">
+                        <h3><i class="fas fa-sign-in-alt"></i> Player Login</h3>
+                        <div class="input-group">
+                            <label for="nickname">Nickname</label>
+                            <input type="text" id="nickname" placeholder="Enter your nickname">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                        </div>
+                        <button class="btn-primary" id="login-btn">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="profile-tab">
+                    <div class="profile-section">
+                        <h3><i class="fas fa-user-edit"></i> Profile Settings</h3>
+                        
+                        <div class="media-upload-section">
+                            <div class="avatar-upload">
+                                <div class="upload-preview" id="avatar-preview">
+                                    <div class="upload-placeholder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary upload-btn" id="avatar-upload-btn">
+                                    <i class="fas fa-camera"></i> Change Avatar
+                                </button>
+                                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                            </div>
+                            
+                            <div class="banner-upload">
+                                <div class="upload-preview" id="banner-preview">
+                                    <div class="upload-placeholder">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary upload-btn" id="banner-upload-btn">
+                                    <i class="fas fa-image"></i> Change Banner
+                                </button>
+                                <input type="file" id="banner-upload" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        
+                        <div class="profile-info-section">
+                            <div class="input-group">
+                                <label for="new-nickname">Nickname</label>
+                                <input type="text" id="new-nickname" placeholder="Enter your new nickname">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="about-me">About Me</label>
+                                <textarea id="about-me" placeholder="Tell something about yourself"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="color-scheme-section">
+                            <h4><i class="fas fa-palette"></i> Color Scheme</h4>
+                            <div class="color-pickers">
+                                <div class="color-picker-group">
+                                    <label>First Color</label>
+                                    <div class="color-input">
+                                        <input type="color" id="primary-color" value="#5865F2">
+                                        <span id="primary-color-value">#5865F2</span>
+                                    </div>
+                                </div>
+                                <div class="color-picker-group">
+                                    <label>Second Color</label>
+                                    <div class="color-input">
+                                        <input type="color" id="secondary-color" value="#57F287">
+                                        <span id="secondary-color-value">#57F287</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary update-btn" id="update-profile-btn">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="wave-tab">
+                    <div class="wave-section">
+                        <h3></i> My Wave</h3>
+                        
+                        <div class="wave-animation-container">
+                            <div class="wave-animation" id="wave-animation"></div>
+                            <div class="wave-stats">
+                                <div class="wave-stat">
+                                    <span class="wave-stat-value" id="total-levels">0</span>
+                                    <span class="wave-stat-label">Total Levels</span>
+                                </div>
+                                <div class="wave-stat">
+                                    <span class="wave-stat-value" id="total-points">0.0</span>
+                                    <span class="wave-stat-label">Total Stars</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-radar-container">
+                            <canvas id="skill-radar"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cropper-modal" class="cropper-modal">
+        <div class="cropper-container">
+            <div class="cropper-header">
+                <h3>Crop Image</h3>
+                <button class="close-btn" id="cancel-crop-btn">&times;</button>
+            </div>
+            <div class="cropper-image-container">
+                <img id="cropper-image" src="">
+            </div>
+            <div class="cropper-controls">
+                <button class="btn-secondary" id="rotate-left-btn">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button class="btn-secondary" id="rotate-right-btn">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="btn-primary" id="crop-btn">
+                    <i class="fas fa-check"></i> Apply
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

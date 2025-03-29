@@ -1,26 +1,214 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const supabaseUrl = 'https://ivriytixvxgntxkougjr.supabase.co';
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cml5dGl4dnhnbnR4a291Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzY0NDgsImV4cCI6MjA1ODI1MjQ0OH0.hByLZ98uqgJaKLPvZ3jf6_-SnCDIkttG2S9RfgNahtE';
-    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey); 
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-    async function fetchPlayerFromSupabase(userId) {
-        const { data, error } = await supabaseClient
-            .from('players')
-            .select('*') 
-            .eq('user_id', userId)
-            .single();
-
-        if (error) {
-            console.error('Error fetching player from Supabase:', error);
+    async function fetchPlayerData(playerId) {
+        try {
+            const { data, error } = await supabaseClient
+                .from('players')
+                .select('*')
+                .eq('id', playerId)
+                .single();
+            
+            if (error) throw error;
+            return data;
+        } catch (error) {
+            console.error('Error fetching player:', error);
             return null;
         }
-
-        return data;
     }
 
-    async function fetchData(url) {
-        const response = await fetch(url);
-        return await response.json();
+    async function fetchAllPlayers() {
+        try {
+            const { data, error } = await supabaseClient
+                .from('players')
+                .select('*');
+            
+            if (error) throw error;
+            return data;
+        } catch (error) {
+            console.error('Error fetching players:', error);
+            return [];
+        }
+    }
+
+    async function fetchLevels() {
+        try {
+            const response = await fetch('levels.json');
+            if (!response.ok) throw new Error('Failed to load levels');
+            return await response.json();
+        } catch (error) {
+            console.error('Error loading levels:', error);
+            return [];
+        }
+    }
+
+    function parseSkillSet(skillSet) {
+        if (!skillSet) return [];
+        if (Array.isArray(skillSet)) return skillSet;
+        if (typeof skillSet === 'string') {
+            try {
+                if (skillSet.startsWith('[')) return JSON.parse(skillSet);
+                return skillSet.split(',').map(s => s.trim());
+            } catch (e) {
+                return skillSet.split(',').map(s => s.trim());
+            }
+        }
+        return [];
+    }
+
+    async function loadPlayerDetails() {
+        const playerId = new URLSearchParams(window.location.search).get('id');
+        if (!playerId) return;
+
+        const [player, allPlayers, levels] = await Promise.all([
+            fetchPlayerData(playerId),
+            fetchAllPlayers(),
+            fetchLevels()
+        ]);
+
+        if (!player) {
+            document.getElementById('player-details').innerHTML = '<div class="error">Player not found</div>';
+            return;
+        }
+
+        if (player.col1 && player.col2) {
+            document.documentElement.style.setProperty('--col1', player.col1);
+            document.documentElement.style.setProperty('--col2', player.col2);
+        }
+
+        const completedLevels = levels.filter(level => 
+            level.players.some(p => p.id === playerId && p.progress === 100)
+        ).map(level => {
+            const playerRecord = level.players.find(p => p.id === playerId);
+            return {
+                ...level,
+                position: levels.indexOf(level) + 1,
+                date: playerRecord?.date
+            };
+        }).sort((a, b) => a.position - b.position);
+
+        const progressLevels = levels.filter(level => 
+            level.players.some(p => p.id === playerId && p.progress < 100)
+        ).map(level => {
+            const playerRecord = level.players.find(p => p.id === playerId);
+            return {
+                ...level,
+                position: levels.indexOf(level) + 1,
+                date: playerRecord?.date,
+                progress: playerRecord?.progress
+            };
+        }).sort((a, b) => a.position - b.position);
+
+        const totalPoints = completedLevels.reduce((sum, level) => sum + level.points, 0) +
+            progressLevels.reduce((sum, level) => sum + (level.points / 5), 0);
+
+        const limitPercent = player.l_percent ? parseFloat(player.l_percent) : 0;
+        const playerRank = allPlayers
+            .map(p => ({ id: p.id, points: calculatePlayerPoints(p.id, levels) }))
+            .sort((a, b) => b.points - a.points)
+            .findIndex(p => p.id === playerId) + 1;
+
+        const skillSet = parseSkillSet(player.skill_set);
+
+        document.getElementById('player-banner').style.backgroundImage = `url('${player.banner_url || 'https://via.placeholder.com/1200x250'}')`;
+        document.getElementById('player-avatar').src = player.avatar_url || 'https://via.placeholder.com/300';
+        document.getElementById('player-rank').textContent = `#${playerRank}`;
+        document.getElementById('player-nickname').textContent = player.nickname;
+        
+        if (player.flag) {
+            const flagImg = document.getElementById('player-flag');
+            flagImg.src = `flags/${player.flag}.png`;
+            flagImg.alt = player.flag;
+            flagImg.style.display = 'inline-block';
+        }
+
+        if (player.about) {
+            document.getElementById('player-description').textContent = player.about;
+        } else {
+            document.getElementById('player-description').style.display = 'none';
+        }
+
+        const statsContainer = document.getElementById('player-stats');
+        statsContainer.innerHTML = `
+            <div class="stat-card">
+                <h3>Total Stars</h3>
+                <p class="stars-count">${Math.round(totalPoints * 10) / 10} <i class="fas fa-star"></i></p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed Levels</h3>
+                <p>${completedLevels.length}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Progress Levels</h3>
+                <p>${progressLevels.length}</p>
+            </div>
+            ${player.osc ? `
+            <div class="stat-card">
+                <h3>OSC</h3>
+                <p>${player.osc}</p>
+            </div>
+            ` : ''}
+            ${player.time_for_1_star ? `
+            <div class="stat-card">
+                <h3>Attempts for 1⭐</h3>
+                <p>${player.time_for_1_star}</p>
+            </div>
+            ` : ''}
+            ${skillSet.length > 0 ? `
+            <div class="stat-card">
+                <h3>Skill-sets</h3>
+                <div class="skill-sets">${skillSet.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}</div>
+            </div>
+            ` : ''}
+            ${player.l_percent ? `
+            <div class="stat-card">
+                <h3>LIMIT%</h3>
+                <p>${player.l_percent}</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: ${limitPercent}%"></div>
+                </div>
+            </div>
+            ` : ''}
+        `;
+
+        if (player.about_me) {
+            document.getElementById('player-about').textContent = player.about_me;
+        } else {
+            document.getElementById('player-about').textContent = 'No description provided';
+        }
+
+        document.getElementById('completed-levels-title').textContent = `Completed Levels (${completedLevels.length})`;
+        const completedList = document.getElementById('completed-levels-list');
+        completedList.innerHTML = completedLevels.map(level => `
+            <li onclick="window.location.href='level.html?id=${level.id}'">
+                <div>
+                    <span class="level-position">#${level.position}</span>
+                    <span class="level-name">${level.name}</span>
+                </div>
+                <span class="level-date">${level.date || 'N/A'}</span>
+            </li>
+        `).join('');
+
+        if (progressLevels.length > 0) {
+            const progressSection = document.getElementById('progress-levels-section');
+            progressSection.style.display = 'block';
+            document.getElementById('progress-levels-title').textContent = `Progress Levels (${progressLevels.length})`;
+            
+            const progressList = document.getElementById('progress-levels-list');
+            progressList.innerHTML = progressLevels.map(level => `
+                <li onclick="window.location.href='level.html?id=${level.id}'">
+                    <div>
+                        <span class="level-position">#${level.position}</span>
+                        <span class="level-name">${level.name}</span>
+                    </div>
+                    <span class="level-date">${level.progress || 0}% (${level.date || 'N/A'})</span>
+                </li>
+            `).join('');
+        }
+
+        setupScrollToTop();
     }
 
     function calculatePlayerPoints(playerId, levels) {
@@ -38,161 +226,21 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.round(totalPoints * 10) / 10;
     }
 
-    async function loadPlayerDetails() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const playerId = urlParams.get('id'); 
-        const levels = await fetchData('levels.json');
-        const players = await fetchData('players.json'); 
-        const player = players.find(p => p.id === playerId); 
-        const playerDetails = document.getElementById('player-details');
+    function setupScrollToTop() {
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollButton = document.getElementById('scroll-to-top');
+            if (scrollButton) scrollButton.classList.toggle('visible', scrollTop > 300);
+        });
 
-        if (player) {
-            if (!player.user_id) {
-                console.error('User ID is missing for player:', player);
-                playerDetails.innerHTML = '<p>Player data is incomplete.</p>';
-                return;
-            }
-
-            const supabaseData = await fetchPlayerFromSupabase(player.user_id);
-
-            if (!supabaseData) {
-                playerDetails.innerHTML = '<p>Player data could not be loaded from Supabase.</p>';
-                return;
-            }
-
-            const skillSet = Array.isArray(supabaseData.skill_set)
-                ? supabaseData.skill_set
-                : JSON.parse(supabaseData.skill_set || '[]');
-
-            const totalPoints = calculatePlayerPoints(playerId, levels);
-
-            const completedLevels = levels.filter(level => {
-                const playerProgress = level.players.find(p => p.id === playerId);
-                return playerProgress && playerProgress.progress === 100;
-            });
-
-            const hardestLevel = completedLevels.reduce((hardest, level) => {
-                return level.points > (hardest?.points || 0) ? level : hardest;
-            }, null);
-
-            const progresses = levels.filter(level => {
-                const playerProgress = level.players.find(p => p.id === playerId);
-                return playerProgress && playerProgress.progress < 100;
-            });
-
-            const playersWithPoints = players.map(player => ({
-                ...player,
-                points: calculatePlayerPoints(player.id, levels)
-            }));
-
-            playersWithPoints.sort((a, b) => b.points - a.points);
-            const playerPosition = playersWithPoints.findIndex(p => p.id === playerId) + 1;
-
-            const lPercent = parseFloat(supabaseData.l_percent) || 0;
-
-            playerDetails.innerHTML = `
-                <div class="player-card" data-channel-link="${player.channel_link}">
-                    <img src="${supabaseData.banner_url || 'https://via.placeholder.com/800x200'}" alt="Banner" class="player-banner">
-                    <div class="player-avatar-container">
-                        <img src="${supabaseData.avatar_url || 'https://via.placeholder.com/150'}" alt="Avatar" class="player-avatar">
-                        <div class="player-info-header">
-                            <h2>#${playerPosition} - ${supabaseData.nickname} <img src="flags/${supabaseData.flag}.png" class="flag" alt="${supabaseData.flag}"></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="player-info">
-                    <div class="info-card">
-                        <h3>Stars</h3>
-                        <p>${totalPoints}</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>OSC</h3>
-                        <p>${supabaseData.osc}</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>L%</h3>
-                        <p>${supabaseData.l_percent}</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: ${lPercent}%"></div>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <h3>Attempts for 1⭐</h3>
-                        <p>${supabaseData.time_for_1_star}</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>Skill-set</h3>
-                        <p>${skillSet.join(', ')}</p>
-                    </div>
-                </div>
-                <div class="about-me">
-                    <h3>ABOUT ME</h3>
-                    <p>${supabaseData.about_me || 'No information available.'}</p>
-                </div>
-                <div class="completed-levels">
-                    <h3>COMPLETIONS</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Level</th>
-                                <th>Position</th>
-                                <th>Stars</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${completedLevels.map(level => {
-                                const position = levels.indexOf(level) + 1;
-                                const isHardest = hardestLevel && level.id === hardestLevel.id;
-                                return `
-                                    <tr onclick="window.location.href='level.html?id=${level.id}'">
-                                        <td>${level.name} ${isHardest ? '<span class="hardest-marker">[Hardest]</span>' : ''}</td>
-                                        <td>#${position}</td>
-                                        <td>${level.points}</td>
-                                    </tr>
-                                `;
-                            }).join('')}
-                        </tbody>
-                    </table>
-                </div>
-                ${progresses.length > 0 ? `
-                    <div class="progress-levels">
-                        <h3>PROGRESSES</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Level</th>
-                                    <th>Position</th>
-                                    <th>Progress</th>
-                                    <th>Stars</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${progresses.map(level => {
-                                    const playerProgress = level.players.find(p => p.id === playerId);
-                                    const position = levels.indexOf(level) + 1;
-                                    const points = playerProgress.progress === 100 ? level.points : level.points / 5;
-                                    return `
-                                        <tr onclick="window.location.href='level.html?id=${level.id}'"> 
-                                            <td>${level.name}</td>
-                                            <td>#${position}</td>
-                                            <td>${playerProgress.progress}%</td>
-                                            <td>${points.toFixed(1)}</td>
-                                        </tr>
-                                    `;
-                                }).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                ` : ''}
-            `;
-            const playerCard = document.querySelector('.player-card');
-            if (playerCard && player.channel_link) {
-                playerCard.addEventListener('click', () => {
-                    window.open(player.channel_link, '_blank');
+        const scrollButton = document.getElementById('scroll-to-top');
+        if (scrollButton) {
+            scrollButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
-            }
-        } else {
-            playerDetails.innerHTML = '<p>Player not found.</p>';
+            });
         }
     }
 

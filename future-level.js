@@ -46,20 +46,24 @@ async function loadFutureLevelDetails() {
         const levelDetails = document.getElementById('level-details');
         
         if (!level) {
-            levelDetails.innerHTML = '<p>Level not found</p>';
+            levelDetails.innerHTML = '<div class="error-message">Level not found</div>';
             return;
         }
 
         await preloadPlayerNicknames(level.players.map(p => p.id));
 
         const position = levels.indexOf(level) + 1;
-        const firstPlayerNickname = await getPlayerInfo(level.players[0]?.id);
-
+        const verifierNickname = await getPlayerInfo(level.players[0]?.id);
+        
         let videoId = '';
         if (level.players[0]?.video_link) {
-            videoId = extractYouTubeId(level.players[0].video_link);
+            const videoLink = level.players[0].video_link;
+            if (videoLink.includes('youtube.com')) {
+                videoId = videoLink.split('v=')[1]?.split('&')[0];
+            } else if (videoLink.includes('youtu.be')) {
+                videoId = videoLink.split('/').pop();
+            }
         }
-        const embedVideoLink = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
         const playerRecords = await Promise.all(level.players.map(async player => {
             const nickname = await getPlayerInfo(player.id);
@@ -67,33 +71,47 @@ async function loadFutureLevelDetails() {
         }));
 
         levelDetails.innerHTML = `
-            <h2>#${position} - ${level.name}</h2>
-            <div class="level-info">
+            <div class="level-header">
+                <div class="level-position">#${position}</div>
+                <div class="level-title">
+                    <h1 class="level-name">${level.name}</h1>
+                </div>
+            </div>
+            
+            <div class="level-info-grid">
                 <div class="info-card">
-                    <h3>Verified by</h3>
-                    <p>${firstPlayerNickname}</p>
+                    <h3>ID</h3>
+                    <p>${level.id || 'N/A'}</p>
                 </div>
                 <div class="info-card">
                     <h3>Skill-sets</h3>
                     <p>${level.skill_sets?.join(', ') || 'N/A'}</p>
                 </div>
+                ${level.enjoyment ? `
                 <div class="info-card">
                     <h3>Enjoyment</h3>
-                    <p>${level.enjoyment || 'N/A'}/10</p>
+                    <p>${level.enjoyment}/10</p>
+                </div>
+                ` : ''}
+                <div class="info-card">
+                    <h3>Verified by</h3>
+                    <p>${verifierNickname}</p>
                 </div>
             </div>
-            <div class="video-player">
-                ${embedVideoLink 
-                    ? `<iframe src="${embedVideoLink}" frameborder="0" allowfullscreen></iframe>` 
-                    : '<p>Video unavailable</p>'}
+            
+            ${videoId ? `
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="total-records">
-                <h3>Total Records (${playerRecords.length})</h3>
+            ` : '<div class="video-error">Video unavailable</div>'}
+            
+            <div class="records-section">
+                <h2 class="section-title">Total Records (${playerRecords.length})</h2>
                 <ul class="player-list">
                     ${playerRecords.map(player => `
                         <li ${player.video_link ? `onclick="window.open('${player.video_link}', '_blank')"` : ''}>
                             <p class="player-name">${player.nickname}</p>
-                            <p class="player-date">${player.progress || 'N/A'}</p>
+                            <p class="player-date">${player.date || 'N/A'} (${player.progress || '0'}%)</p>
                         </li>
                     `).join('')}
                 </ul>
@@ -101,7 +119,7 @@ async function loadFutureLevelDetails() {
         `;
     } catch (error) {
         console.error('Error loading level details:', error);
-        document.getElementById('level-details').innerHTML = '<p>Error loading level details</p>';
+        document.getElementById('level-details').innerHTML = '<div class="error-message">Error loading level details</div>';
     }
 }
 
@@ -127,15 +145,27 @@ async function preloadPlayerNicknames(playerIds) {
     }
 }
 
-function extractYouTubeId(url) {
-    if (!url) return null;
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
+function setupScrollToTop() {
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollButton = document.getElementById('scroll-to-top');
+        if (scrollButton) scrollButton.classList.toggle('visible', scrollTop > 300);
+    });
+
+    const scrollButton = document.getElementById('scroll-to-top');
+    if (scrollButton) {
+        scrollButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.includes('future-level.html')) {
         loadFutureLevelDetails();
+        setupScrollToTop();
     }
 });
