@@ -5,7 +5,7 @@ const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 const skillSets = [
     "wave", "cube", "ship", "ball", "ufo", 
     "memory", "dual", "nerve-control", "timings", 
-    "fast-paced", "high cps", "learny", "timing", "robot", "swing", "spider", "slow-paced", "flow", "chokepoints", "gimmicky"
+    "fast-paced", "high cps", "learny", "robot", "swing", "spider", "slow-paced", "flow", "chokepoints", "gimmicky"
 ];
 
 const phaseColors = {
@@ -33,6 +33,40 @@ async function hashPassword(password) {
     const hashBuffer = await crypto.subtle.digest('SHA-256', data);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function gjp2Encrypt(password) {
+    const xorKey = [37526, 57325, 21831, 35843];
+    let encrypted = "";
+    
+    for (let i = 0; i < password.length; i++) {
+        const charCode = password.charCodeAt(i);
+        const keyPart = xorKey[i % 4];
+        const encryptedChar = (charCode ^ keyPart).toString();
+        
+        while (encryptedChar.length < 5) {
+            encryptedChar = "0" + encryptedChar;
+        }
+        
+        encrypted += encryptedChar;
+    }
+    
+    return encrypted;
+}
+
+function gjp2Decrypt(encrypted) {
+    const xorKey = [37526, 57325, 21831, 35843];
+    let decrypted = "";
+    
+    for (let i = 0; i < encrypted.length; i += 5) {
+        const chunk = encrypted.substr(i, 5);
+        const encryptedValue = parseInt(chunk, 10);
+        const keyPart = xorKey[(i / 5) % 4];
+        const decryptedChar = String.fromCharCode(encryptedValue ^ keyPart);
+        decrypted += decryptedChar;
+    }
+    
+    return decrypted;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -116,38 +150,46 @@ async function handleLogin() {
     const password = document.getElementById('password').value;
 
     if (!nickname || !password) {
-        alert('Введите никнейм и пароль');
+        alert('Please enter both nickname and password');
         return;
     }
 
     try {
-        const { data: userData, error } = await supabaseClient
+        const { data: userData, error: userError } = await supabaseClient
             .from('players')
             .select('*')
             .eq('nickname', nickname)
             .single();
 
-        if (error || !userData) {
-            throw new Error('</3');
+        if (userError) throw userError;
+
+        const inputGjp2 = gjp2Encrypt(password);
+        if (userData.password_gjp2 === inputGjp2) {
+            loginSuccess(userData);
+            return;
         }
 
-        const hashedPassword = await hashPassword(password);
-        
-        if (userData.password_hash !== hashedPassword) {
-            throw new Error('</3');
+        const hashedInput = await hashPassword(password);
+        if (userData.password_hash === hashedInput) {
+            loginSuccess(userData);
+            return;
         }
 
-        currentUser = userData;
-        localStorage.setItem('gdPlayer', JSON.stringify(userData));
-        showProfileTab();
-        loadCurrentProfileData(userData);
-        updateSidebarUser(userData);
-        alert('<3');
-        
+        throw new Error('Invalid password </3');
+
     } catch (error) {
-        console.error('Ошибка входа:', error);
-        alert(`Ошибка входа: ${error.message}`);
+        console.error('Login error:', error);
+        alert(error.message || 'Login failed </3');
     }
+}
+
+function loginSuccess(userData) {
+    currentUser = userData;
+    localStorage.setItem('gdPlayer', JSON.stringify(userData));
+    showProfileTab();
+    loadCurrentProfileData(userData);
+    updateSidebarUser(userData);
+    alert('Login successful <3');
 }
 
 function loadCurrentProfileData(userData) {
@@ -191,20 +233,12 @@ async function updateProfile() {
     if (!currentUser) return;
 
     try {
-        const newPassword = document.getElementById('password').value;
-        let updateData = {
+        const updateData = {
             nickname: document.getElementById('new-nickname').value.trim(),
             about_me: document.getElementById('about-me').value.trim(),
             col1: document.getElementById('primary-color').value,
             col2: document.getElementById('secondary-color').value
         };
-
-        if (newPassword) {
-            updateData.password = await hashPassword(newPassword);
-        }
-
-        if (currentUser.avatar_url) updateData.avatar_url = currentUser.avatar_url;
-        if (currentUser.banner_url) updateData.banner_url = currentUser.banner_url;
 
         const { error } = await supabaseClient
             .from('players')
@@ -217,18 +251,10 @@ async function updateProfile() {
         localStorage.setItem('gdPlayer', JSON.stringify(currentUser));
         updateSidebarUser(currentUser);
         
-        const successMsg = document.createElement('div');
-        successMsg.className = 'success-message';
-        successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Profile updated successfully!';
-        document.getElementById('profile-tab').appendChild(successMsg);
-        
-        setTimeout(() => {
-            successMsg.classList.add('fade-out');
-            setTimeout(() => successMsg.remove(), 500);
-        }, 3000);
+        alert('Профиль успешно обновлен!');
     } catch (error) {
-        console.error('Update profile error:', error);
-        alert('Failed to update profile. Please try again.');
+        console.error('Ошибка обновления:', error);
+        alert('Ошибка: ' + error.message);
     }
 }
 
