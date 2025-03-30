@@ -128,13 +128,13 @@ async function handleLogin() {
             .single();
 
         if (error || !userData) {
-            throw new Error('Пользователь не найден');
+            throw new Error('</3');
         }
 
         const hashedPassword = await hashPassword(password);
         
         if (userData.password_hash !== hashedPassword) {
-            throw new Error('Неверный пароль');
+            throw new Error('</3');
         }
 
         currentUser = userData;
@@ -142,7 +142,7 @@ async function handleLogin() {
         showProfileTab();
         loadCurrentProfileData(userData);
         updateSidebarUser(userData);
-        alert('Вход выполнен успешно!');
+        alert('<3');
         
     } catch (error) {
         console.error('Ошибка входа:', error);
