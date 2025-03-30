@@ -27,6 +27,14 @@ let currentUser = null;
 let currentCropper = null;
 let currentUploadType = null;
 
+async function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const savedUser = localStorage.getItem('gdPlayer');
     if (savedUser) {
@@ -108,36 +116,37 @@ async function handleLogin() {
     const password = document.getElementById('password').value;
 
     if (!nickname || !password) {
-        alert('Please enter both nickname and password');
+        alert('Введите никнейм и пароль');
         return;
     }
 
     try {
-        const { data: userData, error: userError } = await supabaseClient
+        const { data: userData, error } = await supabaseClient
             .from('players')
             .select('*')
             .eq('nickname', nickname)
             .single();
 
-        if (userError) {
-            console.error('Error finding user:', userError);
-            alert('User not found');
-            return;
+        if (error || !userData) {
+            throw new Error('Пользователь не найден');
         }
 
-        if (userData.password === password) {
-            currentUser = userData;
-            localStorage.setItem('gdPlayer', JSON.stringify(userData));
-            showProfileTab();
-            loadCurrentProfileData(userData);
-            updateSidebarUser(userData);
-            alert('Login successful <3');
-        } else {
-            alert('Invalid password </3');
+        const hashedPassword = await hashPassword(password);
+        
+        if (userData.password_hash !== hashedPassword) {
+            throw new Error('Неверный пароль');
         }
+
+        currentUser = userData;
+        localStorage.setItem('gdPlayer', JSON.stringify(userData));
+        showProfileTab();
+        loadCurrentProfileData(userData);
+        updateSidebarUser(userData);
+        alert('Вход выполнен успешно!');
+        
     } catch (error) {
-        console.error('Login error:', error);
-        alert('Login failed </3');
+        console.error('Ошибка входа:', error);
+        alert(`Ошибка входа: ${error.message}`);
     }
 }
 
@@ -182,12 +191,17 @@ async function updateProfile() {
     if (!currentUser) return;
 
     try {
-        const updateData = {
+        const newPassword = document.getElementById('password').value;
+        let updateData = {
             nickname: document.getElementById('new-nickname').value.trim(),
             about_me: document.getElementById('about-me').value.trim(),
             col1: document.getElementById('primary-color').value,
             col2: document.getElementById('secondary-color').value
         };
+
+        if (newPassword) {
+            updateData.password = await hashPassword(newPassword);
+        }
 
         if (currentUser.avatar_url) updateData.avatar_url = currentUser.avatar_url;
         if (currentUser.banner_url) updateData.banner_url = currentUser.banner_url;
@@ -607,7 +621,6 @@ function animateWave(levels) {
 
     updateWave();
 }
-
 
 async function fetchData(url) {
     try {
