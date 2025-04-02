@@ -103,23 +103,10 @@ function toggleComplete(runKey, runItem, button) {
 function saveSession() {
     const sessionName = prompt('Enter session name:', currentSession.name);
     if (sessionName) {
-        updateCurrentSession();
         currentSession.name = sessionName;
         saveSessions();
         alert(`<3`);
     }
-}
-
-function updateCurrentSession() {
-    const positionsKey = currentSession.positions.join(',');
-    currentSession.completed[positionsKey] = {};
-    
-    document.querySelectorAll('.blitzkrieg-run').forEach(run => {
-        const runKey = run.dataset.runKey;
-        if (run.classList.contains('completed')) {
-            currentSession.completed[positionsKey][runKey] = true;
-        }
-    });
 }
 
 function showSessionsModal() {
@@ -205,8 +192,6 @@ function loadSessions() {
 function saveSessions() {
     const saved = localStorage.getItem('blitzkriegSessions');
     let sessions = saved ? JSON.parse(saved) : {};
-    
-    updateCurrentSession();
     
     sessions[currentSession.name] = JSON.parse(JSON.stringify(currentSession));
     localStorage.setItem('blitzkriegSessions', JSON.stringify(sessions));
