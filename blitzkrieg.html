@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blitzkrieg</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>Blitzkrieg</h1>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html"><i class="fas fa-fire"></i> Demon List</a>
+            <a href="future.html"><i class="fas fa-clock"></i> Future List</a>
+            <a href="archive.html"><i class="fas fa-archive"></i> Archive</a>
+            <a href="players.html"><i class="fas fa-users"></i> Top Players</a>
+            <a href="dashboard.html"><i class="fas fa-user-cog"></i> Dashboard</a>
+            <a href="weekly-hardest.html"><i class="fas fa-crown"></i> Weekly Hardest</a>
+            <a href="blitzkrieg.html" class="active"><i class="fas fa-bolt"></i> Blitzkrieg</a>
+        </div>
+        <div class="sidebar-footer">
+            <a href="https://discord.gg/cg4QTF59z9" id="discord-link"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://forms.gle/cXuwy3YN7Rp1eyra9" id="submit-record"><i class="fas fa-paper-plane"></i> Submit a Record</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="blitzkrieg-container">
+            <h1><i class="fas fa-bolt"></i> Blitzkrieg</h1>
+            <p class="blitzkrieg-description"> Author's rubber, a program for compiling Blitzkrieg</p>
+            
+            <div class="blitzkrieg-input">
+                <div class="input-group">
+                    <label for="start-positions">Start Positions :</label>
+                    <input type="text" id="start-positions" placeholder="e.g. 25,50,75" value="25,50,75">
+                </div>
+                <button id="generate-blitzkrieg" class="blitzkrieg-button">Generate Blitzkrieg</button>
+            </div>
+            
+            <div class="blitzkrieg-results" id="blitzkrieg-results">
+            </div>
+        </div>
+    </div>
+
+    <button id="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('generate-blitzkrieg').addEventListener('click', generateBlitzkrieg);
+            
+            generateBlitzkrieg();
+        });
+
+        function generateBlitzkrieg() {
+            const input = document.getElementById('start-positions').value;
+            const positions = input.split(',')
+                .map(pos => parseFloat(pos.trim()))
+                .filter(pos => !isNaN(pos) && pos >= 0 && pos <= 100)
+                .sort((a, b) => a - b);
+            
+            if (positions.length === 0 || positions[0] !== 0) positions.unshift(0);
+            if (positions[positions.length - 1] !== 100) positions.push(100);
+            
+            const resultsContainer = document.getElementById('blitzkrieg-results');
+            resultsContainer.innerHTML = '';
+            
+            if (positions.length < 2) {
+                resultsContainer.innerHTML = '<p class="error">Please enter valid start positions.</p>';
+                return;
+            }
+            
+            const maxStage = positions.length - 1;
+            
+            for (let stage = 1; stage <= maxStage; stage++) {
+                const stageDiv = document.createElement('div');
+                stageDiv.className = 'blitzkrieg-stage';
+                
+                const stageHeader = document.createElement('h2');
+                stageHeader.textContent = `Stage ${stage}`;
+                stageDiv.appendChild(stageHeader);
+                
+                const runsList = document.createElement('ul');
+                runsList.className = 'blitzkrieg-runs';
+                
+                for (let i = 0; i <= positions.length - 1 - stage; i++) {
+                    const startPos = positions[i];
+                    const endPos = positions[i + stage];
+                    
+                    const runItem = document.createElement('li');
+                    runItem.className = 'blitzkrieg-run';
+                    runItem.textContent = `${startPos}% → ${endPos}%`;
+                    runsList.appendChild(runItem);
+                }
+                
+                stageDiv.appendChild(runsList);
+                resultsContainer.appendChild(stageDiv);
+            }
+        }
+    </script>
+</body>
+</html>
