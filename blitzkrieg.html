@@ -5,6 +5,76 @@
     <title>Blitzkrieg</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .sessions-list {
+            margin: 20px 0;
+        }
+
+        .session-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .session-actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .session-button {
+            background-color: #444;
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .session-button.danger {
+            background-color: #d32f2f;
+        }
+
+        .session-button:hover {
+            opacity: 0.8;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -29,17 +99,30 @@
     <div class="main-content">
         <div class="blitzkrieg-container">
             <h1><i class="fas fa-bolt"></i> Blitzkrieg</h1>
-            <p class="blitzkrieg-description"> Author's rubber, a program for compiling Blitzkrieg</p>
+            <p class="blitzkrieg-description">Authorship: rudder, a program for compiling Blitzkrieg</p>
             
             <div class="blitzkrieg-input">
                 <div class="input-group">
                     <label for="start-positions">Start Positions :</label>
                     <input type="text" id="start-positions" placeholder="e.g. 25,50,75" value="25,50,75">
                 </div>
-                <button id="generate-blitzkrieg" class="blitzkrieg-button">Generate Blitzkrieg</button>
+                <div class="blitzkrieg-actions">
+                    <button id="generate-blitzkrieg" class="blitzkrieg-button">Generate Blitzkrieg</button>
+                    <button id="save-blitzkrieg" class="blitzkrieg-button secondary">Save Session</button>
+                    <button id="manage-sessions" class="blitzkrieg-button secondary">Manage Sessions</button>
+                </div>
             </div>
             
-            <div class="blitzkrieg-results" id="blitzkrieg-results">
+            <div class="blitzkrieg-results" id="blitzkrieg-results"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="sessions-modal">
+        <div class="modal-content">
+            <h2>Saved Sessions</h2>
+            <div class="sessions-list" id="sessions-list"></div>
+            <div class="modal-actions">
+                <button id="close-modal" class="blitzkrieg-button">Close</button>
             </div>
         </div>
     </div>
@@ -48,58 +131,6 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('generate-blitzkrieg').addEventListener('click', generateBlitzkrieg);
-            
-            generateBlitzkrieg();
-        });
-
-        function generateBlitzkrieg() {
-            const input = document.getElementById('start-positions').value;
-            const positions = input.split(',')
-                .map(pos => parseFloat(pos.trim()))
-                .filter(pos => !isNaN(pos) && pos >= 0 && pos <= 100)
-                .sort((a, b) => a - b);
-            
-            if (positions.length === 0 || positions[0] !== 0) positions.unshift(0);
-            if (positions[positions.length - 1] !== 100) positions.push(100);
-            
-            const resultsContainer = document.getElementById('blitzkrieg-results');
-            resultsContainer.innerHTML = '';
-            
-            if (positions.length < 2) {
-                resultsContainer.innerHTML = '<p class="error">Please enter valid start positions.</p>';
-                return;
-            }
-            
-            const maxStage = positions.length - 1;
-            
-            for (let stage = 1; stage <= maxStage; stage++) {
-                const stageDiv = document.createElement('div');
-                stageDiv.className = 'blitzkrieg-stage';
-                
-                const stageHeader = document.createElement('h2');
-                stageHeader.textContent = `Stage ${stage}`;
-                stageDiv.appendChild(stageHeader);
-                
-                const runsList = document.createElement('ul');
-                runsList.className = 'blitzkrieg-runs';
-                
-                for (let i = 0; i <= positions.length - 1 - stage; i++) {
-                    const startPos = positions[i];
-                    const endPos = positions[i + stage];
-                    
-                    const runItem = document.createElement('li');
-                    runItem.className = 'blitzkrieg-run';
-                    runItem.textContent = `${startPos}% → ${endPos}%`;
-                    runsList.appendChild(runItem);
-                }
-                
-                stageDiv.appendChild(runsList);
-                resultsContainer.appendChild(stageDiv);
-            }
-        }
-    </script>
+    <script src="blitzkrieg.js"></script>
 </body>
 </html>

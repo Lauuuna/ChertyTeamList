@@ -653,3 +653,71 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.blitzkrieg-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.blitzkrieg-button.secondary {
+    background-color: #444;
+}
+
+.blitzkrieg-button.secondary:hover {
+    background-color: #555;
+}
+
+.blitzkrieg-button.danger {
+    background-color: #d32f2f;
+}
+
+.blitzkrieg-button.danger:hover {
+    background-color: #b71c1c;
+}
+
+.blitzkrieg-run {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.blitzkrieg-run.completed {
+    background-color: #2e7d32;
+}
+
+.blitzkrieg-run.completed:hover {
+    background-color: #1b5e20;
+}
+
+.complete-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.complete-button i {
+    transition: transform 0.2s ease;
+}
+
+.complete-button:hover i {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .blitzkrieg-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .blitzkrieg-actions {
+        grid-template-columns: 1fr;
+    }
+}
