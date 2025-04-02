@@ -8,11 +8,13 @@ const levelsCache = {
     timestamp: 0
 };
 let allLevels = [];
+let availableDates = [];
 let activeFilters = {
     searchText: '',
     phaseFilter: '',
     positionFilter: '',
     skillFilter: '',
+    monthFilter: '',
     singleRecordOnly: false
 };
 
@@ -53,6 +55,11 @@ function setupFilterButtons() {
         loadLevels();
     });
     
+    document.getElementById('month-filter')?.addEventListener('change', (e) => {
+        activeFilters.monthFilter = e.target.value;
+        loadLevels();
+    });
+    
     document.getElementById('single-record-filter')?.addEventListener('change', (e) => {
         activeFilters.singleRecordOnly = e.target.checked;
         loadLevels();
@@ -70,6 +77,7 @@ function applyFilters() {
         phaseFilter: document.getElementById('phase-filter')?.value || '',
         positionFilter: document.getElementById('position-filter')?.value || '',
         skillFilter: document.getElementById('skill-filter')?.value || '',
+        monthFilter: document.getElementById('month-filter')?.value || '',
         singleRecordOnly: document.getElementById('single-record-filter')?.checked || false
     };
     loadLevels();
@@ -81,12 +89,14 @@ function clearAllFilters() {
     const phaseFilter = document.getElementById('phase-filter');
     const positionFilter = document.getElementById('position-filter');
     const skillFilter = document.getElementById('skill-filter');
+    const monthFilter = document.getElementById('month-filter');
     const singleRecordFilter = document.getElementById('single-record-filter');
 
     if (searchInput) searchInput.value = '';
     if (phaseFilter) phaseFilter.value = '';
     if (positionFilter) positionFilter.value = '';
     if (skillFilter) skillFilter.value = '';
+    if (monthFilter) monthFilter.value = '';
     if (singleRecordFilter) singleRecordFilter.checked = false;
 
     activeFilters = {
@@ -94,6 +104,7 @@ function clearAllFilters() {
         phaseFilter: '',
         positionFilter: '',
         skillFilter: '',
+        monthFilter: '',
         singleRecordOnly: false
     };
     loadLevels();
@@ -119,6 +130,7 @@ async function loadAllLevels() {
         const playerIds = allLevels.map(level => level.players[0]?.id).filter(Boolean);
         await preloadPlayerNicknames(playerIds);
         populateSkillFilters();
+        populateMonthFilters();
     } catch (error) {
         console.error('Error loading all levels:', error);
     }
@@ -147,6 +159,37 @@ function populateSkillFilters() {
     });
 
     skillFilter.appendChild(fragment);
+}
+
+function populateMonthFilters() {
+    const monthFilter = document.getElementById('month-filter');
+    if (!monthFilter) return;
+
+    const datesSet = new Set();
+    
+    allLevels.forEach(level => {
+        if (level.players && level.players.length > 0 && level.players[0].date) {
+            const dateParts = level.players[0].date.split('-');
+            if (dateParts.length === 3) {
+                const year = dateParts[0];
+                const month = dateParts[2].padStart(2, '0');
+                datesSet.add(`${year}-${month}`);
+            }
+        }
+    });
+
+    availableDates = Array.from(datesSet).sort((a, b) => {
+        const [yearA, monthA] = a.split('-');
+        const [yearB, monthB] = b.split('-');
+        return new Date(yearB, monthB - 1) - new Date(yearA, monthA - 1);
+    });
+
+    if (availableDates.length > 0) {
+        const [minYear, minMonth] = availableDates[availableDates.length - 1].split('-');
+        const [maxYear, maxMonth] = availableDates[0].split('-');
+        monthFilter.min = `${minYear}-${minMonth}`;
+        monthFilter.max = `${maxYear}-${maxMonth}`;
+    }
 }
 
 function isNewLevel(level) {
@@ -181,14 +224,15 @@ async function loadLevels() {
             activeFilters.phaseFilter,
             activeFilters.positionFilter,
             activeFilters.skillFilter,
+            activeFilters.monthFilter,
             activeFilters.singleRecordOnly
         );
 
         levelsList.innerHTML = '';
 
         filteredLevels.forEach((level, index) => {
-            const originalPosition = allLevels.indexOf(level) + 1;
-            const levelCard = createLevelCard(level, originalPosition, isAnyFilterActive());
+            const filteredPosition = index + 1;
+            const levelCard = createLevelCard(level, filteredPosition, isAnyFilterActive());
             levelsList.appendChild(levelCard);
         });
 
@@ -200,9 +244,9 @@ async function loadLevels() {
     }
 }
 
-function filterLevels(levels, searchText, phaseFilter, positionFilter, skillFilter, singleRecordOnly) {
+function filterLevels(levels, searchText, phaseFilter, positionFilter, skillFilter, monthFilter, singleRecordOnly) {
     const searchLower = searchText.toLowerCase();
-    return levels.filter((level, index) => {
+    let filtered = levels.filter((level, index) => {
         const matchesSearch = level.name.toLowerCase().includes(searchLower);
         const matchesPhase = !phaseFilter || level.phase === phaseFilter;
         const matchesPosition = !positionFilter || (index + 1) === parseInt(positionFilter);
@@ -212,6 +256,30 @@ function filterLevels(levels, searchText, phaseFilter, positionFilter, skillFilt
         
         return matchesSearch && matchesPhase && matchesPosition && matchesSkill && matchesSingleRecord;
     });
+
+    if (monthFilter) {
+        const [selectedYear, selectedMonth] = monthFilter.split('-');
+        const selectedDate = new Date(selectedYear, selectedMonth - 1);
+        
+        filtered = filtered.filter(level => {
+            if (!level.players || level.players.length === 0) return false;
+            
+            const levelDateStr = level.players[0].date;
+            const levelDateParts = levelDateStr.split('-');
+            if (levelDateParts.length !== 3) return false;
+            
+            const levelYear = levelDateParts[0];
+            const levelDay = levelDateParts[1] === 'XX' ? '01' : levelDateParts[1].padStart(2, '0');
+            const levelMonth = levelDateParts[2].padStart(2, '0');
+            
+            const levelDate = new Date(levelYear, levelMonth - 1, levelDay);
+            const compareDate = new Date(selectedYear, selectedMonth - 1, 1);
+            
+            return levelDate <= compareDate;
+        });
+    }
+
+    return filtered;
 }
 
 function isAnyFilterActive() {
@@ -219,6 +287,7 @@ function isAnyFilterActive() {
            activeFilters.phaseFilter !== '' ||
            activeFilters.positionFilter !== '' ||
            activeFilters.skillFilter !== '' ||
+           activeFilters.monthFilter !== '' ||
            activeFilters.singleRecordOnly;
 }
 

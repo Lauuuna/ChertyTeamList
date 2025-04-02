@@ -321,6 +321,28 @@ body {
     color: white;
 }
 
+.month-picker {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.month-picker::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.month-picker::-webkit-datetime-edit-text,
+.month-picker::-webkit-datetime-edit-month-field,
+.month-picker::-webkit-datetime-edit-year-field {
+    color: white;
+    padding: 0 2px;
+}
+
 .filter-actions {
     display: flex;
     gap: 10px;
@@ -454,6 +476,52 @@ body {
     0% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
     50% { box-shadow: 0 0 20px 10px rgba(255, 68, 68, 0.4); }
     100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
+}
+
+.month-picker-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.month-picker-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b0b0b0;
+}
+
+.month-picker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.month-picker-nav {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.month-picker-nav:hover {
+    background-color: #333;
+}
+
+.month-picker-nav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.month-picker-display {
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    border: 1px solid #444;
 }
 
 @media (max-width: 768px) {
@@ -648,12 +716,6 @@ body {
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    .blitzkrieg-runs {
-        grid-template-columns: 1fr;
-    }
-}
-
 .blitzkrieg-actions {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -711,6 +773,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .blitzkrieg-runs {
+        grid-template-columns: 1fr;
+    }
     .blitzkrieg-actions {
         grid-template-columns: 1fr 1fr;
     }
