@@ -570,10 +570,16 @@
           "progress": 100
         },
         {
+          "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
+          "date": "2025-04-04",
+          "video_link": "https://www.youtube.com/watch?v=ShHHykNDQg4",
+          "progress": 100
+        },
+        {
           "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
-          "date": "2025-XX-XX",
+          "date": "2025-05-04",
           "video_link": "",
-          "progress": 81
+          "progress": 100
         },
         {
           "id": "c70984ba-e74c-4335-96e6-373c75252736",
@@ -2920,6 +2926,12 @@
         "id": "eca1cc3e-7c19-4d0a-86ef-62e3f57f4cdb",
         "date": "2025-XX-03",
         "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": "adaa3d6f-4398-460f-93bf-2834e52848a0",
+        "date": "2025-30-03",
+        "video_link": "https://www.youtube.com/watch?v=V8W1eVQL9W8",
         "progress": 100
       }
     ]

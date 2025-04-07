@@ -124,6 +124,20 @@
             }
         ]
     },
+    {
+        "id": 79997992,
+        "name": "Shardscapes",
+        "skill_sets": ["timings", "robot", "slow-paced"],
+        "enjoyment": 6,
+        "players": [
+            {
+                "id": "00fb331d-585f-4396-8558-f148eec150c7",
+                "nickname": "kotyarachik",
+                "video_link": "https://www.youtube.com/watch?v=prAX7gnKrkU&t=3s",
+                "progress": "X" 
+            }
+        ]
+    },
         {
         "id": 82172844,
         "name": "cobwebs",
