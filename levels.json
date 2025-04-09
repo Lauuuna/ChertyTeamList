@@ -758,6 +758,12 @@
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=sx84tcnNgAI",
         "progress": 100
+      },
+      {
+        "id": "04313f0f-005a-4cfe-aaad-840dc5305aaf",
+        "date": "2025-06-04",
+        "video_link": "https://www.youtube.com/watch?v=nQIHzORhzik",
+        "progress": 100
       }
     ]
   },
@@ -1144,6 +1150,24 @@
         "id": "00fb331d-585f-4396-8558-f148eec150c7",
         "date": "2024-XX-09",
         "video_link": "",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "id": 36107975,
+    "name": "Carnage Mode",
+    "phase": "3",
+    "ggdl_phase": "26",
+    "skill_sets": ["chokepoints", "overall", "nerve-control"],
+    "points": 8.8,
+    "list_percent": 50,
+    "enjoyment": 5,
+    "players": [
+      {
+        "id": "04313f0f-005a-4cfe-aaad-840dc5305aaf",
+        "date": "2025-29-03",
+        "video_link": "https://www.youtube.com/watch?v=iJTvbmkssB0",
         "progress": 100
       }
     ]

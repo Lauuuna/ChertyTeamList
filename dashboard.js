@@ -158,25 +158,20 @@ async function handleLogin() {
         const { data: userData, error: userError } = await supabaseClient
             .from('players')
             .select('*')
-            .eq('nickname', nickname)
+            .eq('nicname', nickname)
             .single();
 
-        if (userError) throw userError;
-
-        const inputGjp2 = gjp2Encrypt(password);
-        if (userData.password_gjp2 === inputGjp2) {
-            loginSuccess(userData);
-            return;
+        if (userError || !userData) {
+            throw new Error('Player not found </3');
         }
 
         const hashedInput = await hashPassword(password);
-        if (userData.password_hash === hashedInput) {
-            loginSuccess(userData);
-            return;
+        if (userData.password_hash !== hashedInput) {
+            throw new Error('Invalid password </3');
         }
 
-        throw new Error('Invalid password </3');
-
+        loginSuccess(userData);
+        
     } catch (error) {
         console.error('Login error:', error);
         alert(error.message || 'Login failed </3');
