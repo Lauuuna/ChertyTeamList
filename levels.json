@@ -20,7 +20,7 @@
           "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
           "date": "2025-XX-XX",
           "video_link": "",
-          "progress": 78
+          "progress": 91
         }
       ],
       "archives": [
@@ -498,6 +498,25 @@
       ]
     },
     {
+      "id": 58825144,
+      "name": "xo",
+      "phase": "5",
+      "ggdl_phase": "30",
+      "skill_sets": ["slow-paced", "nerve control", "overall"],
+      "points": 21.5,
+      "background": "",
+      "list_percent": 41,
+      "enjoyment": 6,
+      "players": [
+        {
+          "id": "fe506e3a-3e5d-49d6-bd81-892db2d67f63",
+          "date": "2025-04-13",
+          "video_link": "https://www.youtube.com/watch?v=OED3RhGutQA",
+          "progress": 100
+        }
+      ]
+    },
+    {
       "id": 26681070,
       "name": "Sonic Wave",
       "phase": "5",
@@ -640,6 +659,12 @@
         "progress": 100
       },
       {
+        "id": "61aab92c-376d-4759-9c0e-5826b250a099",
+        "date": "2025-04-XX",
+        "video_link": "",
+        "progress": 95
+      },
+      {
         "id": "2f26542e-600e-4970-a385-d1f46d93b16a",
         "date": "20XX-XX-XX",
         "video_link": "",
@@ -771,6 +796,7 @@
         "video_link": "https://www.youtube.com/watch?v=nQIHzORhzik",
         "progress": 100
       }
+      
     ]
   },
   {
@@ -2691,6 +2717,12 @@
         "date": "2025-XX-02",
         "video_link": "https://www.youtube.com/watch?v=QKTgYye1otg",
         "progress": 100
+      },
+      {
+        "id": "04313f0f-005a-4cfe-aaad-840dc5305aaf",
+        "date": "2025-04-12",
+        "video_link": "https://www.youtube.com/watch?v=QKTgYye1otg",
+        "progress": 100
       }
     ]
   },
@@ -3106,6 +3138,12 @@
         "id": "7cc838e1-558a-45a5-abcf-a5d7cfb1e62b",
         "date": "20XX-XX-XX",
         "video_link": "",
+        "progress": 100
+      },
+      {
+        "id": "2b5d74f8-274b-49ed-84ac-ab1220f0ee98",
+        "date": "2025-01-12",
+        "video_link": "https://www.youtube.com/watch?v=lGTcZwx8_-Y",
         "progress": 100
       }
     ]
