@@ -345,7 +345,7 @@ function createLevelCard(level, position, filtersActive) {
 }
 
 function createIcons(level) {
-    return (level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" title="Weekly Extreme">' : '') + 
+    return (level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" title="WEGDPS">' : '') + 
            (level.show_new_icon ? '<img src="icons/new.png" class="new-icon" title="New Level">' : '');
 }
 

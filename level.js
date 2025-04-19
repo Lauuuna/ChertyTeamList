@@ -53,7 +53,7 @@ async function loadLevelDetails() {
         const position = levels.indexOf(level) + 1;
         const verifierNickname = await getPlayerInfo(level.players[0]?.id);
         
-        const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon" title="Weekly Extreme">' : '';
+        const weIcon = level.show_we_icon ? '<img src="icons/we-icon.png" class="we-icon" alt="WE Icon" title="WEGDPS">' : '';
         const newIcon = level.show_new_icon ? '<img src="icons/new.png" class="new-icon" alt="NEW Icon" title="New Level">' : '';
         
         let videoId = '';
