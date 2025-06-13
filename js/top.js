@@ -46,6 +46,9 @@ async function fetchPlayersData() {
     levels.forEach(level => {
         level.players?.forEach(player => {
             const username = player.id;
+
+            if (bannedPlayers.includes(username)) return;
+
             stats[username] = stats[username] || { points: 0, completions: 0 };
             
             if (player.progress >= 100) {

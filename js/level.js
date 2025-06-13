@@ -121,11 +121,10 @@ function updateLevelPage(level, position) {
     const recordsCount = document.getElementById('records-count');
     
     if (level.players && level.players.length > 1) {
-        // Сортируем записи по проценту в порядке убывания (кроме первого игрока)
         const sortedPlayers = [...level.players.slice(1)].sort((a, b) => {
             const progressA = parseInt(a.progress) || 0;
             const progressB = parseInt(b.progress) || 0;
-            return progressB - progressA; // Сортируем по убыванию
+            return progressB - progressA;
         });
         
         recordsCount.textContent = sortedPlayers.length;

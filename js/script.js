@@ -1,3 +1,7 @@
+const bannedPlayers = [
+    "tami.q"
+];
+
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.menu-item:not(.discord-btn)');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -80,6 +84,18 @@ function initTabs() {
             }
         });
     });
+}
+
+async function fetchBlacklist() {
+    try {
+        const response = await fetch('./blacklist.json');
+        if (!response.ok) throw new Error('Failed to load blacklist');
+        const data = await response.json();
+        return data.bannedPlayers || [];
+    } catch (error) {
+        console.error('Error loading blacklist:', error);
+        return [];
+    }
 }
 
 function switchTab(tabId) {
@@ -321,25 +337,28 @@ function handleLogout() {
 }
 
 function initModTools() {
-    document.getElementById('edit-order-btn').addEventListener('click', openOrderEditor);
-    document.getElementById('edit-data-btn').addEventListener('click', openLevelDataEditor);
-    document.querySelectorAll('.close-modal').forEach(btn => {
-        btn.addEventListener('click', closeAllModals);
-    });
-    document.querySelector('.close-record-modal').addEventListener('click', closeRecordModal);
-    document.getElementById('save-order-btn').addEventListener('click', saveLevelOrder);
-    document.getElementById('cancel-edit-btn').addEventListener('click', backToLevelList);
-    document.getElementById('save-level-btn').addEventListener('click', saveLevelData);
-    document.getElementById('add-record-btn').addEventListener('click', () => {
+    const editOrderBtn = document.getElementById('edit-order-btn');
+    const createLevelBtn = document.getElementById('create-level-btn');
+    
+    if (editOrderBtn) editOrderBtn.addEventListener('click', openOrderEditor);
+    if (createLevelBtn) createLevelBtn.addEventListener('click', openNewLevelModal);
+    
+    document.getElementById('save-order-btn')?.addEventListener('click', saveLevelOrder);
+    document.getElementById('save-level-btn')?.addEventListener('click', saveLevelData);
+    document.getElementById('add-record-btn')?.addEventListener('click', () => {
         currentEditingRecordIndex = null;
         openAddRecordModal();
     });
-    document.getElementById('save-record-btn').addEventListener('click', saveRecord);
-    document.getElementById('cancel-record-btn').addEventListener('click', closeRecordModal);
-    document.getElementById('create-level-btn').addEventListener('click', openNewLevelModal);
-    document.getElementById('save-new-level-btn').addEventListener('click', saveNewLevel);
-    document.querySelector('#new-level-modal .close-modal').addEventListener('click', closeAllModals);
-    document.getElementById('cancel-new-level-btn').addEventListener('click', closeAllModals);
+    document.getElementById('save-record-btn')?.addEventListener('click', saveRecord);
+    document.getElementById('cancel-record-btn')?.addEventListener('click', closeRecordModal);
+
+    document.querySelectorAll('.close-modal').forEach(btn => {
+        btn.addEventListener('click', () => closeAllModals());
+    });
+    
+    document.querySelector('.close-record-modal')?.addEventListener('click', () => {
+        closeModal('record-edit-modal');
+    });
 }
 
 let currentEditingLevel = null;
@@ -403,22 +422,22 @@ function closeRecordModal() {
 }
 
 function saveRecord() {
-    if (!currentEditingLevel) {
-        return;
-    }
+    if (!currentEditingLevel) return;
 
-    const id = document.getElementById('record-username').value.trim(); 
+    currentEditingLevel = { players: [] }; 
+
+    const id = document.getElementById('record-username').value.trim();
     const progress = parseInt(document.getElementById('record-progress').value);
     const date = document.getElementById('record-date').value.trim();
     const videoLink = document.getElementById('record-video').value.trim();
 
     if (!id) {
-        showNotification("ID is required", true);
+        showNotification("Username is required", true);
         return;
     }
 
     const newRecord = {
-        id, 
+        id,
         progress,
         date: date || undefined,
         video_link: videoLink || undefined
@@ -448,7 +467,7 @@ function removeRecord(index) {
 function openAddRecordModal() {
     currentEditingRecordIndex = null;
     document.getElementById('record-modal-title').textContent = 'Add New Record';
-    document.getElementById('record-username').value = ''; 
+    document.getElementById('record-username').value = '';
     document.getElementById('record-progress').value = 100;
     document.getElementById('record-date').value = '';
     document.getElementById('record-video').value = '';
@@ -458,12 +477,18 @@ function openAddRecordModal() {
 function closeAllModals() {
     document.querySelectorAll('.modal').forEach(modal => {
         modal.style.display = 'none';
-        const searchInput = modal.querySelector('.search-input');
-        if (searchInput) searchInput.value = '';
     });
     document.body.style.overflow = '';
     currentEditingLevel = null;
     resetNewLevelForm();
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
 }
 
 function openLevelDataEditor() {
@@ -966,18 +991,6 @@ async function loadDemonList() {
     }
 }
 
-function displayLevels(levelIds) {
-    const container = document.getElementById('levels-container');
-    container.innerHTML = '';
-
-    levelIds.forEach((id, index) => {
-        const level = allLevels.find(l => l.id === id);
-        if (level) {
-            container.appendChild(createLevelCard(level, index + 1));
-        }
-    });
-}
-
 function createLevelCard(level, position) {
     const card = document.createElement('div');
     card.className = 'level-card';
@@ -1004,8 +1017,17 @@ function createLevelCard(level, position) {
 
     img.onerror = () => img.src = 'https://via.placeholder.com/300x180/333/666?text=No+Preview';
 
+    const editBtn = createEditButton(level);
+    card.appendChild(editBtn);
+
+    const userData = JSON.parse(localStorage.getItem("userData")) || {};
+    if (userData.role === 'mod') {
+        editBtn.style.display = 'flex';
+    }
+
     card.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('view-in-list-btn')) {
+        if (!e.target.classList.contains('level-edit-btn') && 
+            !e.target.closest('.level-edit-btn')) {
             window.location.href = `level.html?id=${level.id}`;
         }
     });
@@ -1203,9 +1225,10 @@ function displayFilteredLevels() {
     let displayedCount = 0;
     originalOrder.forEach((id, index) => {
         const level = levelsMap.get(id);
-        if (level && filteredLevels.some(l => l.id === id)) {
-            const card = createLevelCard(level, index + 1);
-            
+        if (level && filteredLevels.some(l => l.id === id) && !shouldRemoveLevel(level)) {
+            displayedCount++;
+            const card = createLevelCard(level, displayedCount);
+
             if (isFilterActive) {
                 const viewInListBtn = document.createElement('button');
                 viewInListBtn.className = 'view-in-list-btn';
@@ -1216,9 +1239,8 @@ function displayFilteredLevels() {
                 });
                 card.appendChild(viewInListBtn);
             }
-            
+
             container.appendChild(card);
-            displayedCount++;
         }
     });
 
@@ -1353,3 +1375,63 @@ document.querySelectorAll('.archive-tab-btn').forEach(btn => {
         loadArchiveLevels(type);
     });
 });
+
+function createEditButton(level) {
+    const editBtn = document.createElement('button');
+    editBtn.className = 'level-edit-btn';
+    editBtn.innerHTML = '<i class="fas fa-cog"></i>';
+    editBtn.title = 'Edit Level';
+    editBtn.style.display = 'none';
+    
+    editBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        openLevelDataEditorForLevel(level);
+    });
+    
+    return editBtn;
+}
+
+function openLevelDataEditorForLevel(level) {
+    const modal = document.getElementById('level-edit-modal');
+    const container = document.getElementById('level-select-container');
+    
+    container.style.display = 'none';
+    document.getElementById('level-edit-form').style.display = 'block';
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    loadLevelDataForEditing(level);
+}
+
+function shouldRemoveLevel(level) {
+    if (!level.players || level.players.length === 0) {
+        return true; 
+    }
+
+    const hasValidRecord = level.players.some(player => {
+        const isBanned = bannedPlayers.includes(player.id);
+        const is100Percent = player.progress === 100;
+        return !isBanned && is100Percent;
+    });
+
+    return !hasValidRecord;
+}
+
+async function displayLevels(levelIds) {
+    const container = document.getElementById('levels-container');
+
+    if (!allLevels || allLevels.length === 0) {
+        allLevels = await loadAllLevels();
+    }
+
+    container.innerHTML = '';
+
+    levelIds.forEach((id, index) => {
+        const level = allLevels.find(l => l.id === id);
+        if (level && !shouldRemoveLevel(level)) {
+            container.appendChild(createLevelCard(level, index + 1));
+        }
+    });
+}

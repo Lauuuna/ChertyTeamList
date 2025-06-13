@@ -3071,3 +3071,49 @@ body {
 .level-card {
     margin-bottom: 15px; 
 }
+
+.level-edit-btn {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: none;
+    color: #cccccc;
+    border: none;
+    width: 24px;
+    height: 24px;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+.level-edit-btn i {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.level-edit-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.close-modal,
+.close-record-modal {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: transform 0.2s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-modal:hover,
+.close-record-modal:hover {
+    color: #ff5555;
+    transform: scale(1.2);
+}

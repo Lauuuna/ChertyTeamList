@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chertilist</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/sliderbar.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/notification.css">
+    <link rel="stylesheet" href="/css/records.css">
+    <link rel="stylesheet" href="/css/filter.css">
+    <link rel="stylesheet" href="/css/user-panel.css">
+    <link rel="stylesheet" href="/css/profile-preview.css">
+    <link rel="stylesheet" href="/css/level-edit.css">
+    <link rel="stylesheet" href="/css/top-players.css">
+    <link rel="stylesheet" href="/css/archive.css">
     <link rel="stylesheet" href="/css/blitzkrieg.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -197,7 +209,6 @@
     <div class="modal-content" style="max-width: 500px;">
         <div class="modal-header">
             <h3 id="new-record-modal-title">Add New Record</h3>
-            <button class="close-modal">&times;</button>
         </div>
         <div class="modal-body">
             <div class="level-edit-grid">
@@ -231,9 +242,6 @@
         <button id="edit-order-btn" class="user-button primary">
             Change the order of levels
         </button>
-        <button id="edit-data-btn" class="user-button primary">
-            Changing Level Data
-        </button>
         <button id="create-level-btn" class="user-button primary">
             Create New Level
         </button>
@@ -259,9 +267,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3>Edit Level Data</h3>
-                    <div class="search-container">
-                        <input type="text" id="level-search" placeholder="Search levels..." class="search-input">
-                    </div>
                     <button class="close-modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -299,7 +304,6 @@
                 </div>
             </div>
             <div class="level-edit-actions">
-                <button id="cancel-edit-btn" class="user-button danger">Back to List</button>
                 <button id="save-level-btn" class="user-button primary">Save Changes</button>
             </div>
         </div>
@@ -308,7 +312,6 @@
                 <div class="modal-content" style="max-width: 500px;">
                     <div class="modal-header">
                         <h3 id="record-modal-title">Edit Record</h3>
-                        <button class="close-record-modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="level-edit-grid">
@@ -369,7 +372,6 @@
                 </div>
             </div>
             <div class="level-edit-actions">
-                <button id="cancel-edit-btn" class="user-button danger">Back to List</button>
                 <button id="save-level-btn" class="user-button primary">Save Changes</button>
             </div>
         </div>
