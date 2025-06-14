@@ -1,6 +1,7 @@
 const bannedPlayers = [
-    "tami.q"
 ];
+
+const imageCache = {};
 
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.menu-item:not(.discord-btn)');
@@ -896,20 +897,40 @@ async function uploadToImgBB(file) {
 
 function updateAvatarPreview(url) {
     const preview = document.getElementById('avatar-preview');
-    preview.style.backgroundImage = url ? `url(${url})` : 'url(https://via.placeholder.com/100)';
+    if (!url) {
+        preview.style.backgroundImage = 'url(https://via.placeholder.com/100)';
+        return;
+    }
+    const img = new Image();
+    img.src = getCachedImage(url);
+    img.onload = () => {
+        preview.style.backgroundImage = `url(${url})`;
+    };
+    img.onerror = () => {
+        preview.style.backgroundImage = 'url(https://via.placeholder.com/100)';
+    };
 }
 
 function updateBannerPreview(url) {
     const preview = document.getElementById('banner-preview');
-    if (url && url.trim() !== '') {
+    if (!url || url.trim() === '') {
+        preview.style.backgroundImage = 'none';
+        preview.style.backgroundColor = '#333';
+        return;
+    }
+    
+    const img = new Image();
+    img.src = getCachedImage(url);
+    img.onload = () => {
         preview.style.backgroundImage = `url(${url})`;
         preview.style.backgroundSize = 'cover';
         preview.style.backgroundPosition = 'center';
         preview.style.backgroundColor = 'transparent';
-    } else {
+    };
+    img.onerror = () => {
         preview.style.backgroundImage = 'none';
         preview.style.backgroundColor = '#333';
-    }
+    };
 }
 
 function updateUsernamePreview(event) {
@@ -1434,4 +1455,18 @@ async function displayLevels(levelIds) {
             container.appendChild(createLevelCard(level, index + 1));
         }
     });
+}
+
+function getCachedImage(url) {
+    if (!imageCache[url]) {
+        imageCache[url] = new Image();
+        imageCache[url].src = url;
+    }
+    return imageCache[url].src;
+}
+
+function getPlaceholderUrl() {
+    return document.createElement('canvas').toDataURL('image/webp') 
+        ? 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAQAAAAfQ//73v/+BiOh/AAA='
+        : 'https://via.placeholder.com/300x180/333/666?text=Loading...';
 }

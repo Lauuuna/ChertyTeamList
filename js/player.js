@@ -60,12 +60,24 @@ function displayPlayerProfile(playerData) {
 }
 
 function getLevelThumbnail(level) {
+    const img = new Image();
+    img.src = 'https://via.placeholder.com/300x180/333/666?text=Loading...';
+    
     if (level.players?.[0]?.video_link) {
         const videoId = extractYouTubeId(level.players[0].video_link);
-        return videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` 
-                      : 'https://via.placeholder.com/300x180/333/666?text=No+Preview';
+        if (videoId) {
+            const ytImg = new Image();
+            ytImg.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+            ytImg.onload = () => {
+                img.src = ytImg.src;
+            };
+            ytImg.onerror = () => {
+                img.src = 'https://via.placeholder.com/300x180/333/666?text=No+Preview';
+            };
+            return img.src;
+        }
     }
-    return 'https://via.placeholder.com/300x180/333/666?text=No+Preview';
+    return img.src;
 }
 
 function extractYouTubeId(url) {
