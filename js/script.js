@@ -425,8 +425,6 @@ function closeRecordModal() {
 function saveRecord() {
     if (!currentEditingLevel) return;
 
-    currentEditingLevel = { players: [] }; 
-
     const id = document.getElementById('record-username').value.trim();
     const progress = parseInt(document.getElementById('record-progress').value);
     const date = document.getElementById('record-date').value.trim();
@@ -1243,12 +1241,10 @@ function displayFilteredLevels() {
 
     const levelsMap = new Map(allLevels.map(level => [level.id, level]));
 
-    let displayedCount = 0;
-    originalOrder.forEach((id, index) => {
+    originalOrder.forEach((id, originalPosition) => {
         const level = levelsMap.get(id);
         if (level && filteredLevels.some(l => l.id === id) && !shouldRemoveLevel(level)) {
-            displayedCount++;
-            const card = createLevelCard(level, displayedCount);
+            const card = createLevelCard(level, originalPosition + 1); // Используем оригинальную позицию
 
             if (isFilterActive) {
                 const viewInListBtn = document.createElement('button');
@@ -1265,9 +1261,8 @@ function displayFilteredLevels() {
         }
     });
 
-    if (displayedCount === 0) {
+    if (container.children.length === 0) {
         container.innerHTML = '<div class="no-results">No levels match your filters</div>';
-        console.warn("No levels displayed after filtering. Check filter conditions.");
     }
 }
 
