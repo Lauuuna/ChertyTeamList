@@ -153,10 +153,6 @@ function initUserPanel() {
             document.getElementById('mod-section').style.display = 'block';
             initModTools();
         }
-            if (userData.role === 'mod') {
-                document.getElementById('mod-section').style.display = 'block';
-                initModTools();
-            }
     }
 
     document.getElementById('login-button').addEventListener('click', handleLogin);
@@ -164,11 +160,6 @@ function initUserPanel() {
     document.getElementById('logout-button').addEventListener('click', handleLogout);
     document.getElementById('avatar-input').addEventListener('change', handleAvatarUpload);
     document.getElementById('banner-input').addEventListener('change', handleBannerUpload);
-    
-    document.getElementById('profile-username').addEventListener('input', function(e) {
-        updateUsernamePreview(e);
-        saveUserData();
-    });
     
     document.getElementById('profile-description').addEventListener('input', function(e) {
         updateDescriptionPreview(e);
@@ -298,7 +289,6 @@ function saveProfileDataToLocalStorage(data) {
 
 async function handleProfileUpdate() {
     const updatedData = {
-        username: document.getElementById('profile-username').value,
         password: document.getElementById('profile-password').value || undefined,
         avatar: document.getElementById('profile-avatar-url').value,
         banner: document.getElementById('profile-banner-url').value,
@@ -308,7 +298,7 @@ async function handleProfileUpdate() {
 
     try {
         const res = await fetch('https://ctl.launa-fic.workers.dev/api/profile', {
-            method: 'PUT',
+            method: "PUT",
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${authToken}`
@@ -316,14 +306,13 @@ async function handleProfileUpdate() {
             body: JSON.stringify(updatedData)
         });
 
-        if (res.ok) {
-            showNotification("Profile updated successfully!");
-            saveProfileDataToLocalStorage(updatedData);
-        } else {
-            throw new Error(await res.text());
-        }
+        if (!res.ok) throw new Error(await res.text());
+
+        await loadUserProfile(); 
+        showNotification("Profile updated successfully!");
+        saveProfileDataToLocalStorage(updatedData);
     } catch (error) {
-        showNotification(error.message || "Failed to update profile.", true);
+        showNotification("Failed to update profile: " + error.message, true);
     }
 }
 

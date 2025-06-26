@@ -151,6 +151,11 @@ function renderPlayerProfile(playerData, allLevels) {
                             <div class="country-flag ${playerData.country ? `flag-${playerData.country.toLowerCase()}` : 'flag-default'}"></div>
                         </div>
                     </div>
+                    ${playerData.description ? `
+                    <div class="player-description">
+                        ${playerData.description}
+                    </div>
+                    ` : ''}
                 </div>
             </div>
         </div>
