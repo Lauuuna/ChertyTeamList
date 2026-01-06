@@ -5,7 +5,13 @@ class LevelManager {
         this.bindEvents();
     }
 
-    bindEvents() {}
+    bindEvents() {
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.levelId) {
+                this.loadLevel(event.state.levelId);
+            }
+        });
+    }
 
     async loadLevel(levelId) {
         this.container.innerHTML = `

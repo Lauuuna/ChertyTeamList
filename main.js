@@ -18,7 +18,7 @@ class App {
 
     init() {
         this.bindEvents();
-        this.loadMainPage();
+        this.handleInitialPage();
         this.setupDropdowns();
     }
 
@@ -26,7 +26,7 @@ class App {
         document.querySelector('.logo-link').addEventListener('click', (e) => {
             e.preventDefault();
             this.switchPage('main');
-            window.history.pushState({}, '', '/'); 
+            window.history.pushState({}, '', '/');
             
             const dropdownItems = document.querySelectorAll('.dropdown-item');
             dropdownItems.forEach(i => i.classList.remove('active'));
@@ -74,6 +74,27 @@ class App {
                 this.closeFilterDropdown();
             }
         });
+
+        window.addEventListener('popstate', (event) => {
+            this.handleInitialPage();
+        });
+    }
+
+    handleInitialPage() {
+        const path = window.location.pathname;
+        
+        if (path.startsWith('/level/')) {
+            const levelId = path.split('/')[2];
+            if (levelId) {
+                this.openLevelDetail(levelId);
+            } else {
+                this.switchPage('main');
+                this.loadMainPage();
+            }
+        } else {
+            this.switchPage('main');
+            this.loadMainPage();
+        }
     }
 
     setupDropdowns() {
@@ -143,35 +164,48 @@ class App {
             pageEl.classList.add('active');
             window.scrollTo(0, 0);
         }
-
-        if (page === 'main') {
-            this.loadMainPage();
-        }
     }
 
     openLevelDetail(levelId) {
         if (this.levelManager) {
             this.switchPage('level-detail');
             this.levelManager.loadLevel(levelId);
+            
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(i => i.classList.remove('active'));
+            
             window.history.pushState({levelId: levelId}, '', `/level/${levelId}`);
         }
     }
 
     async loadMainPage() {
-        if (this.isLoading && this.levelsData.length === 0) return;
+        const mainPage = document.getElementById('main-page');
+        if (!mainPage.classList.contains('active')) {
+            return;
+        }
+        
+        if (this.isLoading) return;
         
         const levelsGrid = document.getElementById('levels-grid');
-        const loading = document.querySelector('.loading');
-
-        if (this.levelsData.length === 0) {
-            this.isLoading = true;
-            if (levelsGrid) levelsGrid.innerHTML = '';
-            if (loading) loading.style.display = 'flex';
-        } else {
+        const loading = document.querySelector('#main-page .loading');
+        const noResults = document.getElementById('no-results');
+        
+        if (this.levelsData.length > 0) {
             this.renderLevels();
             return;
         }
-
+        
+        this.isLoading = true;
+        if (levelsGrid) levelsGrid.innerHTML = '';
+        if (loading) {
+            loading.style.display = 'flex';
+            loading.innerHTML = `
+                <div class="loading-spinner"></div>
+                <p>Loading levels...</p>
+            `;
+        }
+        if (noResults) noResults.style.display = 'none';
+        
         try {
             const leaderboard = await api.getLeaderboard();
             if (!leaderboard || !leaderboard.level_order) {
@@ -181,26 +215,37 @@ class App {
             const levelIds = leaderboard.level_order;
             
             const levelPromises = levelIds.map(id => api.getLevel(id));
-            const levels = await Promise.allSettled(levelPromises);
+            const results = await Promise.allSettled(levelPromises);
             
-            this.levelsData = levels
-                .filter(result => result.status === 'fulfilled')
-                .map(result => result.value)
-                .filter(level => level);
+            this.levelsData = [];
+            
+            for (let i = 0; i < results.length; i++) {
+                const result = results[i];
+                if (result.status === 'fulfilled' && result.value) {
+                    const levelData = result.value;
+                    levelData.id = levelIds[i];
+                    this.levelsData.push(levelData);
+                }
+            }
+
+            if (this.levelsData.length === 0) {
+                throw new Error('No levels loaded');
+            }
 
             this.collectAllPhases();
             this.filteredLevels = [...this.levelsData];
             this.renderLevels();
             this.renderFilterOptions();
             
-            if (loading) loading.style.display = 'none';
         } catch (error) {
             console.error('Failed to load levels:', error);
             if (loading) {
+                loading.style.display = 'flex';
                 loading.innerHTML = `
                     <div style="color: #ff5555; text-align: center;">
                         <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
                         <p>Failed to load levels</p>
+                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem;">${error.message}</p>
                         <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #333; border: none; color: white; border-radius: 4px; cursor: pointer;">
                             Retry
                         </button>
@@ -209,6 +254,9 @@ class App {
             }
         } finally {
             this.isLoading = false;
+            if (loading && this.levelsData.length > 0) {
+                loading.style.display = 'none';
+            }
         }
     }
 
@@ -280,7 +328,7 @@ class App {
         
         this.filteredLevels = this.levelsData.filter(level => {
             const matchesSearch = !this.searchTerm || 
-                level.name.toLowerCase().includes(this.searchTerm);
+                (level.name && level.name.toLowerCase().includes(this.searchTerm));
             
             const matchesPhase = this.selectedPhases.size === 0 || 
                 (level.phase && this.selectedPhases.has(level.phase));
@@ -323,9 +371,12 @@ class App {
 
     renderLevels() {
         const levelsGrid = document.getElementById('levels-grid');
+        const loading = document.querySelector('#main-page .loading');
         const noResults = document.getElementById('no-results');
         
         if (!levelsGrid) return;
+        
+        if (loading) loading.style.display = 'none';
         
         levelsGrid.innerHTML = '';
         
@@ -403,7 +454,7 @@ class App {
         card.addEventListener('click', (e) => {
             if (!e.target.closest('.show-level-btn')) {
                 e.preventDefault();
-                this.openLevelDetail(level.id); 
+                this.openLevelDetail(level.id);
             }
         });
 
