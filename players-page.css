@@ -1,0 +1,59 @@
+.players-list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.players-list-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.players-list-description {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+.players-list-content {
+    margin-top: 2rem;
+}
+
+.players-construction {
+    position: relative;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 5rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.players-construction .construction-tape {
+    width: 14px;
+    background: repeating-linear-gradient(-45deg, #000, #000 9px, #f9c922 9px, #f9c922 18px);
+}
+
+.players-construction .construction-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.players-construction .construction-icon {
+    font-size: 3.8rem;
+    color: #222;
+}
+
+.players-construction .construction-text {
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 450px;
+}

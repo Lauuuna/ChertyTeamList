@@ -1,0 +1,227 @@
+.level-detail-header {
+    display: none;
+}
+
+.ld-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px; 
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1200px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 0 1rem; 
+}
+
+.ld-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px; 
+    background: #000;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #222;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.ld-video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.ld-video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    height: 100%;
+    width: 100%;
+}
+
+.ld-video-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.ld-stats-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.ld-stats-card {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 1.5rem;
+    height: 100%; 
+    min-height: 400px; 
+    box-sizing: border-box; 
+}
+
+.ld-stat-group {
+    margin-bottom: 1.5rem;
+}
+
+.ld-stat-group:last-child {
+    margin-bottom: 0;
+}
+
+.ld-stat-label {
+    display: block;
+    color: #888;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+}
+
+.skill-sets-v2-placeholder {
+    position: relative;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-sets-v2-placeholder .construction-tape {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    width: 12px;
+    background: repeating-linear-gradient(-45deg, #000, #000 8px, #f9c922 8px, #f9c922 16px);
+}
+
+.skill-sets-v2-placeholder .tape-left { 
+    left: 0; 
+}
+
+.skill-sets-v2-placeholder .tape-right { 
+    right: 0; 
+}
+
+.skill-sets-v2-placeholder .construction-content {
+    position: relative;
+    z-index: 2;
+    color: #444;
+    font-size: 0.85rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skill-sets-v2-placeholder .construction-content i {
+    font-size: 1rem; 
+    margin-bottom: 0;
+}
+
+.skill-sets-v2-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem; 
+}
+
+.skill-sets-v2-header .ld-stat-label {
+    display: inline-block;
+    margin-bottom: 0; 
+    vertical-align: middle;
+}
+
+.records-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.records-section {
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem; 
+}
+
+.records-table-container {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.records-table th {
+    background: #1a1a1a;
+    color: #888;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #222;
+}
+
+.records-table td {
+    padding: 1rem 1.5rem;
+    color: #ccc;
+    border-bottom: 1px solid #1f1f1f;
+    font-size: 0.95rem;
+}
+
+.col-rank { width: 80px; text-align: center; color: #666; font-weight: bold; }
+.col-player { font-weight: 600; color: #fff !important; }
+.col-progress { width: 120px; text-align: right; font-weight: 700; }
+.col-video { width: 80px; text-align: center; }
+
+.percent-100 { color: #4cd137 !important; } 
+.percent-high { color: #e1b12c !important; } 
+
+.video-link-icon {
+    color: #fff;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.video-link-icon:hover {
+    opacity: 1;
+    color: #e74c3c;
+}
+
+.country-flag {
+    margin-right: 8px;
+    border-radius: 2px;
+    vertical-align: middle;
+}

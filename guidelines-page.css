@@ -1,0 +1,59 @@
+.guidelines-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.guidelines-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.guidelines-description {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+.guidelines-content {
+    margin-top: 2rem;
+}
+
+.guidelines-construction {
+    position: relative;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guidelines-construction .construction-tape {
+    width: 13px;
+    background: repeating-linear-gradient(-45deg, #000, #000 8px, #f9c922 8px, #f9c922 16px);
+}
+
+.guidelines-construction .construction-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.guidelines-construction .construction-icon {
+    font-size: 3.5rem;
+    color: #222;
+}
+
+.guidelines-construction .construction-text {
+    font-size: 1rem;
+    color: #444;
+    max-width: 400px;
+}

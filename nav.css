@@ -1,0 +1,164 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #000000;
+    border-bottom: 1px solid #222222;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.logo {
+    margin-right: 0.5rem;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.logo-link:hover .logo-text {
+    color: #cccccc;
+}
+
+.nav-dropdowns {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+    border: none;
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-btn:hover {
+    color: #ffffff;
+    background-color: #222222;
+}
+
+.dropdown-btn i {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-btn i {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    min-width: 160px;
+    background: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.nav-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #cccccc;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #222222;
+    color: #ffffff;
+}
+
+.dropdown-item.active {
+    background: #333333;
+    color: #ffffff;
+}
+
+.dropdown-item i {
+    width: 16px;
+    font-size: 0.9rem;
+}
+
+.dropdown-item span {
+    font-size: 0.9rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.discord-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #5865F2;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.discord-btn:hover {
+    background: #4752C4;
+    transform: scale(1.1);
+}
+
+.discord-btn i {
+    font-size: 1.2rem;
+}

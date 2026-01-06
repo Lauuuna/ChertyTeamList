@@ -1,0 +1,97 @@
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.page {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: pageEnter 0.3s ease forwards;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes pageEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #222222;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #888888;
+}
+
+.levels-container {
+    position: relative;
+    min-height: 400px;
+    margin-top: 2rem;
+}
+
+.construction-placeholder {
+    position: relative;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.construction-tape {
+    position: absolute;
+    top: 0; bottom: 0; width: 12px;
+    background: repeating-linear-gradient(-45deg, #000, #000 8px, #f9c922 8px, #f9c922 16px);
+}
+
+.tape-left { left: 0; }
+.tape-right { right: 0; }
+
+.construction-content {
+    position: relative;
+    z-index: 2;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.construction-icon {
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.construction-text {
+    font-size: 1rem;
+    color: #555;
+    max-width: 400px;
+    line-height: 1.5;
+}
