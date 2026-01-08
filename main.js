@@ -1,5 +1,7 @@
 class App {
     constructor() {
+        window.app = this;
+        
         this.currentPage = 'main';
         this.levelsData = [];
         this.filteredLevels = [];
@@ -7,10 +9,17 @@ class App {
         this.searchTerm = '';
         this.selectedPhases = new Set();
         this.allPhases = new Set();
+        
         if (typeof LevelManager !== 'undefined') {
             this.levelManager = new LevelManager(this);
         } else {
             console.error('LevelManager class not found. Make sure level-manager.js is loaded.');
+        }
+
+        if (typeof PlayersManager !== 'undefined') {
+            this.playersManager = new PlayersManager(this);
+        } else {
+            console.error('PlayersManager class not found.');
         }
         
         this.init();
@@ -45,32 +54,51 @@ class App {
             });
         });
 
-        document.getElementById('search-btn').addEventListener('click', () => this.performSearch());
-        document.getElementById('search-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.performSearch();
-        });
+        const searchBtn = document.getElementById('search-btn');
+        if (searchBtn) {
+            searchBtn.addEventListener('click', () => this.performSearch());
+        }
+        
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') this.performSearch();
+            });
+        }
 
-        document.getElementById('filter-btn').addEventListener('click', (e) => {
-            e.stopPropagation();
-            this.toggleFilterDropdown();
-        });
+        const filterBtn = document.getElementById('filter-btn');
+        if (filterBtn) {
+            filterBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleFilterDropdown();
+            });
+        }
 
-        document.getElementById('close-filter').addEventListener('click', () => {
-            this.closeFilterDropdown();
-        });
+        const closeFilter = document.getElementById('close-filter');
+        if (closeFilter) {
+            closeFilter.addEventListener('click', () => {
+                this.closeFilterDropdown();
+            });
+        }
 
-        document.getElementById('apply-filters').addEventListener('click', () => {
-            this.applyFilters();
-        });
+        const applyFilters = document.getElementById('apply-filters');
+        if (applyFilters) {
+            applyFilters.addEventListener('click', () => {
+                this.applyFilters();
+            });
+        }
 
-        document.getElementById('clear-filters').addEventListener('click', () => {
-            this.clearFilters();
-        });
+        const clearFilters = document.getElementById('clear-filters');
+        if (clearFilters) {
+            clearFilters.addEventListener('click', () => {
+                this.clearFilters();
+            });
+        }
 
         document.addEventListener('click', (e) => {
             const filterDropdown = document.getElementById('filter-dropdown');
             const filterBtn = document.getElementById('filter-btn');
-            if (filterDropdown && !filterDropdown.contains(e.target) && !filterBtn.contains(e.target)) {
+            if (filterDropdown && !filterDropdown.contains(e.target) && filterBtn && !filterBtn.contains(e.target)) {
                 this.closeFilterDropdown();
             }
         });
@@ -163,6 +191,14 @@ class App {
         if (pageEl) {
             pageEl.classList.add('active');
             window.scrollTo(0, 0);
+        }
+
+        if (page === 'main') {
+            this.loadMainPage();
+        } else if (page === 'players') {
+            if (this.playersManager) {
+                this.playersManager.load();
+            }
         }
     }
 

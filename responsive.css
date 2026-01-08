@@ -1,50 +1,37 @@
 @media (max-width: 1024px) {
-    .logo-text {
-        font-size: 1.2rem;
-    }
-    
     .video-preview {
-        width: 180px;
-        height: 101px;
+        width: 160px;
+    }
+
+    .level-name {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 900px) {
     .ld-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         gap: 1.5rem;
     }
-    
-    .ld-title, .ld-position {
-        font-size: 1.8rem;
+
+    .ld-stats-card {
+        min-height: auto;
+    }
+
+    .records-table th, .records-table td {
+        padding: 0.8rem 1rem; 
     }
 }
 
 @media (max-width: 768px) {
     .nav-container {
-        padding: 0.75rem 0.75rem;
-        flex-direction: column;
-        gap: 0.75rem;
+        padding: 0.75rem 1rem;
     }
-    
-    .nav-left {
-        width: 100%;
-        justify-content: space-between;
-        gap: 0.75rem;
-    }
-    
-    .logo {
-        margin-right: 0;
-    }
-    
+
     .logo-text {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
-    
-    .nav-dropdowns {
-        gap: 0.5rem;
-    }
-    
+
     .dropdown-btn span {
         display: none;
     }
@@ -52,203 +39,105 @@
     .dropdown-btn {
         padding: 0.5rem;
     }
-    
-    .dropdown-content {
-        min-width: 140px;
+
+    .nav-left {
+        gap: 0.5rem;
     }
-    
-    .dropdown-item span {
-        font-size: 0.85rem;
-    }
-    
+
     .discord-btn {
         width: 32px;
         height: 32px;
     }
-    
-    .discord-btn i {
-        font-size: 1.1rem;
-    }
-    
-    .main-content {
-        padding: 0.5rem;
-    }
-    
+
     .search-container {
         padding: 1rem;
     }
     
     .search-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: stretch;
+        gap: 0.75rem;
+        position: relative;
     }
-    
+
+    .filter-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
     .filter-dropdown {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.9);
-        width: 90%;
-        max-width: 400px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: none;
+        transform: none;
+        margin-top: 10px;
+        z-index: 1001;
     }
-    
-    .filter-dropdown.show {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    
+
     .level-card {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 1rem;
-        padding: 1rem;
+        padding: 0.75rem;
         min-height: auto;
     }
-    
-    .level-card.show-button {
-        padding-right: 1rem;
-        padding-bottom: 4rem;
-    }
-    
+
     .video-preview {
-        width: 100%;
-        height: 150px;
+        width: 120px;
+        height: 68px;
+        flex-shrink: 0;
     }
-    
-    .level-header {
-        flex-wrap: wrap;
-        gap: 0.5rem;
+
+    .level-card.show-button {
+        padding-right: 3rem;
     }
-    
-    .level-position {
-        font-size: 1rem;
-    }
-    
-    .level-name {
-        font-size: 1.2rem;
-    }
-    
-    .phase-badge {
-        font-size: 0.75rem;
-        padding: 0.15rem 0.5rem;
-    }
-    
-    .level-details {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        width: 100%;
-    }
-    
+
     .show-level-btn {
-        position: absolute;
-        right: 1rem;
-        top: auto;
-        bottom: 1rem;
-        transform: none;
-    }
-    
-    .future-list-construction,
-    .players-construction,
-    .guidelines-construction,
-    .profile-construction {
-        padding: 3rem 1.5rem;
-        min-height: 250px;
-    }
-    
-    .future-list-construction .construction-icon,
-    .players-construction .construction-icon,
-    .guidelines-construction .construction-icon,
-    .profile-construction .construction-icon {
-        font-size: 2.5rem;
-    }
-    
-    .future-list-construction .construction-text,
-    .players-construction .construction-text,
-    .guidelines-construction .construction-text,
-    .profile-construction .construction-text {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .records-table th, .records-table td {
-        padding: 0.75rem 1rem;
+        width: 32px;
+        height: 32px;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    .records-table th:nth-child(2) { display: none; } 
-    .records-table td:nth-child(2) { display: none; }
-    .records-table th:nth-child(3), 
-    .records-table td:nth-child(3) { padding-left: 1rem; }
-    
-    .ld-title-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    .level-info {
+        gap: 0.25rem;
     }
-    
-    .ld-level-header-detail {
-        flex-direction: column;
-        align-items: flex-start;
+
+    .level-header {
+        align-items: center;
         gap: 0.5rem;
     }
 
-    .ld-position, .ld-title {
-        font-size: 1.5rem;
-    }
-
-    .ld-phase-badge {
-        font-size: 0.9rem;
+    .level-name {
+        font-size: 1.05rem;
+        line-height: 1.2;
     }
 }
 
 @media (max-width: 480px) {
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    .video-preview {
+        width: 100px;
+        height: 56px;
+    }
+
     .logo-text {
         font-size: 1rem;
     }
-    
-    .level-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
-    }
-    
-    .level-position {
-        font-size: 0.95rem;
-    }
-    
-    .level-name {
-        font-size: 1.1rem;
-    }
-    
-    .filter-btn span:first-of-type {
-        display: none;
-    }
-    
-    .future-list-construction,
-    .players-construction,
-    .guidelines-construction,
-    .profile-construction {
-        padding: 2rem 1rem;
-        min-height: 200px;
-    }
-    
-    .future-list-construction .construction-icon,
-    .players-construction .construction-icon,
-    .guidelines-construction .construction-icon,
-    .profile-construction .construction-icon {
-        font-size: 2rem;
-    }
-    
-    .future-list-construction .construction-text,
-    .players-construction .construction-text,
-    .guidelines-construction .construction-text,
-    .profile-construction .construction-text {
-        font-size: 0.85rem;
-        padding: 0;
-    }
-    
-    .construction-tape {
-        width: 8px !important;
+
+    .records-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
     }
 }

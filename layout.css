@@ -1,7 +1,8 @@
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: clamp(0.75rem, 3vw, 2rem);
+    width: 100%;
 }
 
 .page {
@@ -9,6 +10,7 @@
     opacity: 0;
     transform: translateY(20px);
     animation: pageEnter 0.3s ease forwards;
+    width: 100%;
 }
 
 .page.active {
@@ -23,22 +25,23 @@
 }
 
 .header {
-    margin-bottom: 2.5rem;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #222222;
 }
 
 .page-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); 
     font-weight: 700;
     margin-bottom: 0.5rem;
     background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 1.2;
 }
 
 .page-subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     color: #888888;
 }
 
