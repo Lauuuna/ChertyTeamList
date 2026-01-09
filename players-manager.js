@@ -59,48 +59,63 @@ class PlayersManager {
             
             const levelPoints = parseFloat(level.points) || 0;
             const levelRank = levelIndex + 1;
+            const partialPoints = levelPoints / 4; 
 
             level.players.forEach(record => {
-                if (parseInt(record.progress) === 100) {
-                    const username = record.username;
-                    const normalizedName = username.toLowerCase();
+                const progress = parseInt(record.progress);
+                if (progress === 0 || isNaN(progress)) return; 
+                
+                const username = record.username;
+                const normalizedName = username.toLowerCase();
 
-                    if (!playersMap.has(normalizedName)) {
-                        playersMap.set(normalizedName, {
-                            username: username,
-                            country: record.country,
-                            totalPoints: 0,
-                            completedLevels: [],
-                            osc: null,
-                            attemptsFor1: null,
-                            skillSets: null,
-                            limitPercent: null,
-                            role: null
-                        });
-                    }
+                if (!playersMap.has(normalizedName)) {
+                    playersMap.set(normalizedName, {
+                        username: username,
+                        country: record.country,
+                        totalPoints: 0,
+                        completedLevels: [],
+                        progressLevels: [], 
+                        osc: null,
+                        attemptsFor1: null,
+                        skillSets: null,
+                        limitPercent: null,
+                        role: null
+                    });
+                }
 
-                    const playerData = playersMap.get(normalizedName);
-                    
-                    if (record.country && !playerData.country) {
-                        playerData.country = record.country;
-                    }
+                const playerData = playersMap.get(normalizedName);
+                
+                if (record.country && !playerData.country) {
+                    playerData.country = record.country;
+                }
 
-                    if (record.osc !== undefined && record.osc !== null) playerData.osc = record.osc;
-                    if (record.attempts_for_1 !== undefined && record.attempts_for_1 !== null) {
-                        playerData.attemptsFor1 = record.attempts_for_1;
-                    }
-                    if (record.skill_sets !== undefined && record.skill_sets !== null) playerData.skillSets = record.skill_sets;
-                    if (record.limit_percent !== undefined && record.limit_percent !== null) playerData.limitPercent = record.limit_percent;
+                if (record.osc !== undefined && record.osc !== null) playerData.osc = record.osc;
+                if (record.attempts_for_1 !== undefined && record.attempts_for_1 !== null) {
+                    playerData.attemptsFor1 = record.attempts_for_1;
+                }
+                if (record.skill_sets !== undefined && record.skill_sets !== null) playerData.skillSets = record.skill_sets;
+                if (record.limit_percent !== undefined && record.limit_percent !== null) playerData.limitPercent = record.limit_percent;
 
-                    if (record.role !== undefined && record.role !== null) {
-                        playerData.role = record.role;
-                    }
+                if (record.role !== undefined && record.role !== null) {
+                    playerData.role = record.role;
+                }
 
+                if (progress === 100) {
                     playerData.totalPoints += levelPoints;
                     playerData.completedLevels.push({
                         id: level.id,
                         name: level.name,
                         points: levelPoints,
+                        rank: levelRank,
+                        phase: level.phase
+                    });
+                } else {
+                    playerData.totalPoints += partialPoints;
+                    playerData.progressLevels.push({
+                        id: level.id,
+                        name: level.name,
+                        progress: progress, 
+                        points: partialPoints, 
                         rank: levelRank,
                         phase: level.phase
                     });
@@ -112,8 +127,9 @@ class PlayersManager {
 
         this.playersData.forEach((player, index) => {
             player.rank = index + 1;
-            player.completedLevels.sort((a, b) => b.points - a.points);
+            player.completedLevels.sort((a, b) => b.points - a.points); 
             player.hardestLevel = player.completedLevels.length > 0 ? player.completedLevels[0] : null;
+            player.progressLevels.sort((a, b) => b.progress - a.progress); 
         });
     }
 
@@ -250,6 +266,40 @@ class PlayersManager {
             </div>
         `;
 
+        const completedLevelsHtml = `
+            <div class="pd-levels-section">
+                <h3 class="pd-subtitle">Completed Levels (${player.completedLevels.length})</h3>
+                <div class="pd-levels-list">
+                    ${player.completedLevels.map(lvl => `
+                        <div class="pd-level-item" onclick="app.openLevelDetail('${lvl.id}')">
+                            <span class="lvl-name">#${lvl.rank} - ${this.escapeHtml(lvl.name)}</span>
+                            <span class="lvl-points">${parseFloat(lvl.points).toFixed(1)} pts</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        
+        let progressLevelsHtml = '';
+        if (player.progressLevels.length > 0) {
+            progressLevelsHtml = `
+                <div class="pd-levels-section">
+                    <h3 class="pd-subtitle">Progress (${player.progressLevels.length})</h3>
+                    <div class="pd-levels-list">
+                        ${player.progressLevels.map(lvl => `
+                            <div class="pd-level-item progress-item" onclick="app.openLevelDetail('${lvl.id}')">
+                                <span class="lvl-name">
+                                    #${lvl.rank} - ${this.escapeHtml(lvl.name)} 
+                                    <span class="lvl-points">(${lvl.progress}%)</span> 
+                                </span>
+                                <span class="lvl-points">${parseFloat(lvl.points).toFixed(1)} pts</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         const html = `
             <div class="player-detail-card">
                 <div class="pd-header">
@@ -278,17 +328,8 @@ class PlayersManager {
                     </div>
                 </div>
 
-                <div class="pd-levels-section">
-                    <h3 class="pd-subtitle">Completed Levels (${player.completedLevels.length})</h3>
-                    <div class="pd-levels-list">
-                        ${player.completedLevels.map(lvl => `
-                            <div class="pd-level-item" onclick="app.openLevelDetail('${lvl.id}')">
-                                <span class="lvl-name">#${lvl.rank} - ${this.escapeHtml(lvl.name)}</span>
-                                <span class="lvl-points">${parseFloat(lvl.points).toFixed(1)} pts</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
+                ${completedLevelsHtml}
+                ${progressLevelsHtml} 
             </div>
         `;
 
